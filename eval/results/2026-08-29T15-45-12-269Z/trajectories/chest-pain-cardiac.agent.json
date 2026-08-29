@@ -1,0 +1,224 @@
+{
+  "case": "chest-pain-cardiac",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 897,
+      "tokensIn": 500,
+      "tokensOut": 40,
+      "costUsd": 0.000099,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been experiencing this chest discomfort?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1613,
+      "tokensIn": 276,
+      "tokensOut": 14,
+      "costUsd": 0.0000498,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started about 40 minutes ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1006,
+      "tokensIn": 528,
+      "tokensOut": 60,
+      "costUsd": 0.00011520000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 627,
+      "tokensIn": 324,
+      "tokensOut": 14,
+      "costUsd": 0.000057,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's about a 7.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 964,
+      "tokensIn": 576,
+      "tokensOut": 49,
+      "costUsd": 0.0001158,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 619,
+      "tokensIn": 360,
+      "tokensOut": 16,
+      "costUsd": 0.0000636,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nYou: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I'm sweating and I feel slightly sick.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 888,
+      "tokensIn": 614,
+      "tokensOut": 56,
+      "costUsd": 0.0001257,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nYou: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you ever experienced this type of chest discomfort before?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 681,
+      "tokensIn": 391,
+      "tokensOut": 18,
+      "costUsd": 0.00006945000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nYou: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nYou: Yes, I'm sweating and I feel slightly sick.\nService: Thank you for that information. Have you ever experienced this type of chest discomfort before?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced this type of chest discomfort before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 927,
+      "tokensIn": 647,
+      "tokensOut": 61,
+      "costUsd": 0.00013365,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nYou: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\nYou: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nPatient: No, I haven't experienced this type of chest discomfort before.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 857,
+      "tokensIn": 428,
+      "tokensOut": 22,
+      "costUsd": 0.0000774,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nYou: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nYou: Yes, I'm sweating and I feel slightly sick.\nService: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nYou: No, I haven't experienced this type of chest discomfort before.\nService: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent injuries, surgeries, or significant stressors.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1172,
+      "tokensIn": 688,
+      "tokensOut": 57,
+      "costUsd": 0.0001374,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nYou: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\nYou: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nPatient: No, I haven't experienced this type of chest discomfort before.\nYou: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nPatient: No, I haven't had any recent injuries, surgeries, or significant stressors.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 471,
+      "tokensOut": 24,
+      "costUsd": 0.00008505,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nYou: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nYou: Yes, I'm sweating and I feel slightly sick.\nService: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nYou: No, I haven't experienced this type of chest discomfort before.\nService: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nYou: No, I haven't had any recent injuries, surgeries, or significant stressors.\nService: It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm taking amlodipine for high blood pressure, but I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 906,
+      "tokensIn": 733,
+      "tokensOut": 53,
+      "costUsd": 0.00014175,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nYou: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\nYou: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nPatient: No, I haven't experienced this type of chest discomfort before.\nYou: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nPatient: No, I haven't had any recent injuries, surgeries, or significant stressors.\nYou: It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\nPatient: I'm taking amlodipine for high blood pressure, but I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you experienced any pain radiating to your arms, jaw, or back?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 719,
+      "tokensIn": 515,
+      "tokensOut": 21,
+      "costUsd": 0.00008985,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been having some chest discomfort today.\"\n\nYou: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nYou: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nYou: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nYou: Yes, I'm sweating and I feel slightly sick.\nService: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nYou: No, I haven't experienced this type of chest discomfort before.\nService: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nYou: No, I haven't had any recent injuries, surgeries, or significant stressors.\nService: It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\nYou: I'm taking amlodipine for high blood pressure, but I don't have any allergies.\nService: Thank you for that information. Have you experienced any pain radiating to your arms, jaw, or back?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, the pain spreads into my left arm and up into my jaw.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 904,
+      "tokensIn": 774,
+      "tokensOut": 54,
+      "costUsd": 0.00014849999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been having some chest discomfort today.\nYou: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nYou: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nYou: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\nYou: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nPatient: No, I haven't experienced this type of chest discomfort before.\nYou: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nPatient: No, I haven't had any recent injuries, surgeries, or significant stressors.\nYou: It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\nPatient: I'm taking amlodipine for high blood pressure, but I don't have any allergies.\nYou: Thank you for that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: Yes, the pain spreads into my left arm and up into my jaw.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Given your symptoms, I need to ensure your safety. Are you experiencing any difficulty breathing or feeling faint?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 8 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1670,
+      "tokensIn": 640,
+      "tokensOut": 184,
+      "costUsd": 0.0002064,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've been having some chest discomfort today.\nService: Thank you for sharing that. How long have you been experiencing this chest discomfort?\nPatient: It started about 40 minutes ago.\nService: On a scale from 0 to 10, with 0 being no discomfort and 10 being the worst pain imaginable, how would you rate the severity of your chest discomfort?\nPatient: I'd say it's about a 7.\nService: Are you experiencing any other symptoms along with the chest discomfort, such as shortness of breath, sweating, or nausea?\nPatient: Yes, I'm sweating and I feel slightly sick.\nService: Thank you for that information. Have you ever experienced this type of chest discomfort before?\nPatient: No, I haven't experienced this type of chest discomfort before.\nService: Have you had any recent injuries, surgeries, or significant stressors that could be related to this discomfort?\nPatient: No, I haven't had any recent injuries, surgeries, or significant stressors.\nService: It's important to gather a bit more information. Are you currently taking any medications or do you have any known allergies?\nPatient: I'm taking amlodipine for high blood pressure, but I don't have any allergies.\nService: Thank you for that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: Yes, the pain spreads into my left arm and up into my jaw.\nService: Thank you for sharing that. Given your symptoms, I need to ensure your safety. Are you experiencing any difficulty breathin",
+      "output": "{\n  \"chiefComplaint\": \"Chest discomfort\",\n  \"duration\": \"40 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"sweating\",\n    \"feeling slightly sick\",\n    \"pain radiating to left arm\",\n    \"pain radiating to jaw\"\n  ],\n  \"redFlags\": [\n    \"pain spreads into my left arm and up into my jaw\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"amlodipine\"\n  ],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest discomfort that started approximately 40 minutes ago, rating the severity as 7 out of 10. They also report sweating, feeling slightly sick, and pain radiating to the left arm and jaw. The patient has not experienced this type of discomfort before and has no known allergies or recent injuries.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1116,
+      "tokensIn": 631,
+      "tokensOut": 73,
+      "costUsd": 0.0023075,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Chest discomfort\",\n  \"duration\": \"40 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"sweating\",\n    \"feeling slightly sick\",\n    \"pain radiating to left arm\",\n    \"pain radiating to jaw\"\n  ],\n  \"redFlags\": [\n    \"pain spreads into my left arm and up into my jaw\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"amlodipine\"\n  ],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest discomfort that started approximately 40 minutes ago, rating the severity as 7 out of 10. They also report sweating, feeling slightly sick, and pain radiating to the left arm and jaw. The patient has not experienced this type of discomfort before and has no known allergies or recent injuries.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports chest discomfort with a severity of 7/10, accompanied by sweating, nausea, and pain radiating to the left arm and jaw. These symptoms could indicate a cardiac event, which requires urgent assessment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 9096,
+    "tokensOut": 816,
+    "costUsd": 0.00402305,
+    "latencyMs": 16443,
+    "modelCalls": 17
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "case": "back-pain-cauda-equina",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 872,
+      "tokensIn": 501,
+      "tokensOut": 47,
+      "costUsd": 0.00010334999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been experiencing this back pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 684,
+      "tokensIn": 278,
+      "tokensOut": 18,
+      "costUsd": 0.000052499999999999995,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started four days ago after I lifted a heavy box.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1074,
+      "tokensIn": 533,
+      "tokensOut": 61,
+      "costUsd": 0.00011655,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 747,
+      "tokensIn": 331,
+      "tokensOut": 20,
+      "costUsd": 0.00006165000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nYou: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate the back pain a 7 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 967,
+      "tokensIn": 588,
+      "tokensOut": 54,
+      "costUsd": 0.00012059999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\nPatient: I would rate the back pain a 7 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you noticed any other symptoms accompanying your back pain, such as numbness, tingling, weakness, or changes in bowel or bladder function?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 930,
+      "tokensIn": 378,
+      "tokensOut": 40,
+      "costUsd": 0.00008070000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nYou: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\nYou: I would rate the back pain a 7 out of 10.\nService: Have you noticed any other symptoms accompanying your back pain, such as numbness, tingling, weakness, or changes in bowel or bladder function?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs. I've also struggled to start passing urine since this morning.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 998,
+      "tokensIn": 655,
+      "tokensOut": 53,
+      "costUsd": 0.00013005,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\nPatient: I would rate the back pain a 7 out of 10.\nYou: Have you noticed any other symptoms accompanying your back pain, such as numbness, tingling, weakness, or changes in bowel or bladder function?\nPatient: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs. I've also struggled to start passing urine since this morning.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It sounds like you're experiencing some concerning symptoms. Have you had any recent injuries or medical conditions that might be relevant to your back pain and these new symptoms?\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 4 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2453,
+      "tokensIn": 525,
+      "tokensOut": 192,
+      "costUsd": 0.00019394999999999997,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain you can imagine, how would you rate your back pain right now?\nPatient: I would rate the back pain a 7 out of 10.\nService: Have you noticed any other symptoms accompanying your back pain, such as numbness, tingling, weakness, or changes in bowel or bladder function?\nPatient: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs. I've also struggled to start passing urine since this morning.\nService: It sounds like you're experiencing some concerning symptoms. Have you had any recent injuries or medical conditions that might be relevant to your back pain and these new symptoms?",
+      "output": "{\n  \"chiefComplaint\": \"Back pain\",\n  \"duration\": \"4 days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in both legs\",\n    \"heavy feeling in legs going up stairs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"redFlags\": [\n    \"weakness in both legs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing back pain for four days, which began after lifting a heavy box. They rate the pain as 7 out of 10 and have developed additional symptoms including weakness and heaviness in both legs, numbness between the legs, and difficulty starting to pass urine. These accompanying symptoms may indicate a need for urgent evaluation.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1073,
+      "tokensIn": 639,
+      "tokensOut": 68,
+      "costUsd": 0.0022775,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Back pain\",\n  \"duration\": \"4 days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in both legs\",\n    \"heavy feeling in legs going up stairs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"redFlags\": [\n    \"weakness in both legs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing back pain for four days, which began after lifting a heavy box. They rate the pain as 7 out of 10 and have developed additional symptoms including weakness and heaviness in both legs, numbness between the legs, and difficulty starting to pass urine. These accompanying symptoms may indicate a need for urgent evaluation.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports back pain with additional symptoms of weakness in both legs, numbness between the legs, and difficulty starting to pass urine. These symptoms could indicate a serious condition that requires urgent evaluation.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 4428,
+    "tokensOut": 553,
+    "costUsd": 0.00313685,
+    "latencyMs": 9798,
+    "modelCalls": 9
+  }
+}

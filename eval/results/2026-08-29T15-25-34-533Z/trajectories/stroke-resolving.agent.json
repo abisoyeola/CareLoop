@@ -1,0 +1,224 @@
+{
+  "case": "stroke-resolving",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1328,
+      "tokensIn": 506,
+      "tokensOut": 72,
+      "costUsd": 0.0001191,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\", \"options\": [\"A few minutes\", \"Less than an hour\", \"Several hours\", \"All morning\"], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 793,
+      "tokensIn": 304,
+      "tokensOut": 20,
+      "costUsd": 0.000057600000000000004,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It was actually about 90 minutes ago when it started feeling weak.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 966,
+      "tokensIn": 554,
+      "tokensOut": 62,
+      "costUsd": 0.0001203,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 790,
+      "tokensIn": 360,
+      "tokensOut": 24,
+      "costUsd": 0.00006840000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would say it was about a 3. It felt weak, but not painful.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1148,
+      "tokensIn": 614,
+      "tokensOut": 62,
+      "costUsd": 0.0001293,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 952,
+      "tokensIn": 419,
+      "tokensOut": 33,
+      "costUsd": 0.00008265,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nYou: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1142,
+      "tokensIn": 682,
+      "tokensOut": 68,
+      "costUsd": 0.00014309999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nYou: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 766,
+      "tokensIn": 472,
+      "tokensOut": 18,
+      "costUsd": 0.0000816,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nYou: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nYou: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nService: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I didn't have any trouble with coordination or balance.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1077,
+      "tokensIn": 720,
+      "tokensOut": 63,
+      "costUsd": 0.00014580000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nYou: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nYou: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nPatient: No, I didn't have any trouble with coordination or balance.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 843,
+      "tokensIn": 517,
+      "tokensOut": 17,
+      "costUsd": 0.00008775,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nYou: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nYou: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nService: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nYou: No, I didn't have any trouble with coordination or balance.\nService: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"This is the first time something like this has happened.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1258,
+      "tokensIn": 764,
+      "tokensOut": 52,
+      "costUsd": 0.0001458,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nYou: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nYou: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nPatient: No, I didn't have any trouble with coordination or balance.\nYou: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nPatient: This is the first time something like this has happened.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1429,
+      "tokensIn": 550,
+      "tokensOut": 21,
+      "costUsd": 0.0000951,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nYou: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nYou: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nService: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nYou: No, I didn't have any trouble with coordination or balance.\nService: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nYou: This is the first time something like this has happened.\nService: Thank you for sharing that. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm taking medication for high blood pressure, but I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1187,
+      "tokensIn": 801,
+      "tokensOut": 77,
+      "costUsd": 0.00016635,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nYou: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nYou: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nPatient: No, I didn't have any trouble with coordination or balance.\nYou: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nPatient: This is the first time something like this has happened.\nYou: Thank you for sharing that. Are you currently taking any medications or have any known allergies?\nPatient: I'm taking medication for high blood pressure, but I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Given the symptoms you've described, it's important to assess for any other potential concerns. Have you experienced any changes in vision, such as blurriness or double vision, during this episode or since then?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 867,
+      "tokensIn": 615,
+      "tokensOut": 16,
+      "costUsd": 0.00010185,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nYou: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nYou: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nService: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nYou: No, I didn't have any trouble with coordination or balance.\nService: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nYou: This is the first time something like this has happened.\nService: Thank you for sharing that. Are you currently taking any medications or have any known allergies?\nYou: I'm taking medication for high blood pressure, but I don't have any",
+      "output": "{ \"reply\": \"No, I haven't experienced any changes in vision.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 906,
+      "tokensIn": 861,
+      "tokensOut": 55,
+      "costUsd": 0.00016215,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nYou: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nYou: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nPatient: No, I didn't have any trouble with coordination or balance.\nYou: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nPatient: This is the first time something like this has happened.\nYou: Thank you for sharing that. Are you currently taking any medications or have any known allergies?\nPatient: I'm taking medication for high blood pressure, but I don't have any allergies.\nYou: Thank you for that information. Given the symptoms you've de",
+      "output": "{ \"reply\": \"Thank you for your responses. Given the symptoms you've described, it's important to act quickly. Please seek immediate medical attention, as these symptoms could indicate a serious condition.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 8 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1839,
+      "tokensIn": 733,
+      "tokensOut": 196,
+      "costUsd": 0.00022754999999999997,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was actually about 90 minutes ago when it started feeling weak.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of the weakness in your arm?\nPatient: I would say it was about a 3. It felt weak, but not painful.\nService: Thank you for that information. Did you notice any other symptoms occurring at the same time, such as numbness, tingling, or any changes in sensation in your arm or elsewhere?\nPatient: Yes, my partner said the right side of my face was drooping, and my speech was slurred for about 20 minutes.\nService: It sounds like you experienced some concerning symptoms. Did you have any difficulty with coordination or balance during this time?\nPatient: No, I didn't have any trouble with coordination or balance.\nService: Thank you for clarifying that. Have you experienced any similar episodes in the past, or is this the first time something like this has happened?\nPatient: This is the first time something like this has happened.\nService: Thank you for sharing that. Are you currently taking any medications or have any known allergies?\nPatient: I'm taking medication for high blood pressure, but I don't have any allergies.\nService: Thank you for that information. Given t",
+      "output": "{\n  \"chiefComplaint\": \"Weakness in arm and facial drooping with slurred speech.\",\n  \"duration\": \"90 minutes ago\",\n  \"severity\": \"3\",\n  \"symptoms\": [\n    \"weakness in arm\",\n    \"facial drooping on right side\",\n    \"slurred speech\"\n  ],\n  \"redFlags\": [\n    \"right side of my face was drooping\",\n    \"my speech was slurred for about 20 minutes\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"medication for high blood pressure\"\n  ],\n  \"history\": [\n    \"first time experiencing these symptoms\"\n  ],\n  \"summary\": \"The patient reported experiencing weakness in the arm, along with facial drooping and slurred speech that lasted for about 20 minutes. These symptoms began approximately 90 minutes ago. The patient has a history of high blood pressure and has not experienced similar episodes before.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1152,
+      "tokensIn": 643,
+      "tokensOut": 60,
+      "costUsd": 0.0022075000000000003,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Weakness in arm and facial drooping with slurred speech.\",\n  \"duration\": \"90 minutes ago\",\n  \"severity\": \"3\",\n  \"symptoms\": [\n    \"weakness in arm\",\n    \"facial drooping on right side\",\n    \"slurred speech\"\n  ],\n  \"redFlags\": [\n    \"right side of my face was drooping\",\n    \"my speech was slurred for about 20 minutes\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"medication for high blood pressure\"\n  ],\n  \"history\": [\n    \"first time experiencing these symptoms\"\n  ],\n  \"summary\": \"The patient reported experiencing weakness in the arm, along with facial drooping and slurred speech that lasted for about 20 minutes. These symptoms began approximately 90 minutes ago. The patient has a history of high blood pressure and has not experienced similar episodes before.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reported symptoms that could indicate a stroke, including weakness in the arm, facial drooping, and slurred speech. These symptoms require urgent assessment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 10115,
+    "tokensOut": 916,
+    "costUsd": 0.0041419000000000004,
+    "latencyMs": 18443,
+    "modelCalls": 17
+  }
+}

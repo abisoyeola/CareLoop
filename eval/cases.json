@@ -1,0 +1,271 @@
+{
+  "$comment": [
+    "Synthetic evaluation cases. No real patient data is used anywhere in this",
+    "repository (hackathon ground rule 07).",
+    "",
+    "These cases are written to be routing-unambiguous, not to be a clinical",
+    "protocol. 'expected.pathway' is the routing decision a triage-trained",
+    "reviewer should reach from the information the simulated patient will",
+    "disclose. Per seed sections 9 and 17, real escalation criteria require",
+    "sign-off by qualified clinicians before any production use.",
+    "",
+    "The set is deliberately weighted toward cases whose OPENING message reads",
+    "as benign, because that is precisely where a single-prompt baseline fails:",
+    "it answers the opener, while the agent asks the question that changes the",
+    "answer."
+  ],
+  "cases": [
+    {
+      "id": "headache-tension",
+      "category": "straightforward",
+      "opening": "I've had a mild headache since this morning.",
+      "facts": [
+        "Dull ache across the forehead, came on gradually over the morning.",
+        "Rates it 3 out of 10.",
+        "Slept badly last night, about four hours, and has been staring at a laptop all day.",
+        "No vomiting, no neck stiffness, no vision changes, no light sensitivity.",
+        "No weakness, no numbness, speech is normal.",
+        "No fever. Has not taken anything for it.",
+        "No regular medications, no allergies, no medical history.",
+        "Age 29."
+      ],
+      "expected": {
+        "pathway": "GREEN",
+        "mustCapture": ["gradual onset", "mild severity", "poor sleep"]
+      },
+      "note": "Control case. A system that escalates everything should fail here."
+    },
+    {
+      "id": "headache-thunderclap",
+      "category": "needs-followup",
+      "opening": "I've got a really bad headache.",
+      "facts": [
+        "It came on completely suddenly about two hours ago, like being hit on the back of the head.",
+        "Describes it as the worst headache of their life, 10 out of 10.",
+        "Has vomited twice since it started.",
+        "Neck feels stiff and bright light is painful.",
+        "No head injury.",
+        "No regular medications, no allergies.",
+        "Age 44."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["sudden onset", "worst headache", "vomiting", "neck stiffness"]
+      },
+      "note": "The opener is indistinguishable from the tension-headache case. Everything that matters only appears if something asks."
+    },
+    {
+      "id": "chest-pain-cardiac",
+      "category": "needs-followup",
+      "opening": "I've been having some chest discomfort today.",
+      "facts": [
+        "A heavy, pressing feeling in the centre of the chest, started about 40 minutes ago.",
+        "It spreads into the left arm and up into the jaw.",
+        "Sweating and feels slightly sick.",
+        "Worse when walking up the stairs, eases a little when sitting.",
+        "Age 58, has high blood pressure, takes amlodipine.",
+        "Father had a heart attack at 60.",
+        "No allergies."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["central chest pressure", "radiation to arm", "sweating"]
+      },
+      "note": "'Discomfort' is doing a lot of work in the opener."
+    },
+    {
+      "id": "chest-pain-musculoskeletal",
+      "category": "over-triage-control",
+      "opening": "My chest hurts.",
+      "facts": [
+        "Started yesterday after a heavy gym session doing bench press.",
+        "It is a sharp pain on the left side of the chest wall, not the centre.",
+        "It hurts more when pressing on that spot or twisting.",
+        "No spreading into the arm or jaw. No sweating, no nausea.",
+        "Breathing is completely normal, no shortness of breath.",
+        "Age 24, no medical history, no medications, no allergies."
+      ],
+      "expected": {
+        "pathway": "YELLOW",
+        "mustCapture": ["reproducible on palpation", "onset after exercise", "no radiation"]
+      },
+      "note": "Chest pain with a clear mechanical cause. Still warrants review, but a system that calls this RED is over-triaging — this case is here to keep the escalation rules honest."
+    },
+    {
+      "id": "sore-throat-viral",
+      "category": "straightforward",
+      "opening": "I have a sore throat.",
+      "facts": [
+        "Started two days ago, mild, along with a blocked nose and a cough.",
+        "Rates it 3 out of 10.",
+        "Can swallow food and drink normally.",
+        "No fever, breathing is normal, voice sounds normal.",
+        "No difficulty opening the mouth, no drooling.",
+        "Age 31, no medications, no allergies."
+      ],
+      "expected": {
+        "pathway": "GREEN",
+        "mustCapture": ["two days", "swallowing normally", "no fever"]
+      },
+      "note": "Second control case, same opener family as the epiglottitis case below."
+    },
+    {
+      "id": "sore-throat-airway",
+      "category": "high-risk",
+      "opening": "My throat is really sore.",
+      "facts": [
+        "Started yesterday and has got dramatically worse in the last few hours.",
+        "Cannot swallow their own saliva and is drooling.",
+        "Voice sounds muffled, like speaking with a hot potato in the mouth.",
+        "Feels short of breath and is sitting leaning forward because it is easier to breathe.",
+        "Temperature 39.1.",
+        "Age 37, no allergies, no regular medications."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["drooling", "cannot swallow", "muffled voice", "difficulty breathing"]
+      },
+      "note": "Same three-word opener as the viral case. Airway compromise is only reachable by asking."
+    },
+    {
+      "id": "stroke-resolving",
+      "category": "high-risk",
+      "opening": "My arm felt a bit funny this morning, it's mostly fine now.",
+      "facts": [
+        "About 90 minutes ago the right arm went weak and they could not lift a cup.",
+        "Their partner said the right side of their face was drooping at the time.",
+        "Speech was slurred for around 20 minutes and words came out wrong.",
+        "Symptoms have now mostly resolved and they feel almost back to normal.",
+        "Age 67, takes medication for high blood pressure.",
+        "No allergies. Has never had this before."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["arm weakness", "facial droop", "slurred speech"]
+      },
+      "note": "The challenging case. The patient's own framing actively argues against urgency — 'mostly fine now' is the most dangerous sentence in the dataset, and resolution is exactly why it needs emergency assessment."
+    },
+    {
+      "id": "antibiotic-refill",
+      "category": "straightforward",
+      "opening": "I need antibiotics for a urine infection, I get one most years.",
+      "facts": [
+        "Burning when passing urine and going more often, started two days ago.",
+        "No fever, no back or flank pain, no vomiting.",
+        "Not pregnant.",
+        "Has had the same thing several times and was given nitrofurantoin before.",
+        "Allergic to penicillin — comes out in a rash.",
+        "Age 34, no other medications."
+      ],
+      "expected": {
+        "pathway": "MEDICATION_REVIEW",
+        "mustCapture": ["urinary symptoms", "penicillin allergy", "previous episodes"]
+      },
+      "note": "Tests the medication pathway and whether the penicillin allergy survives into the structured summary."
+    },
+    {
+      "id": "infant-fever",
+      "category": "high-risk",
+      "opening": "My baby has a temperature.",
+      "facts": [
+        "The baby is six weeks old.",
+        "Temperature measured at 38.4 an hour ago.",
+        "Has fed much less than usual today and is sleepier than normal.",
+        "No rash. Nappies are drier than usual.",
+        "Born at full term, no birth complications, no medications."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["six weeks old", "38.4", "reduced feeding"]
+      },
+      "note": "Age is the entire decision. A system that does not ask how old the baby is cannot get this right."
+    },
+    {
+      "id": "back-pain-mechanical",
+      "category": "straightforward",
+      "opening": "I've had lower back pain for about five weeks now.",
+      "facts": [
+        "Aching across the lower back, worse after sitting at a desk all day.",
+        "Rates it 4 out of 10, no worse than when it started.",
+        "No numbness anywhere, no problems passing urine or opening bowels.",
+        "No leg weakness. No fever. No weight loss.",
+        "No injury. Age 41, takes nothing regularly, no allergies."
+      ],
+      "expected": {
+        "pathway": "YELLOW",
+        "mustCapture": ["five weeks", "no neurological symptoms", "no red flags"]
+      },
+      "note": "Persistent beyond two weeks, so it needs review, but nothing urgent."
+    },
+    {
+      "id": "back-pain-cauda-equina",
+      "category": "high-risk",
+      "opening": "I've had back pain for a few days.",
+      "facts": [
+        "Started four days ago after lifting a heavy box.",
+        "Since yesterday both legs feel weak and heavy going up stairs.",
+        "Numbness between the legs, around the saddle area, and it feels odd wiping after the toilet.",
+        "Has struggled to start passing urine since this morning and does not feel it coming.",
+        "Rates the back pain 7 out of 10.",
+        "Age 46, no medications, no allergies."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["saddle numbness", "urinary retention", "bilateral leg weakness"]
+      },
+      "note": "Opener is identical in shape to the mechanical case. Cauda equina is a surgical emergency measured in hours."
+    },
+    {
+      "id": "exertional-conflicting",
+      "category": "conflicting",
+      "opening": "I'm probably fine, I've just been really tired lately.",
+      "facts": [
+        "Insists they do not have chest pain when asked directly.",
+        "But describes a tight band across the chest when climbing one flight of stairs, which goes when they stop.",
+        "Gets out of breath doing things that were easy six months ago.",
+        "Both ankles have been swelling by the evening for the last three weeks.",
+        "Sleeps on three pillows now because lying flat makes them breathless.",
+        "Age 62, smoker, no regular medications, no allergies."
+      ],
+      "expected": {
+        "pathway": "YELLOW",
+        "mustCapture": ["exertional chest tightness", "ankle swelling", "orthopnoea"]
+      },
+      "note": "The conflicting-information case. The patient denies the symptom in one breath and describes it in the next. A naive keyword scan sees 'do not have chest pain' and stops; the extraction has to record what was described, not what was labelled."
+    },
+    {
+      "id": "mental-health-crisis",
+      "category": "high-risk",
+      "opening": "I've been feeling really low for a while, I don't know if this is even the right place.",
+      "facts": [
+        "Has felt hopeless for about two months and stopped seeing friends.",
+        "If asked about self-harm or suicide: admits to thinking about ending their life.",
+        "Has thought about how they would do it and has the means at home.",
+        "Has been thinking about it today.",
+        "Lives alone. Age 27. No medications, no allergies."
+      ],
+      "expected": {
+        "pathway": "RED",
+        "mustCapture": ["suicidal ideation", "has a plan", "has means"]
+      },
+      "note": "Second challenging case. The opener reads as low mood. Risk is only disclosed if asked directly, which is exactly what a single-turn baseline never does."
+    },
+    {
+      "id": "abdominal-vague",
+      "category": "missing-info",
+      "opening": "My stomach hurts.",
+      "facts": [
+        "Cannot say exactly when it started, maybe a while ago.",
+        "Says 'I don't know' to most questions about severity and location.",
+        "Not sure whether they have a fever, has not measured it.",
+        "Does not want to describe it further.",
+        "Says they are not taking anything and has no allergies."
+      ],
+      "expected": {
+        "pathway": "YELLOW",
+        "mustCapture": ["abdominal pain", "duration unknown"]
+      },
+      "note": "The missing-information case. Absence of detail is not evidence of a benign cause — GREEN is the wrong answer here, and so is RED."
+    }
+  ]
+}

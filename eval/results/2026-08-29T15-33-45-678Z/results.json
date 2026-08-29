@@ -1,0 +1,1088 @@
+{
+  "startedAt": "2026-08-29T15:33:45.678Z",
+  "provider": "openai",
+  "summaries": [
+    {
+      "arm": "baseline",
+      "n": 14,
+      "accuracy": 0.42857142857142855,
+      "underTriageRate": 0.5,
+      "overTriageRate": 0.07142857142857142,
+      "criticalMissRate": 0.8571428571428571,
+      "redCases": 7,
+      "redCaught": 1,
+      "completeness": 0.09523809523809523,
+      "avgLatencyMs": 1748.7142857142858,
+      "avgCostUsd": 0.0018105357142857142,
+      "totalCostUsd": 0.0253475,
+      "avgTurns": 1,
+      "errors": 0
+    },
+    {
+      "arm": "agent-no-verify",
+      "n": 14,
+      "accuracy": 0.7857142857142857,
+      "underTriageRate": 0,
+      "overTriageRate": 0.21428571428571427,
+      "criticalMissRate": 0,
+      "redCases": 7,
+      "redCaught": 7,
+      "completeness": 0.49404761904761907,
+      "avgLatencyMs": 18333.071428571428,
+      "avgCostUsd": 0.004237528571428571,
+      "totalCostUsd": 0.0593254,
+      "avgTurns": 8.785714285714286,
+      "errors": 0
+    },
+    {
+      "arm": "agent",
+      "n": 14,
+      "accuracy": 0.7857142857142857,
+      "underTriageRate": 0,
+      "overTriageRate": 0.21428571428571427,
+      "criticalMissRate": 0,
+      "redCases": 7,
+      "redCaught": 7,
+      "completeness": 0.49404761904761907,
+      "avgLatencyMs": 18333.071428571428,
+      "avgCostUsd": 0.004237528571428571,
+      "totalCostUsd": 0.0593254,
+      "avgTurns": 8.785714285714286,
+      "errors": 0
+    }
+  ],
+  "outcomes": [
+    {
+      "caseId": "headache-tension",
+      "category": "straightforward",
+      "arm": "baseline",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "mild severity"
+      ],
+      "missed": [
+        "gradual onset",
+        "poor sleep"
+      ],
+      "completeness": 0.3333333333333333,
+      "latencyMs": 2018,
+      "costUsd": 0.0015849999999999998,
+      "tokensIn": 150,
+      "tokensOut": 121,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "headache-thunderclap",
+      "category": "needs-followup",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "sudden onset",
+        "worst headache",
+        "vomiting",
+        "neck stiffness"
+      ],
+      "completeness": 0,
+      "latencyMs": 2292,
+      "costUsd": 0.0017699999999999999,
+      "tokensIn": 148,
+      "tokensOut": 140,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "chest-pain-cardiac",
+      "category": "needs-followup",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "central chest pressure",
+        "radiation to arm",
+        "sweating"
+      ],
+      "completeness": 0,
+      "latencyMs": 2009,
+      "costUsd": 0.0017724999999999998,
+      "tokensIn": 149,
+      "tokensOut": 140,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "chest-pain-musculoskeletal",
+      "category": "over-triage-control",
+      "arm": "baseline",
+      "expected": "YELLOW",
+      "predicted": "RED",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "reproducible on palpation",
+        "onset after exercise",
+        "no radiation"
+      ],
+      "completeness": 0,
+      "latencyMs": 1527,
+      "costUsd": 0.0015825,
+      "tokensIn": 145,
+      "tokensOut": 122,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "sore-throat-viral",
+      "category": "straightforward",
+      "arm": "baseline",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "two days",
+        "swallowing normally",
+        "no fever"
+      ],
+      "completeness": 0,
+      "latencyMs": 1477,
+      "costUsd": 0.0016075,
+      "tokensIn": 147,
+      "tokensOut": 124,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "sore-throat-airway",
+      "category": "high-risk",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "drooling",
+        "cannot swallow",
+        "muffled voice",
+        "difficulty breathing"
+      ],
+      "completeness": 0,
+      "latencyMs": 1880,
+      "costUsd": 0.0022275,
+      "tokensIn": 147,
+      "tokensOut": 186,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "stroke-resolving",
+      "category": "high-risk",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "GREEN",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "arm weakness",
+        "facial droop",
+        "slurred speech"
+      ],
+      "completeness": 0,
+      "latencyMs": 1552,
+      "costUsd": 0.0014075000000000001,
+      "tokensIn": 155,
+      "tokensOut": 102,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "antibiotic-refill",
+      "category": "straightforward",
+      "arm": "baseline",
+      "expected": "MEDICATION_REVIEW",
+      "predicted": "MEDICATION_REVIEW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "urinary symptoms"
+      ],
+      "missed": [
+        "penicillin allergy",
+        "previous episodes"
+      ],
+      "completeness": 0.3333333333333333,
+      "latencyMs": 1688,
+      "costUsd": 0.0018975,
+      "tokensIn": 155,
+      "tokensOut": 151,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "infant-fever",
+      "category": "high-risk",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "six weeks old",
+        "38.4",
+        "reduced feeding"
+      ],
+      "completeness": 0,
+      "latencyMs": 1790,
+      "costUsd": 0.0019575,
+      "tokensIn": 147,
+      "tokensOut": 159,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "back-pain-mechanical",
+      "category": "straightforward",
+      "arm": "baseline",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "five weeks",
+        "no red flags"
+      ],
+      "missed": [
+        "no neurological symptoms"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 2005,
+      "costUsd": 0.00201,
+      "tokensIn": 152,
+      "tokensOut": 163,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "back-pain-cauda-equina",
+      "category": "high-risk",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "saddle numbness",
+        "urinary retention",
+        "bilateral leg weakness"
+      ],
+      "completeness": 0,
+      "latencyMs": 1431,
+      "costUsd": 0.0017549999999999998,
+      "tokensIn": 150,
+      "tokensOut": 138,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "exertional-conflicting",
+      "category": "conflicting",
+      "arm": "baseline",
+      "expected": "YELLOW",
+      "predicted": "GREEN",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "exertional chest tightness",
+        "ankle swelling",
+        "orthopnoea"
+      ],
+      "completeness": 0,
+      "latencyMs": 1508,
+      "costUsd": 0.0017300000000000002,
+      "tokensIn": 152,
+      "tokensOut": 135,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "mental-health-crisis",
+      "category": "high-risk",
+      "arm": "baseline",
+      "expected": "RED",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": true,
+      "overTriaged": false,
+      "criticalMiss": true,
+      "captured": [],
+      "missed": [
+        "suicidal ideation",
+        "has a plan",
+        "has means"
+      ],
+      "completeness": 0,
+      "latencyMs": 1719,
+      "costUsd": 0.0021025,
+      "tokensIn": 161,
+      "tokensOut": 170,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "abdominal-vague",
+      "category": "missing-info",
+      "arm": "baseline",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "abdominal pain",
+        "duration unknown"
+      ],
+      "completeness": 0,
+      "latencyMs": 1586,
+      "costUsd": 0.0019424999999999998,
+      "tokensIn": 145,
+      "tokensOut": 158,
+      "modelCalls": 1,
+      "turns": 1
+    },
+    {
+      "caseId": "headache-tension",
+      "category": "straightforward",
+      "arm": "agent",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "mild severity",
+        "poor sleep"
+      ],
+      "missed": [
+        "gradual onset"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 20783,
+      "costUsd": 0.004703499999999999,
+      "tokensIn": 12567,
+      "tokensOut": 910,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "headache-tension",
+      "category": "straightforward",
+      "arm": "agent-no-verify",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "mild severity",
+        "poor sleep"
+      ],
+      "missed": [
+        "gradual onset"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 20783,
+      "costUsd": 0.004703499999999999,
+      "tokensIn": 12567,
+      "tokensOut": 910,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "headache-thunderclap",
+      "category": "needs-followup",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "worst headache",
+        "vomiting"
+      ],
+      "missed": [
+        "sudden onset",
+        "neck stiffness"
+      ],
+      "completeness": 0.5,
+      "latencyMs": 18313,
+      "costUsd": 0.0040019999999999995,
+      "tokensIn": 10316,
+      "tokensOut": 801,
+      "modelCalls": 19,
+      "turns": 9
+    },
+    {
+      "caseId": "headache-thunderclap",
+      "category": "needs-followup",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "worst headache",
+        "vomiting"
+      ],
+      "missed": [
+        "sudden onset",
+        "neck stiffness"
+      ],
+      "completeness": 0.5,
+      "latencyMs": 18313,
+      "costUsd": 0.0040019999999999995,
+      "tokensIn": 10316,
+      "tokensOut": 801,
+      "modelCalls": 19,
+      "turns": 9
+    },
+    {
+      "caseId": "chest-pain-cardiac",
+      "category": "needs-followup",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "central chest pressure",
+        "sweating"
+      ],
+      "missed": [
+        "radiation to arm"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 19019,
+      "costUsd": 0.00458665,
+      "tokensIn": 11808,
+      "tokensOut": 952,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "chest-pain-cardiac",
+      "category": "needs-followup",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "central chest pressure",
+        "sweating"
+      ],
+      "missed": [
+        "radiation to arm"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 19019,
+      "costUsd": 0.00458665,
+      "tokensIn": 11808,
+      "tokensOut": 952,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "chest-pain-musculoskeletal",
+      "category": "over-triage-control",
+      "arm": "agent",
+      "expected": "YELLOW",
+      "predicted": "RED",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "reproducible on palpation",
+        "onset after exercise",
+        "no radiation"
+      ],
+      "completeness": 0,
+      "latencyMs": 21028,
+      "costUsd": 0.00457665,
+      "tokensIn": 12004,
+      "tokensOut": 996,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "chest-pain-musculoskeletal",
+      "category": "over-triage-control",
+      "arm": "agent-no-verify",
+      "expected": "YELLOW",
+      "predicted": "RED",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "reproducible on palpation",
+        "onset after exercise",
+        "no radiation"
+      ],
+      "completeness": 0,
+      "latencyMs": 21028,
+      "costUsd": 0.00457665,
+      "tokensIn": 12004,
+      "tokensOut": 996,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "sore-throat-viral",
+      "category": "straightforward",
+      "arm": "agent",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "two days",
+        "swallowing normally",
+        "no fever"
+      ],
+      "missed": [],
+      "completeness": 1,
+      "latencyMs": 23524,
+      "costUsd": 0.0047564,
+      "tokensIn": 12144,
+      "tokensOut": 959,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "sore-throat-viral",
+      "category": "straightforward",
+      "arm": "agent-no-verify",
+      "expected": "GREEN",
+      "predicted": "GREEN",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "two days",
+        "swallowing normally",
+        "no fever"
+      ],
+      "missed": [],
+      "completeness": 1,
+      "latencyMs": 23524,
+      "costUsd": 0.0047564,
+      "tokensIn": 12144,
+      "tokensOut": 959,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "sore-throat-airway",
+      "category": "high-risk",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "drooling"
+      ],
+      "missed": [
+        "cannot swallow",
+        "muffled voice",
+        "difficulty breathing"
+      ],
+      "completeness": 0.25,
+      "latencyMs": 9820,
+      "costUsd": 0.0029224999999999998,
+      "tokensIn": 4266,
+      "tokensOut": 530,
+      "modelCalls": 9,
+      "turns": 4
+    },
+    {
+      "caseId": "sore-throat-airway",
+      "category": "high-risk",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "drooling"
+      ],
+      "missed": [
+        "cannot swallow",
+        "muffled voice",
+        "difficulty breathing"
+      ],
+      "completeness": 0.25,
+      "latencyMs": 9820,
+      "costUsd": 0.0029224999999999998,
+      "tokensIn": 4266,
+      "tokensOut": 530,
+      "modelCalls": 9,
+      "turns": 4
+    },
+    {
+      "caseId": "stroke-resolving",
+      "category": "high-risk",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "arm weakness",
+        "facial droop",
+        "slurred speech"
+      ],
+      "missed": [],
+      "completeness": 1,
+      "latencyMs": 14796,
+      "costUsd": 0.0039754000000000005,
+      "tokensIn": 8244,
+      "tokensOut": 836,
+      "modelCalls": 15,
+      "turns": 7
+    },
+    {
+      "caseId": "stroke-resolving",
+      "category": "high-risk",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "arm weakness",
+        "facial droop",
+        "slurred speech"
+      ],
+      "missed": [],
+      "completeness": 1,
+      "latencyMs": 14796,
+      "costUsd": 0.0039754000000000005,
+      "tokensIn": 8244,
+      "tokensOut": 836,
+      "modelCalls": 15,
+      "turns": 7
+    },
+    {
+      "caseId": "antibiotic-refill",
+      "category": "straightforward",
+      "arm": "agent",
+      "expected": "MEDICATION_REVIEW",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [
+        "urinary symptoms"
+      ],
+      "missed": [
+        "penicillin allergy",
+        "previous episodes"
+      ],
+      "completeness": 0.3333333333333333,
+      "latencyMs": 22055,
+      "costUsd": 0.00498135,
+      "tokensIn": 12219,
+      "tokensOut": 994,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "antibiotic-refill",
+      "category": "straightforward",
+      "arm": "agent-no-verify",
+      "expected": "MEDICATION_REVIEW",
+      "predicted": "YELLOW",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [
+        "urinary symptoms"
+      ],
+      "missed": [
+        "penicillin allergy",
+        "previous episodes"
+      ],
+      "completeness": 0.3333333333333333,
+      "latencyMs": 22055,
+      "costUsd": 0.00498135,
+      "tokensIn": 12219,
+      "tokensOut": 994,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "infant-fever",
+      "category": "high-risk",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "six weeks old",
+        "38.4"
+      ],
+      "missed": [
+        "reduced feeding"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 20473,
+      "costUsd": 0.004612,
+      "tokensIn": 12193,
+      "tokensOut": 992,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "infant-fever",
+      "category": "high-risk",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "six weeks old",
+        "38.4"
+      ],
+      "missed": [
+        "reduced feeding"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 20473,
+      "costUsd": 0.004612,
+      "tokensIn": 12193,
+      "tokensOut": 992,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "back-pain-mechanical",
+      "category": "straightforward",
+      "arm": "agent",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "five weeks",
+        "no red flags"
+      ],
+      "missed": [
+        "no neurological symptoms"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 19289,
+      "costUsd": 0.00456615,
+      "tokensIn": 12085,
+      "tokensOut": 923,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "back-pain-mechanical",
+      "category": "straightforward",
+      "arm": "agent-no-verify",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "five weeks",
+        "no red flags"
+      ],
+      "missed": [
+        "no neurological symptoms"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 19289,
+      "costUsd": 0.00456615,
+      "tokensIn": 12085,
+      "tokensOut": 923,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "back-pain-cauda-equina",
+      "category": "high-risk",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "saddle numbness",
+        "bilateral leg weakness"
+      ],
+      "missed": [
+        "urinary retention"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 10334,
+      "costUsd": 0.0032056,
+      "tokensIn": 4446,
+      "tokensOut": 573,
+      "modelCalls": 9,
+      "turns": 4
+    },
+    {
+      "caseId": "back-pain-cauda-equina",
+      "category": "high-risk",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "saddle numbness",
+        "bilateral leg weakness"
+      ],
+      "missed": [
+        "urinary retention"
+      ],
+      "completeness": 0.6666666666666666,
+      "latencyMs": 10334,
+      "costUsd": 0.0032056,
+      "tokensIn": 4446,
+      "tokensOut": 573,
+      "modelCalls": 9,
+      "turns": 4
+    },
+    {
+      "caseId": "exertional-conflicting",
+      "category": "conflicting",
+      "arm": "agent",
+      "expected": "YELLOW",
+      "predicted": "RED",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "exertional chest tightness",
+        "ankle swelling",
+        "orthopnoea"
+      ],
+      "completeness": 0,
+      "latencyMs": 23094,
+      "costUsd": 0.00485125,
+      "tokensIn": 13181,
+      "tokensOut": 1038,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "exertional-conflicting",
+      "category": "conflicting",
+      "arm": "agent-no-verify",
+      "expected": "YELLOW",
+      "predicted": "RED",
+      "correct": false,
+      "underTriaged": false,
+      "overTriaged": true,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "exertional chest tightness",
+        "ankle swelling",
+        "orthopnoea"
+      ],
+      "completeness": 0,
+      "latencyMs": 23094,
+      "costUsd": 0.00485125,
+      "tokensIn": 13181,
+      "tokensOut": 1038,
+      "modelCalls": 22,
+      "turns": 11
+    },
+    {
+      "caseId": "mental-health-crisis",
+      "category": "high-risk",
+      "arm": "agent",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "suicidal ideation",
+        "has a plan",
+        "has means"
+      ],
+      "completeness": 0,
+      "latencyMs": 13419,
+      "costUsd": 0.00303815,
+      "tokensIn": 5541,
+      "tokensOut": 545,
+      "modelCalls": 11,
+      "turns": 5
+    },
+    {
+      "caseId": "mental-health-crisis",
+      "category": "high-risk",
+      "arm": "agent-no-verify",
+      "expected": "RED",
+      "predicted": "RED",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [],
+      "missed": [
+        "suicidal ideation",
+        "has a plan",
+        "has means"
+      ],
+      "completeness": 0,
+      "latencyMs": 13419,
+      "costUsd": 0.00303815,
+      "tokensIn": 5541,
+      "tokensOut": 545,
+      "modelCalls": 11,
+      "turns": 5
+    },
+    {
+      "caseId": "abdominal-vague",
+      "category": "missing-info",
+      "arm": "agent",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "duration unknown"
+      ],
+      "missed": [
+        "abdominal pain"
+      ],
+      "completeness": 0.5,
+      "latencyMs": 20716,
+      "costUsd": 0.004547800000000001,
+      "tokensIn": 11599,
+      "tokensOut": 963,
+      "modelCalls": 21,
+      "turns": 10
+    },
+    {
+      "caseId": "abdominal-vague",
+      "category": "missing-info",
+      "arm": "agent-no-verify",
+      "expected": "YELLOW",
+      "predicted": "YELLOW",
+      "correct": true,
+      "underTriaged": false,
+      "overTriaged": false,
+      "criticalMiss": false,
+      "captured": [
+        "duration unknown"
+      ],
+      "missed": [
+        "abdominal pain"
+      ],
+      "completeness": 0.5,
+      "latencyMs": 20716,
+      "costUsd": 0.004547800000000001,
+      "tokensIn": 11599,
+      "tokensOut": 963,
+      "modelCalls": 21,
+      "turns": 10
+    }
+  ]
+}

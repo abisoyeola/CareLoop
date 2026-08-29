@@ -1,0 +1,24 @@
+{
+  "case": "headache-tension",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 3803,
+      "tokensIn": 150,
+      "tokensOut": 132,
+      "costUsd": 0.001695,
+      "attempts": 1,
+      "input": "I've had a mild headache since this morning.",
+      "output": "{\n  \"carePathway\": \"GREEN\",\n  \"urgency\": \"low\",\n  \"reasoning\": \"The headache is mild and has only been present since this morning, indicating it is likely not serious.\",\n  \"chiefComplaint\": \"headache\",\n  \"symptoms\": [\"mild headache\"],\n  \"redFlags\": [],\n  \"duration\": \"since this morning\",\n  \"severity\": \"mild\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient reports a mild headache that started this morning. There are no red flags or severe symptoms present, suggesting a low urgency situation.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 150,
+    "tokensOut": 132,
+    "costUsd": 0.001695,
+    "latencyMs": 3803,
+    "modelCalls": 1
+  }
+}

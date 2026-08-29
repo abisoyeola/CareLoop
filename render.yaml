@@ -1,0 +1,40 @@
+# Render blueprint — one web service, one external dependency (MongoDB).
+#
+# Socket.IO and Next share a single HTTP listener via server.mjs, so this needs
+# no second service and no sticky-session configuration.
+
+services:
+  - type: web
+    name: careloop
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /login
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+
+      # Set in the Render dashboard. A MongoDB Atlas connection string:
+      #   mongodb+srv://USER:PASSWORD@cluster.xxxxx.mongodb.net/careloop
+      # Atlas network access must allow 0.0.0.0/0, since Render's free tier does
+      # not provide a static outbound IP to allowlist.
+      - key: MONGODB_URI
+        sync: false
+
+      - key: MONGODB_DB
+        value: careloop
+
+      # Render generates this once and keeps it stable across deploys.
+      - key: JWT_SECRET
+        generateValue: true
+
+      # Set in the dashboard. Without it the app runs on the mock provider:
+      # everything works, but the triage is keyword matching, not reasoning.
+      - key: OPENAI_API_KEY
+        sync: false
+
+      - key: OPENAI_MODEL_FAST
+        value: gpt-4o-mini
+      - key: OPENAI_MODEL_STRONG
+        value: gpt-4o

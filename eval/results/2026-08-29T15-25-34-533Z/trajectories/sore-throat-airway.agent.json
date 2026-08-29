@@ -1,0 +1,158 @@
+{
+  "case": "sore-throat-airway",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1027,
+      "tokensIn": 498,
+      "tokensOut": 42,
+      "costUsd": 0.00009989999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand that your throat is really sore. How long have you been experiencing this soreness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 670,
+      "tokensIn": 266,
+      "tokensOut": 22,
+      "costUsd": 0.0000531,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I understand that your throat is really sore. How long have you been experiencing this soreness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started yesterday, and it's gotten a lot worse in the last few hours.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1187,
+      "tokensIn": 536,
+      "tokensOut": 65,
+      "costUsd": 0.0001194,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I understand that your throat is really sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 659,
+      "tokensIn": 327,
+      "tokensOut": 15,
+      "costUsd": 0.000058049999999999995,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I understand that your throat is really sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate it around an 8.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1029,
+      "tokensIn": 590,
+      "tokensOut": 68,
+      "costUsd": 0.0001293,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I understand that your throat is really sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nPatient: I would rate it around an 8.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\", \"options\": [\"Fever\", \"Cough\", \"Difficulty swallowing\", \"None of these\"], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 732,
+      "tokensIn": 367,
+      "tokensOut": 21,
+      "costUsd": 0.00006764999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I understand that your throat is really sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nYou: I would rate it around an 8.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I have a fever and I'm having difficulty swallowing my own saliva.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 883,
+      "tokensIn": 636,
+      "tokensOut": 54,
+      "costUsd": 0.0001278,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I understand that your throat is really sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nPatient: I would rate it around an 8.\nYou: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I'm having difficulty swallowing my own saliva.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you noticed any swelling in your neck or difficulty breathing?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 807,
+      "tokensIn": 404,
+      "tokensOut": 26,
+      "costUsd": 0.0000762,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I understand that your throat is really sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nYou: I would rate it around an 8.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a fever and I'm having difficulty swallowing my own saliva.\nService: Thank you for sharing that. Have you noticed any swelling in your neck or difficulty breathing?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I feel short of breath and I'm sitting leaning forward because it makes it easier to breathe.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 946,
+      "tokensIn": 678,
+      "tokensOut": 48,
+      "costUsd": 0.0001305,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I understand that your throat is really sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nPatient: I would rate it around an 8.\nYou: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I'm having difficulty swallowing my own saliva.\nYou: Thank you for sharing that. Have you noticed any swelling in your neck or difficulty breathing?\nPatient: Yes, I feel short of breath and I'm sitting leaning forward because it makes it easier to breathe.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It sounds like you're experiencing some concerning symptoms. Have you had any recent illnesses or infections, or do you have any known allergies?\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 5 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1658,
+      "tokensIn": 543,
+      "tokensOut": 186,
+      "costUsd": 0.00019304999999999998,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My throat is really sore.\nService: I understand that your throat is really sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your throat pain right now?\nPatient: I would rate it around an 8.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I'm having difficulty swallowing my own saliva.\nService: Thank you for sharing that. Have you noticed any swelling in your neck or difficulty breathing?\nPatient: Yes, I feel short of breath and I'm sitting leaning forward because it makes it easier to breathe.\nService: It sounds like you're experiencing some concerning symptoms. Have you had any recent illnesses or infections, or do you have any known allergies?",
+      "output": "{\n  \"chiefComplaint\": \"Sore throat\",\n  \"duration\": \"Started yesterday, worsened in the last few hours\",\n  \"severity\": \"8/10\",\n  \"symptoms\": [\n    \"fever\",\n    \"difficulty swallowing saliva\",\n    \"shortness of breath\"\n  ],\n  \"redFlags\": [\n    \"I feel short of breath\",\n    \"I'm sitting leaning forward because it makes it easier to breathe\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat that started yesterday and has worsened significantly in the last few hours, rating the pain as an 8 out of 10. They also report having a fever, difficulty swallowing saliva, and shortness of breath, which has led them to lean forward to ease breathing. These symptoms may indicate a need for urgent evaluation.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1107,
+      "tokensIn": 633,
+      "tokensOut": 79,
+      "costUsd": 0.0023724999999999996,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Sore throat\",\n  \"duration\": \"Started yesterday, worsened in the last few hours\",\n  \"severity\": \"8/10\",\n  \"symptoms\": [\n    \"fever\",\n    \"difficulty swallowing saliva\",\n    \"shortness of breath\"\n  ],\n  \"redFlags\": [\n    \"I feel short of breath\",\n    \"I'm sitting leaning forward because it makes it easier to breathe\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat that started yesterday and has worsened significantly in the last few hours, rating the pain as an 8 out of 10. They also report having a fever, difficulty swallowing saliva, and shortness of breath, which has led them to lean forward to ease breathing. These symptoms may indicate a need for urgent evaluation.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports a sore throat with significant worsening in the last few hours, severe pain, fever, difficulty swallowing saliva, and shortness of breath. The need to lean forward to ease breathing is concerning and could indicate a serious condition requiring urgent evaluation.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 5478,
+    "tokensOut": 626,
+    "costUsd": 0.0034274499999999994,
+    "latencyMs": 10705,
+    "modelCalls": 11
+  }
+}

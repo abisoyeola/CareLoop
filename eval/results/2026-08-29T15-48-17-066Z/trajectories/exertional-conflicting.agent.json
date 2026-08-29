@@ -1,0 +1,268 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1592,
+      "tokensIn": 503,
+      "tokensOut": 38,
+      "costUsd": 0.00009824999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Can you describe how long you've been feeling this way?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 958,
+      "tokensIn": 286,
+      "tokensOut": 16,
+      "costUsd": 0.0000525,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been going on for about three weeks now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 987,
+      "tokensIn": 531,
+      "tokensOut": 66,
+      "costUsd": 0.00011925,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1010,
+      "tokensIn": 342,
+      "tokensOut": 14,
+      "costUsd": 0.0000597,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's around a 7.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 993,
+      "tokensIn": 585,
+      "tokensOut": 61,
+      "costUsd": 0.00012435000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1038,
+      "tokensIn": 390,
+      "tokensOut": 30,
+      "costUsd": 0.0000765,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1077,
+      "tokensIn": 649,
+      "tokensOut": 71,
+      "costUsd": 0.00013995,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 830,
+      "tokensIn": 439,
+      "tokensOut": 24,
+      "costUsd": 0.00008025,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't have chest pain, but I do have swelling in both ankles by the evening.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1126,
+      "tokensIn": 692,
+      "tokensOut": 69,
+      "costUsd": 0.0001452,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1243,
+      "tokensIn": 496,
+      "tokensOut": 24,
+      "costUsd": 0.0000888,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nYou: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"The swelling in my ankles comes and goes, but it usually gets worse by the evening.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 979,
+      "tokensIn": 749,
+      "tokensOut": 54,
+      "costUsd": 0.00014475,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nYou: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 979,
+      "tokensIn": 542,
+      "tokensOut": 19,
+      "costUsd": 0.00009269999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nYou: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nYou: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nService: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any previous medical conditions related to those.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1095,
+      "tokensIn": 790,
+      "tokensOut": 48,
+      "costUsd": 0.0001473,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nYou: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nYou: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nPatient: No, I haven't had any previous medical conditions related to those.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 963,
+      "tokensIn": 577,
+      "tokensOut": 21,
+      "costUsd": 0.00009915,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nYou: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nYou: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nService: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nYou: No, I haven't had any previous medical conditions related to those.\nService: Th",
+      "output": "{ \"reply\": \"No, I'm not taking any regular medications and I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 963,
+      "tokensIn": 827,
+      "tokensOut": 61,
+      "costUsd": 0.00016065,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nYou: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nYou: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nPatient: No, I haven't had any previous medical conditions related to those.\nYou: Thank you for that information. Are you currently taking any medications or ha",
+      "output": "{ \"reply\": \"Thank you for providing that information. Have you experienced any recent weight changes, such as weight gain or loss?\", \"options\": [\"Weight gain\", \"Weight loss\", \"No changes\", \"\"], \"readyToAssess\": false, \"missingFields\": [\"recent weight changes\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 944,
+      "tokensIn": 618,
+      "tokensOut": 16,
+      "costUsd": 0.00010229999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nYou: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nYou: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nService: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nYou: No, I haven't had any previous medical conditions related to those.\nService: Th",
+      "output": "{ \"reply\": \"No, I haven't experienced any recent weight changes.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1076,
+      "tokensIn": 863,
+      "tokensOut": 58,
+      "costUsd": 0.00016425,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nYou: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nYou: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nPatient: No, I haven't had any previous medical conditions related to those.\nYou: Thank you for that information. Are you currently taking any medications or ha",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you had any recent illnesses, infections, or hospitalizations that might be relevant to your current symptoms?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"recent illnesses, infections, or hospitalizations\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 857,
+      "tokensIn": 659,
+      "tokensOut": 21,
+      "costUsd": 0.00011144999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nYou: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nYou: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nYou: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nYou: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nService: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nYou: No, I haven't had any previous medical conditions related to those.\nService: Th",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses, infections, or hospitalizations.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1063,
+      "tokensIn": 909,
+      "tokensOut": 71,
+      "costUsd": 0.00017894999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nYou: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nYou: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nPatient: No, I haven't had any previous medical conditions related to those.\nYou: Thank you for that information. Are you currently taking any medications or ha",
+      "output": "{ \"reply\": \"Thank you for sharing all that information. Based on what you've described, I will need to route you for further evaluation. It's important to address your symptoms, especially the breathlessness and swelling in your ankles. Please seek care as soon as possible.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 10 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1630,
+      "tokensIn": 797,
+      "tokensOut": 179,
+      "costUsd": 0.00022695,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, with 0 being no fatigue and 10 being the most extreme fatigue you can imagine, how would you rate your tiredness?\nPatient: I'd say it's around a 7.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, mood, or any physical symptoms like headaches or muscle pain?\nPatient: I haven't really noticed anything like that, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that information. Have you experienced any chest pain, dizziness, or swelling in your legs?\nPatient: I don't have chest pain, but I do have swelling in both ankles by the evening.\nService: Thank you for sharing that detail. How would you describe the swelling in your ankles? Is it constant, does it come and go, or does it change throughout the day?\nPatient: The swelling in my ankles comes and goes, but it usually gets worse by the evening.\nService: I appreciate the clarification. Have you had any previous medical conditions or issues related to your heart, lungs, or kidneys?\nPatient: No, I haven't had any previous medical conditions related to those.\nService: Thank you for that information. Are you currently taking ",
+      "output": "{\n  \"chiefComplaint\": \"Fatigue and breathlessness when lying flat.\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tiredness\",\n    \"breathlessness when lying flat\",\n    \"swelling in both ankles\"\n  ],\n  \"redFlags\": [\n    \"breathlessness when lying flat\",\n    \"swelling in both ankles by the evening\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling very tired for the past three weeks, rating the fatigue as a 7 out of 10. They experience breathlessness when lying flat and swelling in both ankles that worsens by the evening. The patient has no known allergies or current medications and has not experienced any recent illnesses or medical conditions.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1174,
+      "tokensIn": 336,
+      "tokensOut": 94,
+      "costUsd": 0.00178,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Fatigue and breathlessness when lying flat.\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tiredness\",\n    \"breathlessness when lying flat\",\n    \"swelling in both ankles\"\n  ],\n  \"redFlags\": [\n    \"breathlessness when lying flat\",\n    \"swelling in both ankles by the evening\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling very tired for the past three weeks, rating the fatigue as a 7 out of 10. They experience breathlessness when lying flat and swelling in both ankles that worsens by the evening. The patient has no known allergies or current medications and has not experienced any recent illnesses or medical conditions.\"\n}",
+      "output": "{\"carePathway\": \"YELLOW\", \"urgency\": \"The symptoms suggest that there might be an underlying condition that needs evaluation, but it is not an immediate emergency.\", \"reasoning\": \"The combination of fatigue, breathlessness when lying flat, and swelling in the ankles could indicate a condition like heart failure or another cardiovascular issue. It's important to have these symptoms evaluated by a clinician to determine the cause and appropriate treatment.\", \"requiresHumanReview\": true}"
+    },
+    {
+      "step": "verification:escalate",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "Rules overrode the model: YELLOW -> RED. Possible acute coronary syndrome"
+    }
+  ],
+  "totals": {
+    "tokensIn": 12580,
+    "tokensOut": 1055,
+    "costUsd": 0.004193199999999999,
+    "latencyMs": 22577,
+    "modelCalls": 21
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case": "stroke-resolving",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1652,
+      "tokensIn": 155,
+      "tokensOut": 118,
+      "costUsd": 0.0015675,
+      "attempts": 1,
+      "input": "My arm felt a bit funny this morning, it's mostly fine now.",
+      "output": "{\n  \"carePathway\": \"GREEN\",\n  \"urgency\": \"low\",\n  \"reasoning\": \"The symptom was mild and has mostly resolved on its own.\",\n  \"chiefComplaint\": \"Arm felt funny\",\n  \"symptoms\": [\"arm felt funny\"],\n  \"redFlags\": [],\n  \"duration\": \"this morning\",\n  \"severity\": \"mild\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient experienced a mild, transient sensation in the arm that has mostly resolved by the time of reporting.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 155,
+    "tokensOut": 118,
+    "costUsd": 0.0015675,
+    "latencyMs": 1652,
+    "modelCalls": 1
+  }
+}

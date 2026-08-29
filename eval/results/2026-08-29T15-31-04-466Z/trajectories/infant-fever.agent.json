@@ -1,0 +1,258 @@
+{
+  "case": "infant-fever",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 840,
+      "tokensIn": 498,
+      "tokensOut": 38,
+      "costUsd": 0.00009749999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand your concern. How long has your baby had the temperature?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 782,
+      "tokensIn": 245,
+      "tokensOut": 26,
+      "costUsd": 0.00005235,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 905,
+      "tokensIn": 536,
+      "tokensOut": 53,
+      "costUsd": 0.0001122,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"What is your baby's age?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 781,
+      "tokensIn": 275,
+      "tokensOut": 13,
+      "costUsd": 0.00004905,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is six weeks old.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1327,
+      "tokensIn": 553,
+      "tokensOut": 81,
+      "costUsd": 0.00013155,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\", \"options\": [\"Feeding normally\", \"Fussy\", \"Lethargic\"], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 782,
+      "tokensIn": 306,
+      "tokensOut": 22,
+      "costUsd": 0.0000591,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby has fed much less than usual today and is sleepier than normal.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 973,
+      "tokensIn": 593,
+      "tokensOut": 53,
+      "costUsd": 0.00012075,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 942,
+      "tokensIn": 355,
+      "tokensOut": 18,
+      "costUsd": 0.00006405,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nYou: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure, but my baby seems a bit uncomfortable.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 904,
+      "tokensIn": 638,
+      "tokensOut": 51,
+      "costUsd": 0.00012629999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nYou: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 753,
+      "tokensIn": 397,
+      "tokensOut": 13,
+      "costUsd": 0.00006735,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nYou: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nYou: I'm not sure, but my baby seems a bit uncomfortable.\nService: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, there’s no rash.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1215,
+      "tokensIn": 675,
+      "tokensOut": 69,
+      "costUsd": 0.00014265,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nYou: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\nYou: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nPatient: No, there’s no rash.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 807,
+      "tokensIn": 430,
+      "tokensOut": 15,
+      "costUsd": 0.0000735,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nYou: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nYou: I'm not sure, but my baby seems a bit uncomfortable.\nService: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nYou: No, there’s no rash.\nService: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Nappies are drier than usual.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 905,
+      "tokensIn": 710,
+      "tokensOut": 53,
+      "costUsd": 0.0001383,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nYou: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\nYou: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nPatient: No, there’s no rash.\nYou: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nPatient: Nappies are drier than usual.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1060,
+      "tokensIn": 466,
+      "tokensOut": 24,
+      "costUsd": 0.00008429999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nYou: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nYou: I'm not sure, but my baby seems a bit uncomfortable.\nService: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nYou: No, there’s no rash.\nService: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nYou: Nappies are drier than usual.\nService: Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby was born at full term with no complications and hasn't had any medications.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 813,
+      "tokensIn": 755,
+      "tokensOut": 40,
+      "costUsd": 0.00013725,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nYou: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\nYou: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nPatient: No, there’s no rash.\nYou: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nPatient: Nappies are drier than usual.\nYou: Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\nPatient: No, my baby was born at full term with no complications and hasn't had any medications.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate you sharing that. Does your baby have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 772,
+      "tokensIn": 502,
+      "tokensOut": 16,
+      "costUsd": 0.00008489999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nYou: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nYou: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nYou: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nYou: I'm not sure, but my baby seems a bit uncomfortable.\nService: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nYou: No, there’s no rash.\nService: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nYou: Nappies are drier than usual.\nService: Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\nYou: No, my baby was born at full term with no complications and hasn't had any medications.\nService: I appreciate you sharing that. Does your baby have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby doesn't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1066,
+      "tokensIn": 783,
+      "tokensOut": 54,
+      "costUsd": 0.00014984999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nYou: What is your baby's age?\nPatient: My baby is six weeks old.\nYou: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nYou: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\nYou: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nPatient: No, there’s no rash.\nYou: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nPatient: Nappies are drier than usual.\nYou: Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\nPatient: No, my baby was born at full term with no complications and hasn't had any medications.\nYou: I appreciate you sharing that. Does your baby have any known allergies?\nPatient: No, my baby doesn't have any known allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for all the details. Given your baby's age and symptoms, I recommend seeking immediate medical attention. It's important to have a healthcare professional evaluate your baby.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 9 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2122,
+      "tokensIn": 654,
+      "tokensOut": 198,
+      "costUsd": 0.00021689999999999996,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My baby has a temperature.\nService: I understand your concern. How long has your baby had the temperature?\nPatient: I'm not sure exactly how long, but I measured it at 38.4 an hour ago.\nService: What is your baby's age?\nPatient: My baby is six weeks old.\nService: What is your baby's current behavior? Are they feeding normally, fussy, or lethargic?\nPatient: My baby has fed much less than usual today and is sleepier than normal.\nService: I appreciate you sharing that. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, if any?\nPatient: I'm not sure, but my baby seems a bit uncomfortable.\nService: Thank you for that information. Has your baby experienced any other symptoms, such as a rash, coughing, vomiting, or diarrhea?\nPatient: No, there’s no rash.\nService: Has your baby been experiencing any difficulty breathing or signs of dehydration, such as having fewer wet diapers than usual?\nPatient: Nappies are drier than usual.\nService: Thank you for the information. Has your baby had any previous health issues or hospitalizations that we should know about?\nPatient: No, my baby was born at full term with no complications and hasn't had any medications.\nService: I appreciate you sharing that. Does your baby have any known allergies?\nPatient: No, my baby doesn't have any known allergies.\nService: Thank you for all the details. Given your baby's age and symptoms, I recommend seeking immediate medical attention. It's important to have a health",
+      "output": "{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"fed much less than usual\",\n    \"sleepier than normal\",\n    \"drier nappies than usual\"\n  ],\n  \"redFlags\": [\n    \"my baby has fed much less than usual today\",\n    \"nappies are drier than usual\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"born at full term with no complications\",\n    \"hasn't had any medications\"\n  ],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4°C and has been feeding less than usual while appearing sleepier. The patient also noted that the baby's nappies are drier than usual. There are no known allergies or previous health issues reported.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1195,
+      "tokensIn": 645,
+      "tokensOut": 84,
+      "costUsd": 0.0024525,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"fed much less than usual\",\n    \"sleepier than normal\",\n    \"drier nappies than usual\"\n  ],\n  \"redFlags\": [\n    \"my baby has fed much less than usual today\",\n    \"nappies are drier than usual\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"born at full term with no complications\",\n    \"hasn't had any medications\"\n  ],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4°C and has been feeding less than usual while appearing sleepier. The patient also noted that the baby's nappies are drier than usual. There are no known allergies or previous health issues reported.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The baby is six weeks old and has a fever of 38.4°C, is feeding less than usual, appears sleepier, and has drier nappies than usual. These symptoms could indicate a serious condition that requires urgent assessment, especially given the baby's young age.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: duration, severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 10016,
+    "tokensOut": 921,
+    "costUsd": 0.00436035,
+    "latencyMs": 18944,
+    "modelCalls": 19
+  }
+}

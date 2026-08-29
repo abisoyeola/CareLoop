@@ -1,0 +1,24 @@
+{
+  "case": "stroke-resolving",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "mock",
+      "latencyMs": 5,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 1,
+      "input": "My arm felt a bit funny this morning, it's mostly fine now.",
+      "output": "{\"carePathway\":\"YELLOW\",\"urgency\":\"non_urgent\",\"reasoning\":\"Mock provider: keyword match only, not clinical reasoning.\",\"requiresHumanReview\":true}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 0,
+    "tokensOut": 0,
+    "costUsd": 0,
+    "latencyMs": 5,
+    "modelCalls": 1
+  }
+}

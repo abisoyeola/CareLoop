@@ -1,0 +1,24 @@
+{
+  "case": "chest-pain-musculoskeletal",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2805,
+      "tokensIn": 145,
+      "tokensOut": 133,
+      "costUsd": 0.0016925,
+      "attempts": 1,
+      "input": "My chest hurts.",
+      "output": "{\n  \"carePathway\": \"RED\",\n  \"urgency\": \"Immediate\",\n  \"reasoning\": \"Chest pain can be a symptom of a serious condition such as a heart attack, and requires immediate medical evaluation.\",\n  \"chiefComplaint\": \"Chest pain\",\n  \"symptoms\": [\"chest pain\"],\n  \"redFlags\": [\"chest pain\"],\n  \"duration\": \"\",\n  \"severity\": \"\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing chest pain, which is a potential medical emergency. Immediate evaluation is necessary to rule out serious conditions such as a heart attack.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 145,
+    "tokensOut": 133,
+    "costUsd": 0.0016925,
+    "latencyMs": 2805,
+    "modelCalls": 1
+  }
+}

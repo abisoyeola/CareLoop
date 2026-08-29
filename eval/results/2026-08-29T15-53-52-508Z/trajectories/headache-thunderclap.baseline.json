@@ -1,0 +1,24 @@
+{
+  "case": "headache-thunderclap",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2267,
+      "tokensIn": 148,
+      "tokensOut": 153,
+      "costUsd": 0.0019000000000000002,
+      "attempts": 1,
+      "input": "I've got a really bad headache.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Moderate\",\n  \"reasoning\": \"The patient reports a 'really bad headache,' which could indicate a migraine or tension headache, but without additional symptoms or red flags, it is not immediately life-threatening. However, it should be evaluated further to rule out any serious conditions.\",\n  \"chiefComplaint\": \"Headache\",\n  \"symptoms\": [\"really bad headache\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Severe\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing a severe headache. Further evaluation is needed to determine the cause and appropriate treatment.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 148,
+    "tokensOut": 153,
+    "costUsd": 0.0019000000000000002,
+    "latencyMs": 2267,
+    "modelCalls": 1
+  }
+}

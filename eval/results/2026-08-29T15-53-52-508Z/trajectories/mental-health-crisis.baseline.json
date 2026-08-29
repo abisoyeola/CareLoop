@@ -1,0 +1,24 @@
+{
+  "case": "mental-health-crisis",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1968,
+      "tokensIn": 161,
+      "tokensOut": 197,
+      "costUsd": 0.0023725,
+      "attempts": 1,
+      "input": "I've been feeling really low for a while, I don't know if this is even the right place.",
+      "output": "{ \n  \"carePathway\": \"YELLOW\", \n  \"urgency\": \"Non-urgent\", \n  \"reasoning\": \"The patient is experiencing low mood, which could be indicative of depression or another mental health issue. It is important to address these feelings, but it does not appear to be an immediate emergency based on the information provided.\", \n  \"chiefComplaint\": \"Feeling really low\", \n  \"symptoms\": [\"Low mood\"], \n  \"redFlags\": [], \n  \"duration\": \"A while\", \n  \"severity\": \"Not specified\", \n  \"allergies\": [], \n  \"medications\": [], \n  \"summary\": \"The patient reports feeling really low for an unspecified duration. They are unsure if this is the right place to seek help, indicating possible uncertainty about their mental health needs. A non-urgent follow-up with a healthcare provider or mental health professional is recommended to explore these feelings further.\" \n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 161,
+    "tokensOut": 197,
+    "costUsd": 0.0023725,
+    "latencyMs": 1968,
+    "modelCalls": 1
+  }
+}

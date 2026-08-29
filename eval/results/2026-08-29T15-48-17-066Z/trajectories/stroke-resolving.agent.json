@@ -1,0 +1,202 @@
+{
+  "case": "stroke-resolving",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1052,
+      "tokensIn": 506,
+      "tokensOut": 72,
+      "costUsd": 0.0001191,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\", \"options\": [\"A few minutes\", \"Less than an hour\", \"Several hours\", \"All morning\"], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 773,
+      "tokensIn": 304,
+      "tokensOut": 19,
+      "costUsd": 0.000057,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It was about 90 minutes ago when it started feeling weak.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 953,
+      "tokensIn": 553,
+      "tokensOut": 54,
+      "costUsd": 0.00011534999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 753,
+      "tokensIn": 351,
+      "tokensOut": 18,
+      "costUsd": 0.00006345,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it was around a 7 at its worst.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 962,
+      "tokensIn": 599,
+      "tokensOut": 55,
+      "costUsd": 0.00012285,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 934,
+      "tokensIn": 397,
+      "tokensOut": 28,
+      "costUsd": 0.00007635,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nYou: I'd say it was around a 7 at its worst.\nService: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1066,
+      "tokensIn": 655,
+      "tokensOut": 63,
+      "costUsd": 0.00013604999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\nYou: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nPatient: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 764,
+      "tokensIn": 450,
+      "tokensOut": 25,
+      "costUsd": 0.0000825,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nYou: I'd say it was around a 7 at its worst.\nService: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nYou: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nService: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 936,
+      "tokensIn": 705,
+      "tokensOut": 59,
+      "costUsd": 0.00014115,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\nYou: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nPatient: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nYou: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nPatient: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 685,
+      "tokensIn": 498,
+      "tokensOut": 16,
+      "costUsd": 0.00008429999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nYou: I'd say it was around a 7 at its worst.\nService: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nYou: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nService: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nYou: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\nService: Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I've never had anything like this before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1013,
+      "tokensIn": 744,
+      "tokensOut": 48,
+      "costUsd": 0.0001404,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\nYou: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nPatient: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nYou: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nPatient: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\nYou: Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\nPatient: No, I've never had anything like this before.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 735,
+      "tokensIn": 530,
+      "tokensOut": 21,
+      "costUsd": 0.00009209999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nYou: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nYou: I'd say it was around a 7 at its worst.\nService: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nYou: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nService: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nYou: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\nService: Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\nYou: No, I've never had anything like this before.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm taking medication for high blood pressure, but I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 967,
+      "tokensIn": 781,
+      "tokensOut": 54,
+      "costUsd": 0.00014955,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\nYou: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nPatient: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nYou: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nPatient: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\nYou: Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\nPatient: No, I've never had anything like this before.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: I'm taking medication for high blood pressure, but I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Given your symptoms, I recommend seeking immediate medical attention. It's important to have a clinician evaluate your condition as soon as possible.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 7 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1979,
+      "tokensIn": 652,
+      "tokensOut": 224,
+      "costUsd": 0.0002322,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. How long did your arm feel funny this morning? Was it just for a few minutes, or did it last longer?\nPatient: It was about 90 minutes ago when it started feeling weak.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the weakness you felt in your arm?\nPatient: I'd say it was around a 7 at its worst.\nService: Thanks for that information. Did you notice any other symptoms while your arm felt weak, such as numbness, tingling, or difficulty moving it?\nPatient: Yes, I couldn't lift a cup, and my partner said my face was drooping on the right side.\nService: Thank you for sharing that. Have you experienced any chest pain, shortness of breath, or confusion at any point during this episode?\nPatient: No, I didn't have any chest pain or shortness of breath, and I wasn't confused.\nService: Thank you for clarifying that. Have you had any previous episodes like this, or any history of neurological issues or strokes?\nPatient: No, I've never had anything like this before.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: I'm taking medication for high blood pressure, but I don't have any allergies.\nService: Thank you for providing that information. Given your symptoms, I recommend seeking immediate medical attention. It's important to have a clinician evalu",
+      "output": "{\n  \"chiefComplaint\": \"Weakness in arm and facial drooping.\",\n  \"duration\": \"90 minutes ago\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in arm\",\n    \"inability to lift a cup\",\n    \"facial drooping on the right side\"\n  ],\n  \"redFlags\": [\n    \"my partner said my face was drooping on the right side\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"medication for high blood pressure\"\n  ],\n  \"history\": [\n    \"no previous episodes like this\",\n    \"no history of neurological issues or strokes\"\n  ],\n  \"summary\": \"The patient reported experiencing weakness in their arm and facial drooping on the right side, with the weakness rated as 7/10 at its worst. The symptoms began approximately 90 minutes ago, and the patient was unable to lift a cup during this episode. There is no history of similar episodes or neurological issues, but the facial drooping is a concerning symptom that warrants immediate evaluation.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1129,
+      "tokensIn": 381,
+      "tokensOut": 86,
+      "costUsd": 0.0018125,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Weakness in arm and facial drooping.\",\n  \"duration\": \"90 minutes ago\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in arm\",\n    \"inability to lift a cup\",\n    \"facial drooping on the right side\"\n  ],\n  \"redFlags\": [\n    \"my partner said my face was drooping on the right side\"\n  ],\n  \"allergies\": [],\n  \"medications\": [\n    \"medication for high blood pressure\"\n  ],\n  \"history\": [\n    \"no previous episodes like this\",\n    \"no history of neurological issues or strokes\"\n  ],\n  \"summary\": \"The patient reported experiencing weakness in their arm and facial drooping on the right side, with the weakness rated as 7/10 at its worst. The symptoms began approximately 90 minutes ago, and the patient was unable to lift a cup during this episode. There is no history of similar episodes or neurological issues, but the facial drooping is a concerning symptom that warrants immediate evaluation.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The symptoms of weakness in the arm and facial drooping, especially with the sudden onset and inability to lift a cup, are concerning for a possible stroke or transient ischemic attack (TIA). These symptoms require immediate medical evaluation to rule out serious conditions and to provide timely treatment if necessary.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 8106,
+    "tokensOut": 842,
+    "costUsd": 0.00342485,
+    "latencyMs": 14701,
+    "modelCalls": 15
+  }
+}

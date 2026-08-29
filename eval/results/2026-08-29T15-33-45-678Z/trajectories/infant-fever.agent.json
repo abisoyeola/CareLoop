@@ -1,0 +1,280 @@
+{
+  "case": "infant-fever",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 832,
+      "tokensIn": 498,
+      "tokensOut": 36,
+      "costUsd": 0.00009629999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. How long has your baby had a temperature?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 786,
+      "tokensIn": 243,
+      "tokensOut": 22,
+      "costUsd": 0.00004965,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I just measured it an hour ago, and it was 38.4.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1139,
+      "tokensIn": 530,
+      "tokensOut": 65,
+      "costUsd": 0.00011849999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 916,
+      "tokensIn": 304,
+      "tokensOut": 10,
+      "costUsd": 0.00005160000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1094,
+      "tokensIn": 579,
+      "tokensOut": 57,
+      "costUsd": 0.00012104999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 836,
+      "tokensIn": 341,
+      "tokensOut": 22,
+      "costUsd": 0.00006434999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is sleepier than normal and has fed much less than usual today.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1076,
+      "tokensIn": 628,
+      "tokensOut": 50,
+      "costUsd": 0.0001242,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 701,
+      "tokensIn": 386,
+      "tokensOut": 15,
+      "costUsd": 0.0000669,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed any other symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1132,
+      "tokensIn": 666,
+      "tokensOut": 67,
+      "costUsd": 0.0001401,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 700,
+      "tokensIn": 423,
+      "tokensOut": 15,
+      "costUsd": 0.00007245,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nYou: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't received any medications.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1045,
+      "tokensIn": 703,
+      "tokensOut": 55,
+      "costUsd": 0.00013844999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nYou: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 756,
+      "tokensIn": 461,
+      "tokensOut": 20,
+      "costUsd": 0.00008115,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nYou: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nYou: No, my baby hasn't received any medications.\nService: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby doesn't have any known allergies or relevant medical history.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1054,
+      "tokensIn": 746,
+      "tokensOut": 71,
+      "costUsd": 0.0001545,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nYou: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\nYou: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nPatient: No, my baby doesn't have any known allergies or relevant medical history.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 840,
+      "tokensIn": 519,
+      "tokensOut": 31,
+      "costUsd": 0.00009645000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nYou: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nYou: No, my baby hasn't received any medications.\nService: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nYou: No, my baby doesn't have any known allergies or relevant medical history.\nService: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't had any difficulty breathing or a persistent high fever, but the nappies are drier than usual.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 975,
+      "tokensIn": 815,
+      "tokensOut": 64,
+      "costUsd": 0.00016064999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nYou: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\nYou: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nPatient: No, my baby doesn't have any known allergies or relevant medical history.\nYou: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nPatient: No, my baby hasn't had any difficulty breathing or a persistent high fever, but the nappies are drier than usual.\n\nProduce th",
+      "output": "{ \"reply\": \"Thank you for that information. Given the drier nappies, can you tell me how many wet diapers your baby has had in the last 24 hours?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"wet diaper count in the last 24 hours\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 580,
+      "tokensOut": 22,
+      "costUsd": 0.0001002,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nYou: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nYou: No, my baby hasn't received any medications.\nService: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nYou: No, my baby doesn't have any known allergies or relevant medical history.\nService: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nYou: No, my baby hasn't had any difficulty breathing or a persistent high fever, but t",
+      "output": "{ \"reply\": \"I'm not sure about the exact number, but I think it's fewer than usual.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1066,
+      "tokensIn": 867,
+      "tokensOut": 44,
+      "costUsd": 0.00015644999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nYou: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\nYou: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nPatient: No, my baby doesn't have any known allergies or relevant medical history.\nYou: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nPatient: No, my baby hasn't had any difficulty breathing or a persistent high fever, but the nappies are drier than usual.\nYou: Thank ",
+      "output": "{ \"reply\": \"I appreciate your response. It's important to monitor hydration closely. How old is your baby?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"baby's age\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 684,
+      "tokensIn": 618,
+      "tokensOut": 13,
+      "costUsd": 0.00010049999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nYou: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nYou: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nYou: No, my baby hasn't received any medications.\nService: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nYou: No, my baby doesn't have any known allergies or relevant medical history.\nService: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nYou: No, my baby hasn't had any difficulty breathing or a persistent high fever, but t",
+      "output": "{ \"reply\": \"My baby is six weeks old.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1070,
+      "tokensIn": 896,
+      "tokensOut": 78,
+      "costUsd": 0.00018119999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nYou: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nYou: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\nYou: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nPatient: No, my baby doesn't have any known allergies or relevant medical history.\nYou: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nPatient: No, my baby hasn't had any difficulty breathing or a persistent high fever, but the nappies are drier than usual.\nYou: Thank ",
+      "output": "{ \"reply\": \"Thank you for that information. Based on what you've shared, it's important to ensure your baby is getting enough fluids. I recommend you seek care for your baby as soon as possible, given the fever and signs of dehydration. Please contact a healthcare professional or visit a clinic right away.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 10 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1612,
+      "tokensIn": 791,
+      "tokensOut": 152,
+      "costUsd": 0.00020985,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My baby has a temperature.\nService: I understand. How long has your baby had a temperature?\nPatient: I just measured it an hour ago, and it was 38.4.\nService: Thank you for that information. On a scale from 0 to 10, how severe would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nService: It's okay if you're unsure. Can you describe how your baby is acting? Are they fussy, lethargic, or otherwise seem uncomfortable?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for sharing that. Have you noticed any other symptoms, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, I haven't noticed any other symptoms.\nService: I appreciate that information. Has your baby received any medications for the fever, such as acetaminophen or ibuprofen?\nPatient: No, my baby hasn't received any medications.\nService: Thank you for the information. Does your baby have any known allergies or any relevant medical history that we should be aware of?\nPatient: No, my baby doesn't have any known allergies or relevant medical history.\nService: Thank you for providing that information. Has your baby experienced any difficulty breathing, a persistent high fever (over 39°C), or any signs of dehydration, such as dry mouth or fewer wet diapers?\nPatient: No, my baby hasn't had any difficulty breathing or a persistent high fever, but the nappies are drier th",
+      "output": "{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"1 hour\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"sleepier than normal\",\n    \"fed much less than usual\",\n    \"drier than usual nappies\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4°C measured an hour ago. The baby is sleepier than normal and has fed much less than usual today, with fewer wet diapers than usual. No other symptoms such as cough, rash, vomiting, or diarrhea have been noted.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1279,
+      "tokensIn": 599,
+      "tokensOut": 83,
+      "costUsd": 0.0023275,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"1 hour\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"sleepier than normal\",\n    \"fed much less than usual\",\n    \"drier than usual nappies\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4°C measured an hour ago. The baby is sleepier than normal and has fed much less than usual today, with fewer wet diapers than usual. No other symptoms such as cough, rash, vomiting, or diarrhea have been noted.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The baby is six weeks old and has a fever, which is concerning in infants under three months. Additionally, the baby is sleepier than normal, feeding less, and has fewer wet diapers, which could indicate dehydration or another serious issue. These symptoms require urgent evaluation.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 12193,
+    "tokensOut": 992,
+    "costUsd": 0.004612,
+    "latencyMs": 20470,
+    "modelCalls": 21
+  }
+}

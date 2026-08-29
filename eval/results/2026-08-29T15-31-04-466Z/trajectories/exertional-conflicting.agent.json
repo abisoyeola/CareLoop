@@ -1,0 +1,267 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1072,
+      "tokensIn": 503,
+      "tokensOut": 39,
+      "costUsd": 0.00009884999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Can you tell me how long you've been feeling this way?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 971,
+      "tokensIn": 287,
+      "tokensOut": 16,
+      "costUsd": 0.00005264999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been going on for about three weeks now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1257,
+      "tokensIn": 532,
+      "tokensOut": 70,
+      "costUsd": 0.0001218,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1014,
+      "tokensIn": 347,
+      "tokensOut": 14,
+      "costUsd": 0.00006045,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's around a 7.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1182,
+      "tokensIn": 590,
+      "tokensOut": 54,
+      "costUsd": 0.00012089999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1034,
+      "tokensIn": 388,
+      "tokensOut": 15,
+      "costUsd": 0.0000672,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed anything like that.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1545,
+      "tokensIn": 632,
+      "tokensOut": 76,
+      "costUsd": 0.0001404,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\", \"options\": [\"Yes, weight loss\", \"Yes, weight gain\", \"No significant change\"], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 874,
+      "tokensIn": 421,
+      "tokensOut": 18,
+      "costUsd": 0.00007395,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any significant weight loss or gain.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1074,
+      "tokensIn": 668,
+      "tokensOut": 58,
+      "costUsd": 0.000135,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 968,
+      "tokensIn": 465,
+      "tokensOut": 24,
+      "costUsd": 0.00008415,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 992,
+      "tokensIn": 718,
+      "tokensOut": 48,
+      "costUsd": 0.0001365,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nYou: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 976,
+      "tokensIn": 505,
+      "tokensOut": 20,
+      "costUsd": 0.00008774999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nYou: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any medications and I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1604,
+      "tokensIn": 754,
+      "tokensOut": 54,
+      "costUsd": 0.00014549999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nYou: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\", \"options\": [\"Yes\", \"No\", \"A little\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 910,
+      "tokensIn": 542,
+      "tokensOut": 17,
+      "costUsd": 0.00009149999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nYou: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any allergies.\nService: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't been feeling unusually stressed or anxious.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1145,
+      "tokensIn": 788,
+      "tokensOut": 51,
+      "costUsd": 0.00014879999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nYou: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any allergies.\nYou: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nPatient: No, I haven't been feeling unusually stressed or anxious.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you had any recent changes in your sleep patterns, such as sleeping too much or not enough?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"sleep patterns\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 927,
+      "tokensIn": 583,
+      "tokensOut": 14,
+      "costUsd": 0.00009585,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nYou: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any allergies.\nService: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nYou: No, I haven't been feeling unusually ",
+      "output": "{ \"reply\": \"No, my sleep patterns haven't changed.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1029,
+      "tokensIn": 826,
+      "tokensOut": 53,
+      "costUsd": 0.0001557,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nYou: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any allergies.\nYou: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nPatient: No, I haven't been feeling unusually stressed or anxious.\nYou: Thank you for your responses. Have you had any",
+      "output": "{ \"reply\": \"Thank you for all the information you've provided. Have you ever been diagnosed with any medical conditions or had any significant health issues in the past?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1203,
+      "tokensIn": 623,
+      "tokensOut": 26,
+      "costUsd": 0.00010905,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nYou: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any allergies.\nService: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nYou: No, I haven't been feeling unusually ",
+      "output": "{ \"reply\": \"No, I haven't been diagnosed with any medical conditions or had any significant health issues in the past.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 969,
+      "tokensIn": 878,
+      "tokensOut": 59,
+      "costUsd": 0.0001671,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nYou: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nYou: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any allergies.\nYou: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nPatient: No, I haven't been feeling unusually stressed or anxious.\nYou: Thank you for your responses. Have you had any",
+      "output": "{ \"reply\": \"Thank you for sharing all that information. Have you experienced any chest pain, shortness of breath, or dizziness along with your tiredness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1127,
+      "tokensIn": 675,
+      "tokensOut": 40,
+      "costUsd": 0.00012525,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nYou: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nYou: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nYou: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any allergies.\nService: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nYou: No, I haven't been feeling unusually ",
+      "output": "{ \"reply\": \"I don't have chest pain, but I do feel a tight band across my chest when I climb stairs, and I get out of breath doing things that were easy before.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1854,
+      "tokensIn": 781,
+      "tokensOut": 173,
+      "costUsd": 0.00022095,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how severe would you rate your tiredness, with 0 being no tiredness at all and 10 being the worst tiredness you've ever experienced?\nPatient: I'd say it's around a 7.\nService: Thanks for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as difficulty sleeping, changes in appetite, or mood changes?\nPatient: No, I haven't noticed anything like that.\nService: Thank you for clarifying that. Have you experienced any significant weight loss or gain during this time?\nPatient: No, I haven't experienced any significant weight loss or gain.\nService: I appreciate your response. Have you had any recent illnesses, injuries, or changes in your routine that might be relevant to your tiredness?\nPatient: No, I haven't had any recent illnesses or injuries, and my routine hasn't really changed.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any allergies.\nService: Thank you for providing that information. Have you been feeling unusually stressed or anxious during this time?\nPatient: No, I haven't been feeling unusually stressed or anxious.\nService: Thank you for your re",
+      "output": "{\n  \"chiefComplaint\": \"Increased tiredness\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tight band across chest when climbing stairs\",\n    \"out of breath doing things that were easy before\"\n  ],\n  \"redFlags\": [\n    \"tight band across my chest when I climb stairs\",\n    \"get out of breath doing things that were easy before\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling unusually tired for the past three weeks, rating the severity as 7 out of 10. They describe experiencing a tight sensation across the chest when climbing stairs and becoming out of breath with activities that were previously easy. No other significant symptoms or medical history were reported.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1281,
+      "tokensIn": 620,
+      "tokensOut": 69,
+      "costUsd": 0.00224,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Increased tiredness\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tight band across chest when climbing stairs\",\n    \"out of breath doing things that were easy before\"\n  ],\n  \"redFlags\": [\n    \"tight band across my chest when I climb stairs\",\n    \"get out of breath doing things that were easy before\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling unusually tired for the past three weeks, rating the severity as 7 out of 10. They describe experiencing a tight sensation across the chest when climbing stairs and becoming out of breath with activities that were previously easy. No other significant symptoms or medical history were reported.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports a tight band across the chest when climbing stairs and becoming out of breath with activities that were previously easy. These symptoms could indicate a cardiac issue or another serious condition that requires urgent assessment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 13126,
+    "tokensOut": 1008,
+    "costUsd": 0.004679299999999999,
+    "latencyMs": 25008,
+    "modelCalls": 22
+  }
+}

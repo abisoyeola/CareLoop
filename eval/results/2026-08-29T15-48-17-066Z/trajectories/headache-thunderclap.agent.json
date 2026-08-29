@@ -1,0 +1,224 @@
+{
+  "case": "headache-thunderclap",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1328,
+      "tokensIn": 499,
+      "tokensOut": 41,
+      "costUsd": 0.00009944999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand you're experiencing a bad headache. How long have you been having this headache?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 855,
+      "tokensIn": 266,
+      "tokensOut": 13,
+      "costUsd": 0.0000477,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started about two hours ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 958,
+      "tokensIn": 527,
+      "tokensOut": 64,
+      "costUsd": 0.00011745,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 882,
+      "tokensIn": 317,
+      "tokensOut": 22,
+      "costUsd": 0.00006075,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's a 10 out of 10, the worst headache of my life.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1216,
+      "tokensIn": 587,
+      "tokensOut": 78,
+      "costUsd": 0.00013485,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\", \"options\": [\"Nausea\", \"Vomiting\", \"Sensitivity to light\", \"Visual changes\"], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 936,
+      "tokensIn": 373,
+      "tokensOut": 23,
+      "costUsd": 0.00006975,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nYou: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I've vomited twice since it started, and bright light is really painful.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 929,
+      "tokensIn": 644,
+      "tokensOut": 59,
+      "costUsd": 0.000132,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nYou: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 965,
+      "tokensIn": 414,
+      "tokensOut": 15,
+      "costUsd": 0.0000711,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nYou: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nYou: Yes, I've vomited twice since it started, and bright light is really painful.\nService: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any head injury.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 883,
+      "tokensIn": 677,
+      "tokensOut": 49,
+      "costUsd": 0.00013094999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nYou: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\nYou: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any head injury.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 893,
+      "tokensIn": 446,
+      "tokensOut": 21,
+      "costUsd": 0.0000795,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nYou: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nYou: Yes, I've vomited twice since it started, and bright light is really painful.\nService: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nYou: No, I haven't had any head injury.\nService: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any regular medications and I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1038,
+      "tokensIn": 715,
+      "tokensOut": 61,
+      "costUsd": 0.00014385,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nYou: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\nYou: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any head injury.\nYou: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \", \"options\": [\"This is the first time\", \"I've had similar headaches before\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1985,
+      "tokensIn": 488,
+      "tokensOut": 18,
+      "costUsd": 0.000084,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nYou: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nYou: Yes, I've vomited twice since it started, and bright light is really painful.\nService: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nYou: No, I haven't had any head injury.\nService: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"This is the first time I've had a headache like this.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1360,
+      "tokensIn": 754,
+      "tokensOut": 57,
+      "costUsd": 0.0001473,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nYou: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\nYou: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any head injury.\nYou: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nYou: Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \nPatient: This is the first time I've had a headache like this.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you noticed any other concerning symptoms, such as confusion, difficulty speaking, weakness, or seizures?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 788,
+      "tokensIn": 530,
+      "tokensOut": 16,
+      "costUsd": 0.0000891,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've got a really bad headache.\"\n\nYou: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nYou: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nYou: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nYou: Yes, I've vomited twice since it started, and bright light is really painful.\nService: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nYou: No, I haven't had any head injury.\nService: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \nYou: This is the first time I've had a headache like this.\nService: Thank you for sharing that. Have you noticed any other concerning symptoms, such as confusion, difficulty speaking, weakness, or seizures?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed any of those symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1280,
+      "tokensIn": 794,
+      "tokensOut": 64,
+      "costUsd": 0.00015749999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've got a really bad headache.\nYou: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nYou: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nYou: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\nYou: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any head injury.\nYou: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nYou: Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \nPatient: This is the first time I've had a headache like this.\nYou: Thank you for sharing that. Have you noticed any other concerning symptoms, such as confusion, difficulty speaking, weakness, or seizures?\nPatient: No, I haven't noticed any of those symptoms.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Based on what you've shared, I need to route you for immediate care due to the severity and sudden onset of your headache along with associated symptoms. Please seek medical attention right away.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 8 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1697,
+      "tokensIn": 675,
+      "tokensOut": 168,
+      "costUsd": 0.00020205,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've got a really bad headache.\nService: I understand you're experiencing a bad headache. How long have you been having this headache?\nPatient: It started about two hours ago.\nService: Thank you for that information. On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your headache right now?\nPatient: It's a 10 out of 10, the worst headache of my life.\nService: I'm sorry to hear that you're experiencing such severe pain. Are you experiencing any other symptoms along with your headache, such as nausea, vomiting, sensitivity to light, or visual changes?\nPatient: Yes, I've vomited twice since it started, and bright light is really painful.\nService: It sounds like you're having a very difficult time. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any head injury.\nService: Thank you for clarifying that. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for the information. Have you ever experienced headaches like this before, or is this the first time? \nPatient: This is the first time I've had a headache like this.\nService: Thank you for sharing that. Have you noticed any other concerning symptoms, such as confusion, difficulty speaking, weakness, or seizures?\nPatient: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Base",
+      "output": "{\n  \"chiefComplaint\": \"Severe headache\",\n  \"duration\": \"2 hours\",\n  \"severity\": \"10/10\",\n  \"symptoms\": [\n    \"vomiting\",\n    \"sensitivity to light\"\n  ],\n  \"redFlags\": [\n    \"the worst headache of my life\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"first time experiencing this type of headache\"\n  ],\n  \"summary\": \"The patient reports a severe headache rated 10/10 that started two hours ago. They have experienced vomiting twice and report sensitivity to bright light. This is the first time they have had a headache of this severity, and they have not had any recent head injuries. Immediate care is recommended due to the severity and sudden onset of symptoms.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1305,
+      "tokensIn": 325,
+      "tokensOut": 90,
+      "costUsd": 0.0017125,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Severe headache\",\n  \"duration\": \"2 hours\",\n  \"severity\": \"10/10\",\n  \"symptoms\": [\n    \"vomiting\",\n    \"sensitivity to light\"\n  ],\n  \"redFlags\": [\n    \"the worst headache of my life\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"first time experiencing this type of headache\"\n  ],\n  \"summary\": \"The patient reports a severe headache rated 10/10 that started two hours ago. They have experienced vomiting twice and report sensitivity to bright light. This is the first time they have had a headache of this severity, and they have not had any recent head injuries. Immediate care is recommended due to the severity and sudden onset of symptoms.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"Immediate\", \"reasoning\": \"The patient is experiencing a severe headache described as 'the worst headache of my life,' accompanied by vomiting and sensitivity to light. These symptoms, especially when occurring suddenly and with such intensity, could indicate a serious condition such as a subarachnoid hemorrhage or other neurological emergency. Immediate medical evaluation is necessary.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 9031,
+    "tokensOut": 859,
+    "costUsd": 0.0034798,
+    "latencyMs": 19298,
+    "modelCalls": 17
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case": "sore-throat-airway",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1880,
+      "tokensIn": 147,
+      "tokensOut": 186,
+      "costUsd": 0.0022275,
+      "attempts": 1,
+      "input": "My throat is really sore.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Non-urgent\",\n  \"reasoning\": \"The patient reports a sore throat, which is a common symptom that can be caused by a variety of conditions, such as a viral infection or allergies. Without additional symptoms or red flags, this does not appear to be an emergency.\",\n  \"chiefComplaint\": \"Sore throat\",\n  \"symptoms\": [\"Sore throat\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing a sore throat. Further information about duration, severity, and additional symptoms would help in determining the appropriate care pathway. Currently, it is suggested to monitor symptoms and consider over-the-counter remedies or consult a healthcare provider if symptoms persist or worsen.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 147,
+    "tokensOut": 186,
+    "costUsd": 0.0022275,
+    "latencyMs": 1880,
+    "modelCalls": 1
+  }
+}

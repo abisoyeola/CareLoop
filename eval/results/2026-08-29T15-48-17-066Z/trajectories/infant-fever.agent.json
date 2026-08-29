@@ -1,0 +1,280 @@
+{
+  "case": "infant-fever",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 820,
+      "tokensIn": 498,
+      "tokensOut": 38,
+      "costUsd": 0.00009749999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand your concern. How long has your baby had a fever?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 727,
+      "tokensIn": 245,
+      "tokensOut": 19,
+      "costUsd": 0.00004815,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I measured the temperature at 38.4 an hour ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1079,
+      "tokensIn": 529,
+      "tokensOut": 84,
+      "costUsd": 0.00012974999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\", \"options\": [\"More irritable\", \"Lethargic\", \"Acting normally\", \"\"], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 778,
+      "tokensIn": 282,
+      "tokensOut": 22,
+      "costUsd": 0.00005550000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is sleepier than normal and has fed much less than usual today.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1499,
+      "tokensIn": 569,
+      "tokensOut": 84,
+      "costUsd": 0.00013575,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 685,
+      "tokensIn": 339,
+      "tokensOut": 16,
+      "costUsd": 0.00006044999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure, but they seem pretty uncomfortable.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 870,
+      "tokensIn": 620,
+      "tokensOut": 50,
+      "costUsd": 0.000123,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 802,
+      "tokensIn": 378,
+      "tokensOut": 24,
+      "costUsd": 0.00007110000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 969,
+      "tokensIn": 667,
+      "tokensOut": 52,
+      "costUsd": 0.00013125,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 821,
+      "tokensIn": 422,
+      "tokensOut": 25,
+      "costUsd": 0.00007829999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nYou: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 838,
+      "tokensIn": 712,
+      "tokensOut": 40,
+      "costUsd": 0.00013079999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nYou: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Has your baby received all their vaccinations on schedule?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 705,
+      "tokensIn": 455,
+      "tokensOut": 10,
+      "costUsd": 0.00007424999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nYou: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nYou: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nService: Has your baby received all their vaccinations on schedule?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1141,
+      "tokensIn": 730,
+      "tokensOut": 56,
+      "costUsd": 0.00014309999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nYou: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nYou: Has your baby received all their vaccinations on schedule?\nPatient: I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Vaccination history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 711,
+      "tokensIn": 493,
+      "tokensOut": 16,
+      "costUsd": 0.00008355,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nYou: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nYou: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nService: Has your baby received all their vaccinations on schedule?\nYou: I'm not sure.\nService: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure if I have the records available.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1017,
+      "tokensIn": 774,
+      "tokensOut": 62,
+      "costUsd": 0.00015329999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nYou: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nYou: Has your baby received all their vaccinations on schedule?\nPatient: I'm not sure.\nYou: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nPatient: I'm not sure if I have the records available.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"vaccination status\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 774,
+      "tokensIn": 538,
+      "tokensOut": 16,
+      "costUsd": 0.0000903,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nYou: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nYou: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nService: Has your baby received all their vaccinations on schedule?\nYou: I'm not sure.\nService: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nYou: I'm not sure if I have the records available.\nService: I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\n\nReply to the s",
+      "output": "{ \"reply\": \"No, my baby doesn't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 932,
+      "tokensIn": 819,
+      "tokensOut": 54,
+      "costUsd": 0.00015524999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nYou: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nYou: Has your baby received all their vaccinations on schedule?\nPatient: I'm not sure.\nYou: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nPatient: I'm not sure if I have the records available.\nYou: I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\nPatient: No, my baby doesn't have any known allergies.\n\nProduce",
+      "output": "{ \"reply\": \"Thank you for that information. Has your baby experienced any difficulty breathing or unusual skin color?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 724,
+      "tokensIn": 570,
+      "tokensOut": 20,
+      "costUsd": 0.00009749999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nYou: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nYou: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nYou: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nService: Has your baby received all their vaccinations on schedule?\nYou: I'm not sure.\nService: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nYou: I'm not sure if I have the records available.\nService: I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\nYou: No, my bab",
+      "output": "{ \"reply\": \"No, my baby hasn't experienced any difficulty breathing or unusual skin color.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 951,
+      "tokensIn": 855,
+      "tokensOut": 55,
+      "costUsd": 0.00016125,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nYou: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nYou: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nYou: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nYou: Has your baby received all their vaccinations on schedule?\nPatient: I'm not sure.\nYou: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nPatient: I'm not sure if I have the records available.\nYou: I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\nPatient: No, my baby doesn't have any known allergies.\nYou: Tha",
+      "output": "{ \"reply\": \"Thank you for the information. Given the symptoms you've described, it may be important to seek care. Please consider taking your baby to a healthcare provider for further evaluation.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 10 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1680,
+      "tokensIn": 727,
+      "tokensOut": 142,
+      "costUsd": 0.00019424999999999998,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My baby has a temperature.\nService: I understand your concern. How long has your baby had a fever?\nPatient: I measured the temperature at 38.4 an hour ago.\nService: How is your baby's behavior? Are they more irritable, lethargic, or acting normally?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nService: I see. On a scale of 0 to 10, how would you rate your baby's discomfort or pain, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure, but they seem pretty uncomfortable.\nService: I understand. Are there any other symptoms your baby is experiencing, such as a cough, rash, vomiting, or diarrhea?\nPatient: No, there are no other symptoms like a cough, rash, vomiting, or diarrhea.\nService: Thanks for that information. Has your baby had any recent illnesses or been in contact with anyone who is sick?\nPatient: No, my baby hasn't had any recent illnesses or been in contact with anyone who is sick.\nService: Has your baby received all their vaccinations on schedule?\nPatient: I'm not sure.\nService: It's important to know about vaccinations. Can you tell me if your baby is up to date on their vaccinations, or if you have any records available?\nPatient: I'm not sure if I have the records available.\nService: I understand. It's important to know about any allergies your baby may have. Does your baby have any known allergies to medications, foods, or other substances?\nPatient: No, my baby doesn't have any ",
+      "output": "{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"1 hour\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"sleepier than normal\",\n    \"fed much less than usual\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their baby has a temperature of 38.4 degrees Celsius measured an hour ago. The baby is sleepier than normal and has fed much less than usual today. There are no other reported symptoms, and the patient is unsure about vaccination records.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1421,
+      "tokensIn": 299,
+      "tokensOut": 88,
+      "costUsd": 0.0016275,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"1 hour\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"sleepier than normal\",\n    \"fed much less than usual\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their baby has a temperature of 38.4 degrees Celsius measured an hour ago. The baby is sleepier than normal and has fed much less than usual today. There are no other reported symptoms, and the patient is unsure about vaccination records.\"\n}",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"within the next 24 hours\", \"reasoning\": \"A fever in a baby, especially when accompanied by changes in feeding and sleepiness, should be evaluated by a clinician to rule out any underlying issues. While these symptoms can often be due to minor infections, it's important to ensure the baby's well-being with a professional assessment.\", \"requiresHumanReview\": false }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "No red-flag rule fired."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 11521,
+    "tokensOut": 973,
+    "costUsd": 0.0038418000000000002,
+    "latencyMs": 19944,
+    "modelCalls": 21
+  }
+}

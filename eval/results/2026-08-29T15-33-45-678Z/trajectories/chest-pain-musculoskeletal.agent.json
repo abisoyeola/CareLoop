@@ -1,0 +1,268 @@
+{
+  "case": "chest-pain-musculoskeletal",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1137,
+      "tokensIn": 496,
+      "tokensOut": 69,
+      "costUsd": 0.0001158,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\", \"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 653,
+      "tokensIn": 271,
+      "tokensOut": 15,
+      "costUsd": 0.000049649999999999994,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started yesterday after a heavy gym session.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1199,
+      "tokensIn": 528,
+      "tokensOut": 84,
+      "costUsd": 0.0001296,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\", \"associated symptoms\", \"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 695,
+      "tokensIn": 320,
+      "tokensOut": 14,
+      "costUsd": 0.0000564,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd rate it about a 6.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1225,
+      "tokensIn": 576,
+      "tokensOut": 49,
+      "costUsd": 0.0001158,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 707,
+      "tokensIn": 356,
+      "tokensOut": 15,
+      "costUsd": 0.0000624,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not experiencing any other symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 972,
+      "tokensIn": 613,
+      "tokensOut": 61,
+      "costUsd": 0.00012855,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you ever experienced this type of chest pain before, or is this the first time?\", \"options\": [\"First time\", \"I've had it before\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 804,
+      "tokensIn": 387,
+      "tokensOut": 19,
+      "costUsd": 0.00006945,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"This is the first time I've experienced this type of chest pain.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 933,
+      "tokensIn": 648,
+      "tokensOut": 55,
+      "costUsd": 0.00013020000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 772,
+      "tokensIn": 429,
+      "tokensOut": 18,
+      "costUsd": 0.00007515000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nYou: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent injuries or medical conditions.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1041,
+      "tokensIn": 689,
+      "tokensOut": 48,
+      "costUsd": 0.00013215000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nYou: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 753,
+      "tokensIn": 463,
+      "tokensOut": 21,
+      "costUsd": 0.00008204999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nYou: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nYou: No, I haven't had any recent injuries or medical conditions.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any medications and I don't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 991,
+      "tokensIn": 726,
+      "tokensOut": 54,
+      "costUsd": 0.0001413,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nYou: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 904,
+      "tokensIn": 505,
+      "tokensOut": 24,
+      "costUsd": 0.00009015,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nYou: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nYou: No, I haven't had any recent injuries or medical conditions.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any pain radiating to my arms, jaw, or back.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1023,
+      "tokensIn": 771,
+      "tokensOut": 56,
+      "costUsd": 0.00014925,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nYou: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain radiating to my arms, jaw, or back.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your vision since the chest pain started?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 757,
+      "tokensIn": 558,
+      "tokensOut": 25,
+      "costUsd": 0.0000987,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nYou: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nYou: No, I haven't had any recent injuries or medical conditions.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nYou: No, I haven't experienced any pain radiating to my arms, jaw, or back.\nService: Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your visi",
+      "output": "{ \"reply\": \"No, I haven't experienced any nausea, heart palpitations, or changes in my vision.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 912,
+      "tokensIn": 825,
+      "tokensOut": 56,
+      "costUsd": 0.00015735,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nYou: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain radiating to my arms, jaw, or back.\nYou: Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your vision since the chest pain started?\nPati",
+      "output": "{ \"reply\": \"Thank you for all the details you've shared. Given your symptoms, it's important to ensure your safety. Have you experienced any difficulty breathing or feeling faint at any point? \", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 741,
+      "tokensIn": 615,
+      "tokensOut": 18,
+      "costUsd": 0.00010305,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nYou: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nYou: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nYou: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nYou: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nYou: No, I haven't had any recent injuries or medical conditions.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nYou: No, I haven't experienced any pain radiating to my arms, jaw, or back.\nService: Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your visi",
+      "output": "{ \"reply\": \"No, I haven't experienced any difficulty breathing or feeling faint.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1768,
+      "tokensIn": 875,
+      "tokensOut": 74,
+      "costUsd": 0.00017565,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nYou: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nYou: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nYou: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\nYou: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain radiating to my arms, jaw, or back.\nYou: Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your vision since the chest pain started?\nPati",
+      "output": "{ \"reply\": \"Thank you for all the information you've provided. Based on what you've shared, I recommend that you seek medical attention to discuss your chest pain further. It's important to have a qualified clinician evaluate your symptoms. Please consider going to the nearest urgent care or emergency room.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 10 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1557,
+      "tokensIn": 766,
+      "tokensOut": 136,
+      "costUsd": 0.00019649999999999998,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My chest hurts.\nService: I'm sorry to hear that you're experiencing chest pain. How long have you been having this pain?\nPatient: It started yesterday after a heavy gym session.\nService: Thank you for that information. On a scale from 0 to 10, with 10 being the worst pain imaginable, how would you rate the severity of your chest pain?\nPatient: I'd rate it about a 6.\nService: Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, dizziness, or sweating?\nPatient: No, I'm not experiencing any other symptoms.\nService: Have you ever experienced this type of chest pain before, or is this the first time?\nPatient: This is the first time I've experienced this type of chest pain.\nService: It's important to gather some more information. Have you had any recent injuries or medical conditions that could be related to this pain?\nPatient: No, I haven't had any recent injuries or medical conditions.\nService: Thank you for the information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for providing that information. Have you experienced any pain radiating to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain radiating to my arms, jaw, or back.\nService: Thank you for all the information you've provided. Have you experienced any nausea, heart palpitations, or changes in your vision since the",
+      "output": "{\n  \"chiefComplaint\": \"Chest pain\",\n  \"duration\": \"Since yesterday\",\n  \"severity\": \"6/10\",\n  \"symptoms\": [\"chest pain\"],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest pain that started yesterday after a heavy gym session, rating the pain as a 6 out of 10. This is the first time the patient has experienced this type of chest pain, and they have not reported any other symptoms or relevant medical history. The patient is not currently taking any medications and has no known allergies.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1483,
+      "tokensIn": 587,
+      "tokensOut": 85,
+      "costUsd": 0.0023175,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Chest pain\",\n  \"duration\": \"Since yesterday\",\n  \"severity\": \"6/10\",\n  \"symptoms\": [\n    \"chest pain\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest pain that started yesterday after a heavy gym session, rating the pain as a 6 out of 10. This is the first time the patient has experienced this type of chest pain, and they have not reported any other symptoms or relevant medical history. The patient is not currently taking any medications and has no known allergies.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"Immediate assessment needed due to chest pain, which could indicate a serious condition requiring urgent evaluation.\", \"reasoning\": \"Chest pain is a symptom that can be associated with serious conditions such as cardiac issues, which require urgent assessment. Despite the absence of additional red flags or symptoms, the nature of chest pain necessitates caution.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 12004,
+    "tokensOut": 996,
+    "costUsd": 0.00457665,
+    "latencyMs": 21027,
+    "modelCalls": 21
+  }
+}

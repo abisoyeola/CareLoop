@@ -1,0 +1,267 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 908,
+      "tokensIn": 656,
+      "tokensOut": 63,
+      "costUsd": 0.0001362,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Can you tell me how long you've been feeling this way?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Main complaint\", \"Duration\", \"Severity\", \"Associated symptoms\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 842,
+      "tokensIn": 287,
+      "tokensOut": 16,
+      "costUsd": 0.00005264999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been going on for about three weeks now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1091,
+      "tokensIn": 685,
+      "tokensOut": 67,
+      "costUsd": 0.00014294999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 929,
+      "tokensIn": 344,
+      "tokensOut": 14,
+      "costUsd": 0.00006,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's around a 7.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1114,
+      "tokensIn": 740,
+      "tokensOut": 53,
+      "costUsd": 0.0001428,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 998,
+      "tokensIn": 384,
+      "tokensOut": 34,
+      "costUsd": 0.000078,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1068,
+      "tokensIn": 800,
+      "tokensOut": 77,
+      "costUsd": 0.0001662,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 972,
+      "tokensIn": 448,
+      "tokensOut": 38,
+      "costUsd": 0.00008999999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1082,
+      "tokensIn": 868,
+      "tokensOut": 39,
+      "costUsd": 0.0001536,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's important to gather more information. Have you ever experienced similar symptoms in the past?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 956,
+      "tokensIn": 501,
+      "tokensOut": 16,
+      "costUsd": 0.00008475,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced anything like this before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 937,
+      "tokensIn": 899,
+      "tokensOut": 52,
+      "costUsd": 0.00016605,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nYou: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Are you currently taking any medications or have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 796,
+      "tokensIn": 533,
+      "tokensOut": 21,
+      "costUsd": 0.00009255,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nYou: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any regular medications and I don't have any allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 984,
+      "tokensIn": 936,
+      "tokensOut": 54,
+      "costUsd": 0.0001728,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nYou: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\nYou: Thank you for that information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you experienced any swelling in your legs or feet, or any recent weight changes?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 982,
+      "tokensIn": 575,
+      "tokensOut": 24,
+      "costUsd": 0.00010065,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nYou: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for that information. Have you exper",
+      "output": "{ \"reply\": \"Yes, both of my ankles have been swelling by the evening for the last three weeks.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 936,
+      "tokensIn": 981,
+      "tokensOut": 48,
+      "costUsd": 0.00017595,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nYou: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\nYou: Thank you for that information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nYou: Thank you for that information. Have you experienced any swelling in your legs or feet, or any recent weight changes?\nPati",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you had any recent illnesses, infections, or significant stressors in your life during this time?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1002,
+      "tokensIn": 623,
+      "tokensOut": 28,
+      "costUsd": 0.00011025,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nYou: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for that information. Have you exper",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses or infections, and I wouldn't say I've had any significant stressors.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 898,
+      "tokensIn": 1033,
+      "tokensOut": 49,
+      "costUsd": 0.00018435,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nYou: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\nYou: Thank you for that information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nYou: Thank you for that information. Have you experienced any swelling in your legs or feet, or any recent weight changes?\nPati",
+      "output": "{\"reply\":\"Thank you for that information. Have you experienced any fever, chills, or night sweats during this time?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"fever, chills, or night sweats\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 959,
+      "tokensIn": 671,
+      "tokensOut": 21,
+      "costUsd": 0.00011325,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nYou: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for that information. Have you exper",
+      "output": "{ \"reply\": \"No, I haven't experienced any fever, chills, or night sweats.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 902,
+      "tokensIn": 1074,
+      "tokensOut": 57,
+      "costUsd": 0.0001953,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nYou: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nYou: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\nYou: Thank you for that information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nYou: Thank you for that information. Have you experienced any swelling in your legs or feet, or any recent weight changes?\nPati",
+      "output": "{ \"reply\": \"Thank you for that detail. Have you noticed any changes in your ability to perform daily activities or any new physical limitations during this time?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"changes in daily activities or physical limitations\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 923,
+      "tokensIn": 717,
+      "tokensOut": 25,
+      "costUsd": 0.00012255,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nYou: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nYou: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nYou: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\nYou: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for that information. Have you exper",
+      "output": "{ \"reply\": \"Yes, I've been getting out of breath doing things that were easy for me six months ago.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1944,
+      "tokensIn": 808,
+      "tokensOut": 190,
+      "costUsd": 0.0002352,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you tell me how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your tiredness, with 0 being no tiredness and 10 being the worst tiredness you've ever felt?\nPatient: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your tiredness, such as changes in sleep, appetite, or mood?\nPatient: I haven't really noticed any changes in my appetite or mood, but I do sleep on three pillows now because lying flat makes me breathless.\nService: Thank you for that detail. Have you experienced any chest pain, palpitations, or significant shortness of breath aside from feeling breathless when lying flat?\nPatient: I don't have chest pain, but I do feel a tight band across my chest when I climb one flight of stairs, and it goes away when I stop.\nService: It's important to gather more information. Have you ever experienced similar symptoms in the past?\nPatient: No, I haven't experienced anything like this before.\nService: Thank you for that information. Are you currently taking any medications or have any known allergies?\nPatient: No, I'm not taking any regular medications and I don't have any allergies.\nService: Thank you for that information. Have you experienced any swelling in your legs or feet, or any recent",
+      "output": "{\n  \"chiefComplaint\": \"Increased tiredness and breathlessness when lying flat.\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tiredness\",\n    \"breathlessness when lying flat\",\n    \"tight band across chest when climbing stairs\",\n    \"swelling in both ankles by evening\"\n  ],\n  \"redFlags\": [\n    \"tight band across my chest when I climb one flight of stairs\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling very tired for the past three weeks, rating the tiredness as a 7 out of 10. They experience breathlessness when lying flat and a tight sensation across the chest when climbing stairs, which resolves upon stopping. Additionally, the patient has noted swelling in both ankles by the evening during this time.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1504,
+      "tokensIn": 347,
+      "tokensOut": 102,
+      "costUsd": 0.0018875,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Increased tiredness and breathlessness when lying flat.\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"tiredness\",\n    \"breathlessness when lying flat\",\n    \"tight band across chest when climbing stairs\",\n    \"swelling in both ankles by evening\"\n  ],\n  \"redFlags\": [\n    \"tight band across my chest when I climb one flight of stairs\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling very tired for the past three weeks, rating the tiredness as a 7 out of 10. They experience breathlessness when lying flat and a tight sensation across the chest when climbing stairs, which resolves upon stopping. Additionally, the patient has noted swelling in both ankles by the evening during this time.\"\n}",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"The symptoms suggest that there might be an underlying issue that needs to be evaluated by a healthcare professional, but it is not an immediate emergency.\", \"reasoning\": \"The combination of breathlessness when lying flat, chest tightness with exertion, and ankle swelling could indicate a cardiovascular issue or another condition that requires medical assessment. It's important to have these symptoms evaluated to determine the cause and appropriate treatment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "1 rule(s) fired and agreed with the model at YELLOW."
+    }
+  ],
+  "totals": {
+    "tokensIn": 14910,
+    "tokensOut": 1088,
+    "costUsd": 0.004663550000000001,
+    "latencyMs": 22727,
+    "modelCalls": 22
+  }
+}

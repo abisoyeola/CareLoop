@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/*
+  Declare the source tree explicitly.
+
+  Tailwind v4's automatic content detection resolves against the process working
+  directory, which is not necessarily this project when the server is launched
+  from elsewhere. When it guesses wrong the failure is silent — the base layer
+  still loads, so the page renders, just with every utility class missing.
+  Pinning the sources here (path is relative to this file) removes the guess.
+*/
+@source "../**/*.{ts,tsx,js,jsx,mdx}";
+
+/*
+  CareLoop design tokens.
+
+  The palette is deliberately quiet. This is a product people open when they are
+  worried about a symptom, and a colour is only allowed to be loud when it is
+  carrying urgency — which is why the four pathway colours are the only
+  saturated things on the page.
+*/
+
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+
+  --brand: #0d9488;
+  --brand-ink: #0f766e;
+  --brand-soft: #ccfbf1;
+
+  --red: #dc2626;
+  --red-soft: #fee2e2;
+  --amber: #d97706;
+  --amber-soft: #fef3c7;
+  --violet: #7c3aed;
+  --violet-soft: #ede9fe;
+  --green: #059669;
+  --green-soft: #d1fae5;
+
+  --radius: 14px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-danger: var(--red);
+  --color-warn: var(--amber);
+  --color-med: var(--violet);
+  --color-safe: var(--green);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------------- chat */
+
+/*
+  The chat surface. A faint dot grid rather than a photographic wallpaper —
+  it gives the thread the same "this is a conversation" feel without competing
+  with clinical content for attention.
+*/
+.chat-canvas {
+  background-color: #eef2f5;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.bubble {
+  max-width: min(78%, 40rem);
+  padding: 0.6rem 0.85rem;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 0.9375rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-shadow: 0 1px 1px rgba(15, 23, 42, 0.06);
+}
+
+.bubble-in {
+  background: var(--surface);
+  border-top-left-radius: 5px;
+}
+
+.bubble-out {
+  background: #d9fdd3;
+  border-top-right-radius: 5px;
+}
+
+.bubble-system {
+  background: #fff8e1;
+  border: 1px solid #fde68a;
+  max-width: min(88%, 44rem);
+  font-size: 0.875rem;
+}
+
+/* Three-dot "the agent is working" indicator. */
+.dot-flash {
+  animation: dotFlash 1.2s infinite ease-in-out both;
+}
+.dot-flash:nth-child(2) {
+  animation-delay: 0.16s;
+}
+.dot-flash:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes dotFlash {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.22s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Urgent cases get one pulse of attention, then stop. A permanently animated
+   alert stops being an alert. */
+.pulse-once {
+  animation: pulseOnce 1.6s ease-out 2;
+}
+
+@keyframes pulseOnce {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.14);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

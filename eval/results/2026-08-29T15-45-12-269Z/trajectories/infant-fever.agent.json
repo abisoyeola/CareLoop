@@ -1,0 +1,279 @@
+{
+  "case": "infant-fever",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1397,
+      "tokensIn": 498,
+      "tokensOut": 38,
+      "costUsd": 0.00009749999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand your concern. How long has your baby had the fever?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 767,
+      "tokensIn": 245,
+      "tokensOut": 18,
+      "costUsd": 0.00004755,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I measured it at 38.4 an hour ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1040,
+      "tokensIn": 528,
+      "tokensOut": 53,
+      "costUsd": 0.000111,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"How old is your baby?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 717,
+      "tokensIn": 267,
+      "tokensOut": 13,
+      "costUsd": 0.00004785,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is six weeks old.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1270,
+      "tokensIn": 545,
+      "tokensOut": 82,
+      "costUsd": 0.00013094999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\", \"options\": [\"Coughing\", \"Vomiting\", \"Difficulty breathing\", \"None of these\"], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 750,
+      "tokensIn": 296,
+      "tokensOut": 17,
+      "costUsd": 0.00005459999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't shown any of those symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 944,
+      "tokensIn": 578,
+      "tokensOut": 57,
+      "costUsd": 0.00012089999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 657,
+      "tokensIn": 344,
+      "tokensOut": 10,
+      "costUsd": 0.000057600000000000004,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 972,
+      "tokensIn": 619,
+      "tokensOut": 77,
+      "costUsd": 0.00013905,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 386,
+      "tokensOut": 22,
+      "costUsd": 0.0000711,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is sleepier than normal and has fed much less than usual today.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 921,
+      "tokensIn": 673,
+      "tokensOut": 55,
+      "costUsd": 0.00013395,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 687,
+      "tokensIn": 430,
+      "tokensOut": 18,
+      "costUsd": 0.0000753,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't experienced any changes in skin color.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1045,
+      "tokensIn": 713,
+      "tokensOut": 50,
+      "costUsd": 0.00013695,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nPatient: No, my baby hasn't experienced any changes in skin color.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 860,
+      "tokensIn": 466,
+      "tokensOut": 29,
+      "costUsd": 0.0000873,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nYou: No, my baby hasn't experienced any changes in skin color.\nService: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 893,
+      "tokensIn": 760,
+      "tokensOut": 38,
+      "costUsd": 0.00013680000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nPatient: No, my baby hasn't experienced any changes in skin color.\nYou: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nPatient: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Has your baby received all the recommended vaccinations for their age?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"vaccination history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1341,
+      "tokensIn": 505,
+      "tokensOut": 16,
+      "costUsd": 0.00008535,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nYou: No, my baby hasn't experienced any changes in skin color.\nService: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nYou: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nService: Has your baby received all the recommended vaccinations for their age?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't received any vaccinations yet.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 940,
+      "tokensIn": 786,
+      "tokensOut": 46,
+      "costUsd": 0.00014549999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nPatient: No, my baby hasn't experienced any changes in skin color.\nYou: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nPatient: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nYou: Has your baby received all the recommended vaccinations for their age?\nPatient: No, my baby hasn't received any vaccinations yet.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Is your baby currently taking any medications or supplements?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 773,
+      "tokensIn": 535,
+      "tokensOut": 17,
+      "costUsd": 0.00009045,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nYou: No, my baby hasn't experienced any changes in skin color.\nService: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nYou: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nService: Has your baby received all the recommended vaccinations for their age?\nYou: No, my baby hasn't received any vaccinations yet.\nService: Thank you for the information. Is your baby currently taking any medications or supplements?\n",
+      "output": "{ \"reply\": \"No, my baby isn't taking any medications or supplements.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1042,
+      "tokensIn": 817,
+      "tokensOut": 43,
+      "costUsd": 0.00014835,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nYou: How old is your baby?\nPatient: My baby is six weeks old.\nYou: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nYou: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nYou: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nYou: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nPatient: No, my baby hasn't experienced any changes in skin color.\nYou: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nPatient: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nYou: Has your baby received all the recommended vaccinations for their age?\nPatient: No, my baby hasn't received any vaccinations yet.\nYou: Thank you for the information. Is your baby currently taking any medications or supplements?\nPatient: No, my baby isn't taking any medication",
+      "output": "{ \"reply\": \"I appreciate your responses. Can you tell me if your baby has any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 778,
+      "tokensIn": 567,
+      "tokensOut": 16,
+      "costUsd": 0.00009465,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nYou: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nYou: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nYou: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nYou: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nYou: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nYou: No, my baby hasn't experienced any changes in skin color.\nService: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nYou: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nService: Has your baby received all the recommended vaccinations for their age?\nYou: No, my baby hasn't received any vaccinations yet.\nService: Thank you for the information. Is your baby currently taking any medications or supplements?\n",
+      "output": "{ \"reply\": \"No, my baby doesn't have any known allergies.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1574,
+      "tokensIn": 685,
+      "tokensOut": 162,
+      "costUsd": 0.00019995,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My baby has a temperature.\nService: I understand your concern. How long has your baby had the fever?\nPatient: I measured it at 38.4 an hour ago.\nService: How old is your baby?\nPatient: My baby is six weeks old.\nService: Has your baby shown any other symptoms, such as coughing, vomiting, or difficulty breathing?\nPatient: No, my baby hasn't shown any of those symptoms.\nService: What would you rate your baby's discomfort or pain on a scale from 0 to 10, with 0 being no discomfort and 10 being the worst possible?\nPatient: I'm not sure.\nService: It's understandable to be unsure. Can you describe how your baby seems to be feeling? Is your baby fussy, lethargic, or otherwise acting differently than usual?\nPatient: My baby is sleepier than normal and has fed much less than usual today.\nService: Thank you for that information. Has your baby experienced any changes in skin color, such as looking pale or bluish?\nPatient: No, my baby hasn't experienced any changes in skin color.\nService: Has your baby had any recent illnesses or infections, or has anyone in your household been sick recently?\nPatient: No, my baby hasn't had any recent illnesses or infections, and no one in our household has been sick recently.\nService: Has your baby received all the recommended vaccinations for their age?\nPatient: No, my baby hasn't received any vaccinations yet.\nService: Thank you for the information. Is your baby currently taking any medications or supplements?\nPatient: No, my bab",
+      "output": "{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"sleepier than normal\",\n    \"fed much less than usual\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"No recent illnesses or infections.\",\n    \"No vaccinations received yet.\"\n  ],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4 degrees Celsius measured an hour ago. The baby is sleepier than normal and has fed much less than usual today. There are no other reported symptoms, and the baby has not received any vaccinations yet.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1020,
+      "tokensIn": 609,
+      "tokensOut": 77,
+      "costUsd": 0.0022925000000000003,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"sleepier than normal\",\n    \"fed much less than usual\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [\n    \"No recent illnesses or infections.\",\n    \"No vaccinations received yet.\"\n  ],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4 degrees Celsius measured an hour ago. The baby is sleepier than normal and has fed much less than usual today. There are no other reported symptoms, and the baby has not received any vaccinations yet.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The baby is six weeks old and has a fever of 38.4 degrees Celsius, is sleepier than normal, and has fed much less than usual. Fever in an infant under three months is a red flag and requires urgent assessment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: duration, severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 11852,
+    "tokensOut": 954,
+    "costUsd": 0.00450515,
+    "latencyMs": 21265,
+    "modelCalls": 22
+  }
+}

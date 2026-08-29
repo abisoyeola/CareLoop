@@ -1,0 +1,246 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 915,
+      "tokensIn": 503,
+      "tokensOut": 38,
+      "costUsd": 0.00009824999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Can you describe how long you've been feeling this way?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 995,
+      "tokensIn": 286,
+      "tokensOut": 16,
+      "costUsd": 0.0000525,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been going on for about three weeks now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1438,
+      "tokensIn": 531,
+      "tokensOut": 64,
+      "costUsd": 0.00011805,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 873,
+      "tokensIn": 340,
+      "tokensOut": 14,
+      "costUsd": 0.0000594,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's around a 7.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 976,
+      "tokensIn": 583,
+      "tokensOut": 52,
+      "costUsd": 0.00011865,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 942,
+      "tokensIn": 379,
+      "tokensOut": 22,
+      "costUsd": 0.00007005,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed any changes in my sleep, appetite, or mood.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1256,
+      "tokensIn": 630,
+      "tokensOut": 72,
+      "costUsd": 0.0001377,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Have you experienced any recent weight loss or gain?\", \"options\": [\"Weight loss\", \"Weight gain\", \"No change\", \"\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 958,
+      "tokensIn": 414,
+      "tokensOut": 18,
+      "costUsd": 0.0000729,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nYou: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any recent weight loss or gain.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1043,
+      "tokensIn": 661,
+      "tokensOut": 62,
+      "costUsd": 0.00013635,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nYou: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1035,
+      "tokensIn": 452,
+      "tokensOut": 21,
+      "costUsd": 0.00008039999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nYou: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\nYou: No, I haven't experienced any recent weight loss or gain.\nService: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any fever, chills, or night sweats.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 944,
+      "tokensIn": 702,
+      "tokensOut": 50,
+      "costUsd": 0.0001353,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nYou: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\nYou: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nPatient: No, I haven't experienced any fever, chills, or night sweats.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 959,
+      "tokensIn": 491,
+      "tokensOut": 22,
+      "costUsd": 0.00008685,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nYou: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\nYou: No, I haven't experienced any recent weight loss or gain.\nService: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nYou: No, I haven't experienced any fever, chills, or night sweats.\nService: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I don't have any chronic health conditions or a history of significant illness.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1059,
+      "tokensIn": 742,
+      "tokensOut": 45,
+      "costUsd": 0.0001383,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nYou: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\nYou: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nPatient: No, I haven't experienced any fever, chills, or night sweats.\nYou: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nPatient: No, I don't have any chronic health conditions or a history of significant illness.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Are you currently taking any medications or supplements?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 963,
+      "tokensIn": 526,
+      "tokensOut": 16,
+      "costUsd": 0.0000885,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nYou: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\nYou: No, I haven't experienced any recent weight loss or gain.\nService: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nYou: No, I haven't experienced any fever, chills, or night sweats.\nService: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nYou: No, I don't have any chronic health conditions or a history of significant illness.\nService: Thank you for that information. Are you currently taking any medications or supplements?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any medications or supplements.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1051,
+      "tokensIn": 771,
+      "tokensOut": 44,
+      "costUsd": 0.00014204999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nYou: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\nYou: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nPatient: No, I haven't experienced any fever, chills, or night sweats.\nYou: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nPatient: No, I don't have any chronic health conditions or a history of significant illness.\nYou: Thank you for that information. Are you currently taking any medications or supplements?\nPatient: No, I'm not taking any medications or supplements.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Do you have any known allergies to medications or other substances?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 963,
+      "tokensIn": 558,
+      "tokensOut": 20,
+      "costUsd": 0.0000957,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I'm probably fine, I've just been really tired lately.\"\n\nYou: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nYou: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nYou: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nYou: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\nYou: No, I haven't experienced any recent weight loss or gain.\nService: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nYou: No, I haven't experienced any fever, chills, or night sweats.\nService: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nYou: No, I don't have any chronic health conditions or a history of significant illness.\nService: Thank you for that information. Are you currently taking any medications or supplements?\nYou: No, I'm not taking any medications or supplements.\nService: Thank you for the information. Do you have any known allergies to medications or other",
+      "output": "{ \"reply\": \"No, I don't have any known allergies to medications or other substances.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1033,
+      "tokensIn": 807,
+      "tokensOut": 57,
+      "costUsd": 0.00015524999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I'm probably fine, I've just been really tired lately.\nYou: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nYou: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nYou: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nYou: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\nYou: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nPatient: No, I haven't experienced any fever, chills, or night sweats.\nYou: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nPatient: No, I don't have any chronic health conditions or a history of significant illness.\nYou: Thank you for that information. Are you currently taking any medications or supplements?\nPatient: No, I'm not taking any medications or supplements.\nYou: Thank you for the information. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known allergies to medications or",
+      "output": "{ \"reply\": \"Thank you for providing all that information. Based on what you've shared, I have everything I need to move forward. A clinician will review your case and determine the next steps.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 9 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1390,
+      "tokensIn": 681,
+      "tokensOut": 140,
+      "costUsd": 0.00018615,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I'm probably fine, I've just been really tired lately.\nService: I understand. Can you describe how long you've been feeling this way?\nPatient: It's been going on for about three weeks now.\nService: Thank you for that information. On a scale of 0 to 10, how would you rate your fatigue, with 0 being no fatigue and 10 being the worst fatigue you've ever experienced?\nPatient: I'd say it's around a 7.\nService: Thank you for sharing that. Have you noticed any other symptoms accompanying your fatigue, such as changes in sleep, appetite, or mood?\nPatient: No, I haven't noticed any changes in my sleep, appetite, or mood.\nService: I appreciate your response. Have you experienced any recent weight loss or gain?\nPatient: No, I haven't experienced any recent weight loss or gain.\nService: Thank you for the information. Have you experienced any fever, chills, or night sweats during this time?\nPatient: No, I haven't experienced any fever, chills, or night sweats.\nService: Thank you for your responses. Do you have any chronic health conditions or a history of significant illness?\nPatient: No, I don't have any chronic health conditions or a history of significant illness.\nService: Thank you for that information. Are you currently taking any medications or supplements?\nPatient: No, I'm not taking any medications or supplements.\nService: Thank you for the information. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known al",
+      "output": "{\n  \"chiefComplaint\": \"Fatigue\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"fatigue\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing fatigue for the past three weeks, rating it as a 7 out of 10 in severity. They have not noticed any changes in sleep, appetite, mood, or experienced any significant weight changes. The patient has no known allergies, is not taking any medications or supplements, and has no chronic health conditions or significant illness history.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1195,
+      "tokensIn": 587,
+      "tokensOut": 80,
+      "costUsd": 0.0022675,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Fatigue\",\n  \"duration\": \"three weeks\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"fatigue\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing fatigue for the past three weeks, rating it as a 7 out of 10 in severity. They have not noticed any changes in sleep, appetite, mood, or experienced any significant weight changes. The patient has no known allergies, is not taking any medications or supplements, and has no chronic health conditions or significant illness history.\"\n}",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"The patient should consult with a clinician for further evaluation of the persistent fatigue.\",\n  \"reasoning\": \"The patient reports fatigue lasting for three weeks with a severity of 7/10. Persistent symptoms lasting more than two weeks warrant professional evaluation to determine the underlying cause.\",\n  \"requiresHumanReview\": true\n}"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "1 rule(s) fired and agreed with the model at YELLOW."
+    }
+  ],
+  "totals": {
+    "tokensIn": 10644,
+    "tokensOut": 853,
+    "costUsd": 0.00423985,
+    "latencyMs": 19988,
+    "modelCalls": 19
+  }
+}

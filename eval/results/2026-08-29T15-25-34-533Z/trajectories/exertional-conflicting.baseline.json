@@ -1,0 +1,24 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2397,
+      "tokensIn": 152,
+      "tokensOut": 171,
+      "costUsd": 0.0020900000000000003,
+      "attempts": 1,
+      "input": "I'm probably fine, I've just been really tired lately.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Low\",\n  \"reasoning\": \"The patient reports feeling really tired lately, which could be due to a variety of causes such as stress, lack of sleep, or an underlying health condition. It is advisable to monitor the situation and consider a check-up if the fatigue persists or worsens.\",\n  \"chiefComplaint\": \"Fatigue\",\n  \"symptoms\": [\"Tiredness\"],\n  \"redFlags\": [],\n  \"duration\": \"Lately\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient reports feeling really tired lately. While this is not immediately concerning, it is important to monitor the situation and seek medical advice if the fatigue continues or other symptoms develop.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 152,
+    "tokensOut": 171,
+    "costUsd": 0.0020900000000000003,
+    "latencyMs": 2397,
+    "modelCalls": 1
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "case": "infant-fever",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1125,
+      "tokensIn": 651,
+      "tokensOut": 70,
+      "costUsd": 0.00013965,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Main complaint\", \"Duration\", \"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 729,
+      "tokensIn": 251,
+      "tokensOut": 13,
+      "costUsd": 0.000045449999999999993,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby is six weeks old.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 682,
+      "tokensOut": 44,
+      "costUsd": 0.00012869999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate that information. How high is your baby's temperature, and how did you measure it?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"temperature measurement\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 795,
+      "tokensIn": 281,
+      "tokensOut": 22,
+      "costUsd": 0.000055350000000000004,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"The temperature is 38.4, and I measured it with a thermometer.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 897,
+      "tokensIn": 721,
+      "tokensOut": 53,
+      "costUsd": 0.00013995,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 902,
+      "tokensIn": 329,
+      "tokensOut": 24,
+      "costUsd": 0.00006374999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nYou: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, my baby has fed much less than usual today and is sleepier than normal.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1036,
+      "tokensIn": 771,
+      "tokensOut": 60,
+      "costUsd": 0.00015165,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nYou: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand. Has your baby experienced any vomiting or diarrhea?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"Severity of symptoms\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 815,
+      "tokensIn": 363,
+      "tokensOut": 17,
+      "costUsd": 0.00006465,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nYou: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nYou: Yes, my baby has fed much less than usual today and is sleepier than normal.\nService: I understand. Has your baby experienced any vomiting or diarrhea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't had any vomiting or diarrhea.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1042,
+      "tokensIn": 798,
+      "tokensOut": 69,
+      "costUsd": 0.00016109999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nYou: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\nYou: I understand. Has your baby experienced any vomiting or diarrhea?\nPatient: No, my baby hasn't had any vomiting or diarrhea.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Severity of fever\", \"Associated symptoms\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 752,
+      "tokensIn": 399,
+      "tokensOut": 20,
+      "costUsd": 0.00007185,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nYou: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nYou: Yes, my baby has fed much less than usual today and is sleepier than normal.\nService: I understand. Has your baby experienced any vomiting or diarrhea?\nYou: No, my baby hasn't had any vomiting or diarrhea.\nService: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't been unusually fussy or difficult to console.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1056,
+      "tokensIn": 837,
+      "tokensOut": 51,
+      "costUsd": 0.00015614999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nYou: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\nYou: I understand. Has your baby experienced any vomiting or diarrhea?\nPatient: No, my baby hasn't had any vomiting or diarrhea.\nYou: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nPatient: No, my baby hasn't been unusually fussy or difficult to console.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the details. Has your baby had any recent vaccinations or illnesses?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 760,
+      "tokensIn": 433,
+      "tokensOut": 18,
+      "costUsd": 0.00007575,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nYou: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nYou: Yes, my baby has fed much less than usual today and is sleepier than normal.\nService: I understand. Has your baby experienced any vomiting or diarrhea?\nYou: No, my baby hasn't had any vomiting or diarrhea.\nService: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nYou: No, my baby hasn't been unusually fussy or difficult to console.\nService: Thank you for the details. Has your baby had any recent vaccinations or illnesses?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, my baby hasn't had any recent vaccinations or illnesses.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 976,
+      "tokensIn": 869,
+      "tokensOut": 57,
+      "costUsd": 0.00016455,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nYou: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\nYou: I understand. Has your baby experienced any vomiting or diarrhea?\nPatient: No, my baby hasn't had any vomiting or diarrhea.\nYou: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nPatient: No, my baby hasn't been unusually fussy or difficult to console.\nYou: Thank you for the details. Has your baby had any recent vaccinations or illnesses?\nPatient: No, my baby hasn't had any recent vaccinations or illnesses.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Is your baby experiencing any signs of dehydration, such as a dry mouth, fewer wet diapers, or lethargy?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Signs of dehydration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 875,
+      "tokensIn": 480,
+      "tokensOut": 24,
+      "costUsd": 0.0000864,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My baby has a temperature.\"\n\nYou: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nYou: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nYou: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nYou: Yes, my baby has fed much less than usual today and is sleepier than normal.\nService: I understand. Has your baby experienced any vomiting or diarrhea?\nYou: No, my baby hasn't had any vomiting or diarrhea.\nService: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nYou: No, my baby hasn't been unusually fussy or difficult to console.\nService: Thank you for the details. Has your baby had any recent vaccinations or illnesses?\nYou: No, my baby hasn't had any recent vaccinations or illnesses.\nService: Thank you for providing that information. Is your baby experiencing any signs of dehydration, such as a dry mouth, fewer wet diapers, or lethargy?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"My baby's nappies are drier than usual, and they seem sleepier than normal.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1090,
+      "tokensIn": 922,
+      "tokensOut": 52,
+      "costUsd": 0.0001695,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My baby has a temperature.\nYou: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nYou: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nYou: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\nYou: I understand. Has your baby experienced any vomiting or diarrhea?\nPatient: No, my baby hasn't had any vomiting or diarrhea.\nYou: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nPatient: No, my baby hasn't been unusually fussy or difficult to console.\nYou: Thank you for the details. Has your baby had any recent vaccinations or illnesses?\nPatient: No, my baby hasn't had any recent vaccinations or illnesses.\nYou: Thank you for providing that information. Is your baby experiencing any signs of dehydration, such as a dry mouth, fewer wet diapers, or lethargy?\nPatient: My baby's nappies are drier than usual, and they seem sleepier than normal.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for that information. Given your baby's age and symptoms, it's important to know if your baby has had any changes in skin color, such as looking pale or bluish.\",\"options\":[],\"readyToAssess\":true,\"missingFields\":[]}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 8 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1582,
+      "tokensIn": 644,
+      "tokensOut": 158,
+      "costUsd": 0.0001914,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My baby has a temperature.\nService: Thank you for sharing that. Can you please tell me your baby's exact age in weeks or months?\nPatient: My baby is six weeks old.\nService: I appreciate that information. How high is your baby's temperature, and how did you measure it?\nPatient: The temperature is 38.4, and I measured it with a thermometer.\nService: Thank you for that detail. Has your baby shown any other symptoms, such as coughing, difficulty breathing, irritability, or feeding issues?\nPatient: Yes, my baby has fed much less than usual today and is sleepier than normal.\nService: I understand. Has your baby experienced any vomiting or diarrhea?\nPatient: No, my baby hasn't had any vomiting or diarrhea.\nService: Thank you for the information. Has your baby been unusually fussy or difficult to console during this time?\nPatient: No, my baby hasn't been unusually fussy or difficult to console.\nService: Thank you for the details. Has your baby had any recent vaccinations or illnesses?\nPatient: No, my baby hasn't had any recent vaccinations or illnesses.\nService: Thank you for providing that information. Is your baby experiencing any signs of dehydration, such as a dry mouth, fewer wet diapers, or lethargy?\nPatient: My baby's nappies are drier than usual, and they seem sleepier than normal.\nService: Thank you for that information. Given your baby's age and symptoms, it's important to know if your baby has had any changes in skin color, such as looking pale or bl",
+      "output": "{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"fed much less than usual\",\n    \"sleepier than normal\",\n    \"drier than usual nappies\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4 degrees Celsius, measured with a thermometer. The baby has been feeding less than usual and is sleepier than normal, with drier nappies. There are no reports of vomiting, diarrhea, or recent vaccinations or illnesses.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1537,
+      "tokensIn": 605,
+      "tokensOut": 92,
+      "costUsd": 0.0024324999999999998,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Baby has a temperature.\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [\n    \"temperature of 38.4\",\n    \"fed much less than usual\",\n    \"sleepier than normal\",\n    \"drier than usual nappies\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports that their six-week-old baby has a temperature of 38.4 degrees Celsius, measured with a thermometer. The baby has been feeding less than usual and is sleepier than normal, with drier nappies. There are no reports of vomiting, diarrhea, or recent vaccinations or illnesses.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The baby is six weeks old and has a fever of 38.4 degrees Celsius, which is concerning in infants under three months. Additionally, the baby is feeding less, is sleepier than normal, and has drier nappies, which could indicate dehydration or another serious condition. These symptoms require urgent evaluation.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "2 rule(s) fired and agreed with the model at RED."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: duration, severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 10036,
+    "tokensOut": 844,
+    "costUsd": 0.004298349999999999,
+    "latencyMs": 16846,
+    "modelCalls": 17
+  }
+}

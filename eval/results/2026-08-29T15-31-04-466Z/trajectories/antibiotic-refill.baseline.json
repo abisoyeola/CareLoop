@@ -1,0 +1,24 @@
+{
+  "case": "antibiotic-refill",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1874,
+      "tokensIn": 155,
+      "tokensOut": 160,
+      "costUsd": 0.0019875,
+      "attempts": 1,
+      "input": "I need antibiotics for a urine infection, I get one most years.",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"Moderate\", \"reasoning\": \"The patient is experiencing a recurrent urinary tract infection (UTI), which typically requires medical evaluation and possibly a prescription for antibiotics. However, since this is a recurrent issue, it is not an immediate emergency but should be addressed soon to prevent complications.\", \"chiefComplaint\": \"Urinary tract infection\", \"symptoms\": [\"urinary tract infection\"], \"redFlags\": [], \"duration\": \"Most years\", \"severity\": \"Not specified\", \"allergies\": [], \"medications\": [], \"summary\": \"The patient is experiencing a recurrent urinary tract infection, which they get most years, and is requesting antibiotics. They should see a healthcare provider for evaluation and appropriate treatment.\" }"
+    }
+  ],
+  "totals": {
+    "tokensIn": 155,
+    "tokensOut": 160,
+    "costUsd": 0.0019875,
+    "latencyMs": 1874,
+    "modelCalls": 1
+  }
+}

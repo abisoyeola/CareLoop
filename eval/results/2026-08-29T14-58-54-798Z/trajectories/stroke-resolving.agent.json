@@ -1,0 +1,82 @@
+{
+  "case": "stroke-resolving",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "mock",
+      "latencyMs": 5,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thanks for telling me that. How long have you been experiencing this, and has anything made it better or worse?\",\"options\":[\"Since today\",\"A few days\",\"Over a week\"],\"readyToAssess\":true,\"missingFields\":[\"duration\",\"severity\"]}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 1 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "mock",
+      "latencyMs": 5,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thanks for telling me that. How long have you been experiencing this, and has anything made it better or worse?",
+      "output": "{\"chiefComplaint\":\"Reported symptoms (mock extraction)\",\"duration\":\"unknown\",\"severity\":\"unknown\",\"symptoms\":[],\"redFlags\":[],\"allergies\":[],\"medications\":[],\"history\":[],\"summary\":\"Mock provider active — structured summary not generated.\"}"
+    },
+    {
+      "step": "triage",
+      "model": "mock",
+      "latencyMs": 5,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Reported symptoms (mock extraction)\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"Mock provider active — structured summary not generated.\"\n}",
+      "output": "{\"carePathway\":\"RED\",\"urgency\":\"urgent\",\"reasoning\":\"Mock provider: keyword match only, not clinical reasoning.\",\"requiresHumanReview\":true}"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "No red-flag rule fired."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: duration, severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 0,
+    "tokensOut": 0,
+    "costUsd": 0,
+    "latencyMs": 15,
+    "modelCalls": 3
+  }
+}

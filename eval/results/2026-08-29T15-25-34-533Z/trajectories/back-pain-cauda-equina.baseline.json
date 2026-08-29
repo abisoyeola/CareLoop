@@ -1,0 +1,24 @@
+{
+  "case": "back-pain-cauda-equina",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2088,
+      "tokensIn": 150,
+      "tokensOut": 168,
+      "costUsd": 0.002055,
+      "attempts": 1,
+      "input": "I've had back pain for a few days.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Non-urgent\",\n  \"reasoning\": \"The patient reports back pain that has been present for a few days. While this is not an immediate emergency, it is important to monitor the symptoms and consider further evaluation if they persist or worsen.\",\n  \"chiefComplaint\": \"Back pain\",\n  \"symptoms\": [\"back pain\"],\n  \"redFlags\": [],\n  \"duration\": \"a few days\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing back pain that has lasted for a few days. There are no immediate red flags, but the situation should be monitored. If the pain persists or worsens, further evaluation may be necessary.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 150,
+    "tokensOut": 168,
+    "costUsd": 0.002055,
+    "latencyMs": 2088,
+    "modelCalls": 1
+  }
+}

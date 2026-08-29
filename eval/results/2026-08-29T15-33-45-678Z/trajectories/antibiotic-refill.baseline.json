@@ -1,0 +1,24 @@
+{
+  "case": "antibiotic-refill",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1688,
+      "tokensIn": 155,
+      "tokensOut": 151,
+      "costUsd": 0.0018975,
+      "attempts": 1,
+      "input": "I need antibiotics for a urine infection, I get one most years.",
+      "output": "{\n  \"carePathway\": \"MEDICATION_REVIEW\",\n  \"urgency\": \"Routine\",\n  \"reasoning\": \"The patient has a recurrent urinary tract infection (UTI) and is requesting antibiotics. A medication review is necessary to ensure appropriate treatment and to consider any potential resistance or need for further investigation.\",\n  \"chiefComplaint\": \"Urinary tract infection\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"duration\": \"Recurrent, most years\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient experiences recurrent urinary tract infections and is requesting antibiotics. A medication review is needed to determine the appropriate course of treatment.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 155,
+    "tokensOut": 151,
+    "costUsd": 0.0018975,
+    "latencyMs": 1688,
+    "modelCalls": 1
+  }
+}

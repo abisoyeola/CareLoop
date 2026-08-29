@@ -1,0 +1,24 @@
+{
+  "case": "chest-pain-cardiac",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2746,
+      "tokensIn": 149,
+      "tokensOut": 128,
+      "costUsd": 0.0016524999999999999,
+      "attempts": 1,
+      "input": "I've been having some chest discomfort today.",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"Chest discomfort can be a sign of a serious condition such as a heart attack, which requires immediate medical attention.\", \"chiefComplaint\": \"chest discomfort\", \"symptoms\": [\"chest discomfort\"], \"redFlags\": [\"chest discomfort\"], \"duration\": \"today\", \"severity\": \"not specified\", \"allergies\": [], \"medications\": [], \"summary\": \"The patient is experiencing chest discomfort today, which is a potential red flag for serious conditions like a heart attack. Immediate medical evaluation is necessary.\" }"
+    }
+  ],
+  "totals": {
+    "tokensIn": 149,
+    "tokensOut": 128,
+    "costUsd": 0.0016524999999999999,
+    "latencyMs": 2746,
+    "modelCalls": 1
+  }
+}

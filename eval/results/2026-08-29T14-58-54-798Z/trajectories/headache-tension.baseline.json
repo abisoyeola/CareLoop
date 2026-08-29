@@ -1,0 +1,24 @@
+{
+  "case": "headache-tension",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "mock",
+      "latencyMs": 5,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 1,
+      "input": "I've had a mild headache since this morning.",
+      "output": "{\"carePathway\":\"YELLOW\",\"urgency\":\"non_urgent\",\"reasoning\":\"Mock provider: keyword match only, not clinical reasoning.\",\"requiresHumanReview\":true}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 0,
+    "tokensOut": 0,
+    "costUsd": 0,
+    "latencyMs": 5,
+    "modelCalls": 1
+  }
+}

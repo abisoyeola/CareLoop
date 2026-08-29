@@ -1,0 +1,158 @@
+{
+  "case": "back-pain-cauda-equina",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1100,
+      "tokensIn": 501,
+      "tokensOut": 47,
+      "costUsd": 0.00010334999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been experiencing this back pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 691,
+      "tokensIn": 278,
+      "tokensOut": 18,
+      "costUsd": 0.000052499999999999995,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started four days ago after I lifted a heavy box.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 904,
+      "tokensIn": 533,
+      "tokensOut": 57,
+      "costUsd": 0.00011415000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 754,
+      "tokensIn": 327,
+      "tokensOut": 20,
+      "costUsd": 0.00006104999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nYou: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate the back pain a 7 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1055,
+      "tokensIn": 584,
+      "tokensOut": 51,
+      "costUsd": 0.0001182,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nPatient: I would rate the back pain a 7 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 805,
+      "tokensIn": 371,
+      "tokensOut": 33,
+      "costUsd": 0.00007544999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nYou: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nYou: I would rate the back pain a 7 out of 10.\nService: Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs around the saddle area.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 957,
+      "tokensIn": 641,
+      "tokensOut": 56,
+      "costUsd": 0.00012974999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nPatient: I would rate the back pain a 7 out of 10.\nYou: Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs around the saddle area.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you experienced any bowel or bladder changes, such as difficulty controlling them or changes in sensation?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 778,
+      "tokensIn": 427,
+      "tokensOut": 24,
+      "costUsd": 0.00007845,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nYou: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nYou: I would rate the back pain a 7 out of 10.\nService: Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\nYou: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs around the saddle area.\nService: Thank you for that information. Have you experienced any bowel or bladder changes, such as difficulty controlling them or changes in sensation?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I've struggled to start passing urine since this morning and I don't feel it coming.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 849,
+      "tokensIn": 688,
+      "tokensOut": 41,
+      "costUsd": 0.0001278,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nPatient: I would rate the back pain a 7 out of 10.\nYou: Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs around the saddle area.\nYou: Thank you for that information. Have you experienced any bowel or bladder changes, such as difficulty controlling them or changes in sensation?\nPatient: Yes, I've struggled to start passing urine since this morning and I don't feel it coming.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It sounds like you're experiencing some concerning symptoms. Have you had any previous back injuries or surgeries?\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 5 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1778,
+      "tokensIn": 546,
+      "tokensOut": 206,
+      "costUsd": 0.0002055,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've had back pain for a few days.\nService: Thank you for sharing that. How long have you been experiencing this back pain?\nPatient: It started four days ago after I lifted a heavy box.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your back pain?\nPatient: I would rate the back pain a 7 out of 10.\nService: Are you experiencing any other symptoms along with the back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, since yesterday both legs feel weak and heavy going up stairs, and I have numbness between my legs around the saddle area.\nService: Thank you for that information. Have you experienced any bowel or bladder changes, such as difficulty controlling them or changes in sensation?\nPatient: Yes, I've struggled to start passing urine since this morning and I don't feel it coming.\nService: It sounds like you're experiencing some concerning symptoms. Have you had any previous back injuries or surgeries?",
+      "output": "{\n  \"chiefComplaint\": \"Back pain with associated leg weakness and numbness.\",\n  \"duration\": \"4 days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"back pain\",\n    \"weakness in legs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"redFlags\": [\n    \"weak and heavy legs going up stairs\",\n    \"numbness between my legs around the saddle area\",\n    \"struggled to start passing urine since this morning\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing back pain for four days, which began after lifting a heavy box. They rate the pain as 7 out of 10 and have developed weakness and heaviness in both legs, along with numbness in the saddle area. Additionally, the patient is experiencing difficulty starting to pass urine, which raises concern for potential complications.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1274,
+      "tokensIn": 653,
+      "tokensOut": 75,
+      "costUsd": 0.0023825,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Back pain with associated leg weakness and numbness.\",\n  \"duration\": \"4 days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"back pain\",\n    \"weakness in legs\",\n    \"numbness between legs\",\n    \"difficulty starting to pass urine\"\n  ],\n  \"redFlags\": [\n    \"weak and heavy legs going up stairs\",\n    \"numbness between my legs around the saddle area\",\n    \"struggled to start passing urine since this morning\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing back pain for four days, which began after lifting a heavy box. They rate the pain as 7 out of 10 and have developed weakness and heaviness in both legs, along with numbness in the saddle area. Additionally, the patient is experiencing difficulty starting to pass urine, which raises concern for potential complications.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports back pain with associated leg weakness, numbness in the saddle area, and difficulty starting to pass urine. These symptoms raise concern for potential serious conditions such as cauda equina syndrome, which requires urgent medical assessment.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 5549,
+    "tokensOut": 628,
+    "costUsd": 0.0034487,
+    "latencyMs": 10945,
+    "modelCalls": 11
+  }
+}

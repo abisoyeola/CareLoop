@@ -1,0 +1,24 @@
+{
+  "case": "sore-throat-airway",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2541,
+      "tokensIn": 147,
+      "tokensOut": 183,
+      "costUsd": 0.0021975,
+      "attempts": 1,
+      "input": "My throat is really sore.",
+      "output": "{ \n  \"carePathway\": \"YELLOW\", \n  \"urgency\": \"Within 24-48 hours\", \n  \"reasoning\": \"The patient reports a sore throat, which could be due to a variety of causes such as a viral infection, bacterial infection, or other conditions. It is important to assess further to rule out any serious conditions and provide appropriate treatment.\", \n  \"chiefComplaint\": \"Sore throat\", \n  \"symptoms\": [\"Sore throat\"], \n  \"redFlags\": [], \n  \"duration\": \"Not specified\", \n  \"severity\": \"Not specified\", \n  \"allergies\": [], \n  \"medications\": [], \n  \"summary\": \"The patient is experiencing a sore throat. Further assessment is needed to determine the cause and appropriate treatment. It is recommended to seek medical attention within 24-48 hours.\" \n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 147,
+    "tokensOut": 183,
+    "costUsd": 0.0021975,
+    "latencyMs": 2541,
+    "modelCalls": 1
+  }
+}

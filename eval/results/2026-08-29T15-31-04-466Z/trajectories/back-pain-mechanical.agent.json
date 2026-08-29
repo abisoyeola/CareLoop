@@ -1,0 +1,246 @@
+{
+  "case": "back-pain-mechanical",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1132,
+      "tokensIn": 503,
+      "tokensOut": 75,
+      "costUsd": 0.00012044999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 953,
+      "tokensIn": 284,
+      "tokensOut": 18,
+      "costUsd": 0.0000534,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate it a 4 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1133,
+      "tokensIn": 547,
+      "tokensOut": 63,
+      "costUsd": 0.00011984999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 768,
+      "tokensIn": 338,
+      "tokensOut": 16,
+      "costUsd": 0.00006029999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed any of those symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1138,
+      "tokensIn": 599,
+      "tokensOut": 84,
+      "costUsd": 0.00014025,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Main complaint duration and changes over time\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 713,
+      "tokensIn": 387,
+      "tokensOut": 21,
+      "costUsd": 0.00007065,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It just developed gradually over time, no specific event or activity triggered it.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1424,
+      "tokensIn": 653,
+      "tokensOut": 69,
+      "costUsd": 0.00013935,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 788,
+      "tokensIn": 434,
+      "tokensOut": 25,
+      "costUsd": 0.0000801,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nYou: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1086,
+      "tokensIn": 704,
+      "tokensOut": 61,
+      "costUsd": 0.0001422,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nYou: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 763,
+      "tokensIn": 484,
+      "tokensOut": 13,
+      "costUsd": 0.0000804,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nYou: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nYou: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nService: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not taking any medications regularly.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 943,
+      "tokensIn": 742,
+      "tokensOut": 44,
+      "costUsd": 0.00013769999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nYou: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nYou: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nPatient: I'm not taking any medications regularly.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the update. Do you have any known allergies to medications or other substances?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 874,
+      "tokensIn": 513,
+      "tokensOut": 15,
+      "costUsd": 0.00008595,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nYou: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nYou: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nService: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nYou: I'm not taking any medications regularly.\nService: Thank you for the update. Do you have any known allergies to medications or other substances?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I don't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1051,
+      "tokensIn": 773,
+      "tokensOut": 52,
+      "costUsd": 0.00014715,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nYou: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nYou: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nPatient: I'm not taking any medications regularly.\nYou: Thank you for the update. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for providing that information. Can you tell me if you have any history of back problems or previous injuries related to your back?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 754,
+      "tokensIn": 553,
+      "tokensOut": 24,
+      "costUsd": 0.00009735,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nYou: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nYou: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nService: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nYou: I'm not taking any medications regularly.\nService: Thank you for the update. Do you have any known allergies to medications or other substances?\nYou: No, I don't have any known allergies.\nService: Thank you for providing that information. Can you",
+      "output": "{ \"reply\": \"No, I don't have any history of back problems or previous injuries related to my back.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1126,
+      "tokensIn": 822,
+      "tokensOut": 56,
+      "costUsd": 0.0001569,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nYou: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nYou: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nPatient: I'm not taking any medications regularly.\nYou: Thank you for the update. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known allergies.\nYou: Thank you for providing that information. Can you tell me if you have any history of back problems or previous injuries r",
+      "output": "{ \"reply\": \"Thank you for sharing all that information. Just to confirm, have you had any recent changes in your daily activities or routines that might have contributed to your lower back pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 778,
+      "tokensIn": 609,
+      "tokensOut": 21,
+      "costUsd": 0.00010394999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had lower back pain for about five weeks now.\"\n\nYou: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nYou: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nYou: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nYou: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nYou: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nService: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nYou: I'm not taking any medications regularly.\nService: Thank you for the update. Do you have any known allergies to medications or other substances?\nYou: No, I don't have any known allergies.\nService: Thank you for providing that information. Can you",
+      "output": "{ \"reply\": \"No, I haven't had any recent changes in my daily activities or routines.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1067,
+      "tokensIn": 875,
+      "tokensOut": 57,
+      "costUsd": 0.00016544999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had lower back pain for about five weeks now.\nYou: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nYou: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nYou: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nYou: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nYou: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nPatient: I'm not taking any medications regularly.\nYou: Thank you for the update. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known allergies.\nYou: Thank you for providing that information. Can you tell me if you have any history of back problems or previous injuries r",
+      "output": "{ \"reply\": \"Thank you for your responses. Based on everything you've shared, I will now proceed with the assessment. Please hold on for a moment while I route you to the appropriate care.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 9 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1492,
+      "tokensIn": 749,
+      "tokensOut": 136,
+      "costUsd": 0.00019394999999999997,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've had lower back pain for about five weeks now.\nService: Thank you for sharing that. On a scale from 0 to 10, how would you rate the severity of your lower back pain?\nPatient: I would rate it a 4 out of 10.\nService: I appreciate your response. Have you noticed any other symptoms accompanying your lower back pain, such as numbness, tingling, weakness in your legs, or changes in bowel or bladder function?\nPatient: No, I haven't noticed any of those symptoms.\nService: Thank you for the information. Can you tell me if there was any specific event or activity that seemed to trigger your lower back pain, or has it developed gradually over time?\nPatient: It just developed gradually over time, no specific event or activity triggered it.\nService: Thank you for clarifying that. Have you experienced any weight loss, fever, or significant changes in your overall health since the pain started?\nPatient: No, I haven't experienced any weight loss, fever, or significant changes in my overall health.\nService: Thank you for that information. Can you please tell me about any current medications you are taking, including over-the-counter medications and supplements?\nPatient: I'm not taking any medications regularly.\nService: Thank you for the update. Do you have any known allergies to medications or other substances?\nPatient: No, I don't have any known allergies.\nService: Thank you for providing that information. Can you tell me if you have any history of back problems o",
+      "output": "{\n  \"chiefComplaint\": \"Lower back pain\",\n  \"duration\": \"five weeks\",\n  \"severity\": \"4/10\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing lower back pain that has developed gradually over the past five weeks, rating the severity as 4 out of 10. They have not noticed any accompanying symptoms such as numbness, tingling, or changes in bowel or bladder function. The patient has no history of back problems, is not taking any medications, and has no known allergies.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1256,
+      "tokensIn": 583,
+      "tokensOut": 76,
+      "costUsd": 0.0022175,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Lower back pain\",\n  \"duration\": \"five weeks\",\n  \"severity\": \"4/10\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing lower back pain that has developed gradually over the past five weeks, rating the severity as 4 out of 10. They have not noticed any accompanying symptoms such as numbness, tingling, or changes in bowel or bladder function. The patient has no history of back problems, is not taking any medications, and has no known allergies.\"\n}",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"The patient has been experiencing lower back pain for five weeks, which requires professional evaluation due to the duration of symptoms.\", \"reasoning\": \"The lower back pain has persisted for more than two weeks, which warrants a clinician consultation to evaluate the cause and determine appropriate management.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 11152,
+    "tokensOut": 926,
+    "costUsd": 0.00431285,
+    "latencyMs": 19239,
+    "modelCalls": 19
+  }
+}

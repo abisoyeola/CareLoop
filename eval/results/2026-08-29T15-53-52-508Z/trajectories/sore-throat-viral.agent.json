@@ -1,0 +1,267 @@
+{
+  "case": "sore-throat-viral",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 856,
+      "tokensIn": 651,
+      "tokensOut": 40,
+      "costUsd": 0.00012165,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been experiencing the sore throat?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 703,
+      "tokensIn": 255,
+      "tokensOut": 14,
+      "costUsd": 0.00004665,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been going on for two days.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 967,
+      "tokensIn": 679,
+      "tokensOut": 60,
+      "costUsd": 0.00013785,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 659,
+      "tokensIn": 303,
+      "tokensOut": 18,
+      "costUsd": 0.00005625,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate it a 3 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1008,
+      "tokensIn": 731,
+      "tokensOut": 64,
+      "costUsd": 0.00014805,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\", \"options\": [\"Fever\", \"Cough\", \"Difficulty swallowing\", \"None of the above\"], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 774,
+      "tokensIn": 341,
+      "tokensOut": 26,
+      "costUsd": 0.00006675,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 937,
+      "tokensIn": 777,
+      "tokensOut": 61,
+      "costUsd": 0.00015315,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you noticed any fever or chills during this time?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 759,
+      "tokensIn": 376,
+      "tokensOut": 16,
+      "costUsd": 0.00006599999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't noticed any fever or chills.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 986,
+      "tokensIn": 802,
+      "tokensOut": 56,
+      "costUsd": 0.0001539,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 803,
+      "tokensIn": 412,
+      "tokensOut": 22,
+      "costUsd": 0.000075,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses or infections before this sore throat started.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1023,
+      "tokensIn": 844,
+      "tokensOut": 44,
+      "costUsd": 0.00015299999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nYou: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you currently taking any medications or do you have any known allergies?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 733,
+      "tokensIn": 446,
+      "tokensOut": 21,
+      "costUsd": 0.0000795,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nYou: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any medications and I don't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1010,
+      "tokensIn": 877,
+      "tokensOut": 55,
+      "costUsd": 0.00016455000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nYou: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\nYou: Are you currently taking any medications or do you have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 755,
+      "tokensIn": 484,
+      "tokensOut": 21,
+      "costUsd": 0.0000852,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nYou: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any difficulty breathing or any swelling in my throat.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 888,
+      "tokensIn": 915,
+      "tokensOut": 46,
+      "costUsd": 0.00016485,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nYou: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\nYou: Are you currently taking any medications or do you have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nPatient: No, I haven't had any difficulty breathing or any swelling in my throat.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you been in contact with anyone who has been sick recently?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Contact with sick individuals\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 522,
+      "tokensOut": 21,
+      "costUsd": 0.00009089999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nYou: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nYou: No, I haven't had any difficulty breathing or any swelling in my throat.\nService: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't been in contact with anyone who has been sick recently.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 889,
+      "tokensIn": 953,
+      "tokensOut": 40,
+      "costUsd": 0.00016694999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nYou: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\nYou: Are you currently taking any medications or do you have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nPatient: No, I haven't had any difficulty breathing or any swelling in my throat.\nYou: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\nPatient: No, I haven't been in contact with anyone who has been sick recently.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you experienced any rash or skin changes during this time?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 801,
+      "tokensIn": 559,
+      "tokensOut": 17,
+      "costUsd": 0.00009405000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nYou: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nYou: No, I haven't had any difficulty breathing or any swelling in my throat.\nService: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\nYou: No, I haven't been in contact with anyone who has been sick recently.\nService: Thank you for the informat",
+      "output": "{ \"reply\": \"No, I haven't experienced any rash or skin changes.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 877,
+      "tokensIn": 986,
+      "tokensOut": 48,
+      "costUsd": 0.00017669999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I have a sore throat.\nYou: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nYou: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nYou: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nYou: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\nYou: Are you currently taking any medications or do you have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nYou: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nPatient: No, I haven't had any difficulty breathing or any swelling in my throat.\nYou: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\nPatient: No, I haven't been in contact with anyone who has been sick recently.\nYou: Thank you for the information. Have you experienced any rash or skin ",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you recently traveled anywhere or been exposed to any environmental factors that might have contributed to your symptoms?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 708,
+      "tokensIn": 600,
+      "tokensOut": 21,
+      "costUsd": 0.00010259999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I have a sore throat.\"\n\nYou: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nYou: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nYou: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nYou: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\nYou: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nYou: No, I haven't had any difficulty breathing or any swelling in my throat.\nService: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\nYou: No, I haven't been in contact with anyone who has been sick recently.\nService: Thank you for the informat",
+      "output": "{ \"reply\": \"No, I haven't traveled anywhere recently or been exposed to any environmental factors.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1342,
+      "tokensIn": 715,
+      "tokensOut": 124,
+      "costUsd": 0.00018165,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I have a sore throat.\nService: Thank you for sharing that. How long have you been experiencing the sore throat?\nPatient: It's been going on for two days.\nService: On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of your sore throat?\nPatient: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a blocked nose and a cough, but I can swallow food and drink normally.\nService: Have you noticed any fever or chills during this time?\nPatient: No, I haven't noticed any fever or chills.\nService: Have you had any recent illnesses or infections, such as a cold or flu, before this sore throat started?\nPatient: No, I haven't had any recent illnesses or infections before this sore throat started.\nService: Are you currently taking any medications or do you have any known allergies?\nPatient: No, I'm not taking any medications and I don't have any known allergies.\nService: Thank you for the information. Have you had any difficulty breathing or any swelling in your throat?\nPatient: No, I haven't had any difficulty breathing or any swelling in my throat.\nService: Thank you for your responses. Have you been in contact with anyone who has been sick recently?\nPatient: No, I haven't been in contact with anyone who has been sick recently.\nService: Thank you for the information. Have you ",
+      "output": "{\n  \"chiefComplaint\": \"sore throat\",\n  \"duration\": \"2 days\",\n  \"severity\": \"3/10\",\n  \"symptoms\": [\"blocked nose\", \"cough\"],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat lasting for two days, rated as 3 out of 10 in severity. They also have a blocked nose and a cough but can swallow normally. The patient denies any fever, chills, recent illnesses, or contact with sick individuals.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1162,
+      "tokensIn": 576,
+      "tokensOut": 84,
+      "costUsd": 0.00228,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"sore throat\",\n  \"duration\": \"2 days\",\n  \"severity\": \"3/10\",\n  \"symptoms\": [\n    \"blocked nose\",\n    \"cough\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat lasting for two days, rated as 3 out of 10 in severity. They also have a blocked nose and a cough but can swallow normally. The patient denies any fever, chills, recent illnesses, or contact with sick individuals.\"\n}",
+      "output": "{ \"carePathway\": \"GREEN\", \"urgency\": \"The symptoms are mild and have only been present for two days.\", \"reasoning\": \"The patient reports a sore throat with mild severity, along with a blocked nose and cough. There are no red flags or additional concerning symptoms reported, and the duration is short. Monitoring and self-care are reasonable at this stage.\", \"requiresHumanReview\": false }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "GREEN",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 13804,
+    "tokensOut": 919,
+    "costUsd": 0.0047652,
+    "latencyMs": 19517,
+    "modelCalls": 22
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "case": "abdominal-vague",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 956,
+      "tokensIn": 496,
+      "tokensOut": 46,
+      "costUsd": 0.00010200000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been experiencing stomach pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 842,
+      "tokensIn": 244,
+      "tokensOut": 19,
+      "costUsd": 0.000047999999999999994,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know exactly when it started, maybe a while ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1370,
+      "tokensIn": 528,
+      "tokensOut": 89,
+      "costUsd": 0.0001326,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\", \"options\": [\"Gotten worse\", \"Gotten better\", \"Stayed the same\"], \"readyToAssess\": false, \"missingFields\": [\"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1123,
+      "tokensIn": 289,
+      "tokensOut": 10,
+      "costUsd": 0.00004934999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1090,
+      "tokensIn": 564,
+      "tokensOut": 65,
+      "costUsd": 0.0001236,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 716,
+      "tokensIn": 338,
+      "tokensOut": 10,
+      "costUsd": 0.000056699999999999996,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1038,
+      "tokensIn": 613,
+      "tokensOut": 64,
+      "costUsd": 0.00013035,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 668,
+      "tokensIn": 385,
+      "tokensOut": 10,
+      "costUsd": 0.00006374999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1084,
+      "tokensIn": 660,
+      "tokensOut": 62,
+      "costUsd": 0.0001362,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 707,
+      "tokensIn": 411,
+      "tokensOut": 10,
+      "costUsd": 0.00006764999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1192,
+      "tokensIn": 686,
+      "tokensOut": 71,
+      "costUsd": 0.00014549999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nYou: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\", \"options\": [\"Yes\", \"No\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 671,
+      "tokensIn": 450,
+      "tokensOut": 10,
+      "costUsd": 0.0000735,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nYou: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1564,
+      "tokensIn": 725,
+      "tokensOut": 54,
+      "costUsd": 0.00014115,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nYou: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\nYou: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nPatient: I don't know.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 684,
+      "tokensIn": 482,
+      "tokensOut": 16,
+      "costUsd": 0.0000819,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nYou: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nYou: I don't know.\nService: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not taking anything and I have no allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1064,
+      "tokensIn": 763,
+      "tokensOut": 55,
+      "costUsd": 0.00014744999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nYou: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\nYou: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nPatient: I don't know.\nYou: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nPatient: I'm not taking anything and I have no allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 915,
+      "tokensIn": 526,
+      "tokensOut": 10,
+      "costUsd": 0.00008489999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nYou: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nYou: I don't know.\nService: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nYou: I'm not taking anything and I have no allergies.\nService: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\n\nReply to the service's lat",
+      "output": "{ \"reply\": \"I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1095,
+      "tokensIn": 801,
+      "tokensOut": 80,
+      "costUsd": 0.00016815,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nYou: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\nYou: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nPatient: I don't know.\nYou: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nPatient: I'm not taking anything and I have no allergies.\nYou: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\nPatient: I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Have you experienced any recent stress or changes in your daily routine that might be affecting your stomach?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Main complaint\", \"Duration and how it has changed over time\", \"Severity\", \"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 678,
+      "tokensIn": 558,
+      "tokensOut": 10,
+      "costUsd": 0.0000897,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nYou: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nYou: I don't know.\nService: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nYou: I'm not taking anything and I have no allergies.\nService: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\nYou: I'm not sure.\nService:",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1201,
+      "tokensIn": 833,
+      "tokensOut": 92,
+      "costUsd": 0.00018015000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My stomach hurts.\nYou: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nYou: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nYou: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nYou: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nYou: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\nYou: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nPatient: I don't know.\nYou: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nPatient: I'm not taking anything and I have no allergies.\nYou: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\nPatient: I'm not sure.\nYou: I appreciate your response. Have you e",
+      "output": "{ \"reply\": \"Thank you for your responses. It's important to gather as much information as possible. Have you had any recent travel or changes in diet that could be related to your stomach pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"main complaint\", \"duration and how it has changed over time\", \"severity\", \"associated symptoms\", \"red-flag screening specific to the complaint\", \"relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 788,
+      "tokensIn": 601,
+      "tokensOut": 10,
+      "costUsd": 0.00009614999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My stomach hurts.\"\n\nYou: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nYou: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nYou: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nYou: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nYou: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nYou: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nYou: I don't know.\nService: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nYou: I'm not taking anything and I have no allergies.\nService: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\nYou: I'm not sure.\nService:",
+      "output": "{ \"reply\": \"I don't know.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1369,
+      "tokensIn": 713,
+      "tokensOut": 122,
+      "costUsd": 0.00018015,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My stomach hurts.\nService: Thank you for sharing that. How long have you been experiencing stomach pain?\nPatient: I don't know exactly when it started, maybe a while ago.\nService: I appreciate your response. Can you describe how the pain has changed over time? Has it gotten worse, better, or stayed the same?\nPatient: I don't know.\nService: Thank you for your response. On a scale of 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate your stomach pain right now?\nPatient: I don't know.\nService: I understand that it can be difficult to assess pain. Can you tell me if you are experiencing any other symptoms along with your stomach pain, such as nausea, vomiting, diarrhea, or fever?\nPatient: I don't know.\nService: Thank you for your responses. Have you noticed any changes in your appetite or weight recently?\nPatient: I don't know.\nService: I appreciate your responses. Have you experienced any severe symptoms, such as blood in your stool, persistent vomiting, or severe abdominal pain that comes and goes?\nPatient: I don't know.\nService: Thank you for your answers. Can you tell me about any medical conditions you have or any medications you are currently taking?\nPatient: I'm not taking anything and I have no allergies.\nService: Thank you for sharing that information. Can you tell me if you have any history of stomach issues or gastrointestinal problems, such as ulcers or acid reflux?\nPatient: I'm not sure.\nService: I appreci",
+      "output": "{\n  \"chiefComplaint\": \"Stomach pain\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing stomach pain but is unable to provide details regarding the duration, severity, or any associated symptoms. They have no known allergies and are not currently taking any medications. There is no reported history of gastrointestinal issues, and the patient is uncertain about any recent changes that may be affecting their condition.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1242,
+      "tokensIn": 569,
+      "tokensOut": 97,
+      "costUsd": 0.0023924999999999997,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Stomach pain\",\n  \"duration\": \"unknown\",\n  \"severity\": \"unknown\",\n  \"symptoms\": [],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing stomach pain but is unable to provide details regarding the duration, severity, or any associated symptoms. They have no known allergies and are not currently taking any medications. There is no reported history of gastrointestinal issues, and the patient is uncertain about any recent changes that may be affecting their condition.\"\n}",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"The patient should consult with a clinician to evaluate the stomach pain, especially given the lack of information on duration and severity.\",\n  \"reasoning\": \"The stomach pain's duration and severity are unknown, and there are no associated symptoms reported. Without more information, it is important to have a professional evaluation to rule out any underlying issues that may require treatment.\",\n  \"requiresHumanReview\": true\n}"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "No red-flag rule fired."
+    },
+    {
+      "step": "verification:incomplete",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Missing required fields: duration, severity. Assessment is flagged incomplete for the clinician."
+    }
+  ],
+  "totals": {
+    "tokensIn": 12235,
+    "tokensOut": 1012,
+    "costUsd": 0.0046914,
+    "latencyMs": 22057,
+    "modelCalls": 22
+  }
+}

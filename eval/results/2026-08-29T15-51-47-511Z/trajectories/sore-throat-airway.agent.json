@@ -1,0 +1,158 @@
+{
+  "case": "sore-throat-airway",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 896,
+      "tokensIn": 651,
+      "tokensOut": 43,
+      "costUsd": 0.00012345,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 675,
+      "tokensIn": 267,
+      "tokensOut": 22,
+      "costUsd": 0.00005324999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started yesterday, and it's gotten a lot worse in the last few hours.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1104,
+      "tokensIn": 690,
+      "tokensOut": 60,
+      "costUsd": 0.0001395,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 826,
+      "tokensIn": 323,
+      "tokensOut": 14,
+      "costUsd": 0.00005685,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's about an 8 right now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1286,
+      "tokensIn": 738,
+      "tokensOut": 68,
+      "costUsd": 0.0001515,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nPatient: It's about an 8 right now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\", \"options\": [\"Fever\", \"Cough\", \"Difficulty swallowing\", \"None of these\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 754,
+      "tokensIn": 362,
+      "tokensOut": 25,
+      "costUsd": 0.0000693,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nYou: It's about an 8 right now.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I have a fever and I can't swallow my own saliva. I'm also drooling.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1930,
+      "tokensIn": 788,
+      "tokensOut": 54,
+      "costUsd": 0.00015059999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nPatient: It's about an 8 right now.\nYou: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I can't swallow my own saliva. I'm also drooling.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you experienced any rash, difficulty breathing, or swelling in your throat or face?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 943,
+      "tokensIn": 408,
+      "tokensOut": 24,
+      "costUsd": 0.0000756,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My throat is really sore.\"\n\nYou: My throat is really sore.\nService: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nYou: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nYou: It's about an 8 right now.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nYou: Yes, I have a fever and I can't swallow my own saliva. I'm also drooling.\nService: Thank you for sharing that. Have you experienced any rash, difficulty breathing, or swelling in your throat or face?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any rash or swelling, but I do feel short of breath.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 943,
+      "tokensIn": 833,
+      "tokensOut": 41,
+      "costUsd": 0.00014955,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My throat is really sore.\nYou: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nYou: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nPatient: It's about an 8 right now.\nYou: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I can't swallow my own saliva. I'm also drooling.\nYou: Thank you for sharing that. Have you experienced any rash, difficulty breathing, or swelling in your throat or face?\nPatient: No, I haven't experienced any rash or swelling, but I do feel short of breath.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"It's important to address your shortness of breath. Have you had any previous issues with breathing or any known respiratory conditions?\",\"options\":[],\"readyToAssess\":true,\"missingFields\":[]}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 5 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1839,
+      "tokensIn": 543,
+      "tokensOut": 175,
+      "costUsd": 0.00018644999999999998,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My throat is really sore.\nService: I'm sorry to hear that your throat is sore. How long have you been experiencing this soreness?\nPatient: It started yesterday, and it's gotten a lot worse in the last few hours.\nService: Thank you for that information. On a scale of 0 to 10, with 10 being the worst pain you can imagine, how severe is your throat pain right now?\nPatient: It's about an 8 right now.\nService: I appreciate your response. Are you experiencing any other symptoms along with the sore throat, such as fever, cough, or difficulty swallowing?\nPatient: Yes, I have a fever and I can't swallow my own saliva. I'm also drooling.\nService: Thank you for sharing that. Have you experienced any rash, difficulty breathing, or swelling in your throat or face?\nPatient: No, I haven't experienced any rash or swelling, but I do feel short of breath.\nService: It's important to address your shortness of breath. Have you had any previous issues with breathing or any known respiratory conditions?",
+      "output": "{\n  \"chiefComplaint\": \"Sore throat\",\n  \"duration\": \"1 day\",\n  \"severity\": \"8/10\",\n  \"symptoms\": [\n    \"fever\",\n    \"difficulty swallowing\",\n    \"drooling\",\n    \"shortness of breath\"\n  ],\n  \"redFlags\": [\n    \"I can't swallow my own saliva\",\n    \"I do feel short of breath\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat that started yesterday and has worsened significantly in the last few hours. They rate the pain as an 8 out of 10 and are experiencing a fever, difficulty swallowing, drooling, and shortness of breath. The presence of difficulty swallowing and shortness of breath are concerning and warrant immediate attention.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1239,
+      "tokensIn": 332,
+      "tokensOut": 82,
+      "costUsd": 0.00165,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Sore throat\",\n  \"duration\": \"1 day\",\n  \"severity\": \"8/10\",\n  \"symptoms\": [\n    \"fever\",\n    \"difficulty swallowing\",\n    \"drooling\",\n    \"shortness of breath\"\n  ],\n  \"redFlags\": [\n    \"I can't swallow my own saliva\",\n    \"I do feel short of breath\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a sore throat that started yesterday and has worsened significantly in the last few hours. They rate the pain as an 8 out of 10 and are experiencing a fever, difficulty swallowing, drooling, and shortness of breath. The presence of difficulty swallowing and shortness of breath are concerning and warrant immediate attention.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The combination of severe sore throat, difficulty swallowing, drooling, and shortness of breath are concerning symptoms that could indicate a serious condition such as epiglottitis or an abscess. These symptoms require immediate medical evaluation to ensure the patient's airway is not compromised.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 5935,
+    "tokensOut": 608,
+    "costUsd": 0.00280605,
+    "latencyMs": 12435,
+    "modelCalls": 11
+  }
+}

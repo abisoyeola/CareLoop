@@ -1,0 +1,180 @@
+{
+  "case": "stroke-resolving",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 957,
+      "tokensIn": 659,
+      "tokensOut": 53,
+      "costUsd": 0.00013065,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 672,
+      "tokensIn": 296,
+      "tokensOut": 14,
+      "costUsd": 0.000052799999999999996,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started about 90 minutes ago.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1083,
+      "tokensIn": 693,
+      "tokensOut": 66,
+      "costUsd": 0.00014355,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 686,
+      "tokensIn": 350,
+      "tokensOut": 22,
+      "costUsd": 0.0000657,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nYou: It started about 90 minutes ago.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would say it was around a 7 when it was at its worst.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1220,
+      "tokensIn": 755,
+      "tokensOut": 56,
+      "costUsd": 0.00014685,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nPatient: I would say it was around a 7 when it was at its worst.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 881,
+      "tokensIn": 401,
+      "tokensOut": 34,
+      "costUsd": 0.00008054999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nYou: It started about 90 minutes ago.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nYou: I would say it was around a 7 when it was at its worst.\nService: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1017,
+      "tokensIn": 818,
+      "tokensOut": 61,
+      "costUsd": 0.0001593,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nPatient: I would say it was around a 7 when it was at its worst.\nYou: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nPatient: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"red-flag screening specific to the complaint\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1428,
+      "tokensIn": 468,
+      "tokensOut": 26,
+      "costUsd": 0.0000858,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nYou: It started about 90 minutes ago.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nYou: I would say it was around a 7 when it was at its worst.\nService: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nYou: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\nService: It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, my speech was slurred for about 20 minutes and I had trouble getting words out.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 973,
+      "tokensIn": 877,
+      "tokensOut": 45,
+      "costUsd": 0.00015855,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nPatient: I would say it was around a 7 when it was at its worst.\nYou: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nPatient: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\nYou: It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\nPatient: Yes, my speech was slurred for about 20 minutes and I had trouble getting words out.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for sharing that. I need to ask, did these symptoms come on suddenly or gradually?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 640,
+      "tokensIn": 512,
+      "tokensOut": 11,
+      "costUsd": 0.0000834,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nYou: It started about 90 minutes ago.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nYou: I would say it was around a 7 when it was at its worst.\nService: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nYou: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\nService: It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\nYou: Yes, my speech was slurred for about 20 minutes and I had trouble getting words out.\nService: Thank you for sharing that. I need to ask, did these symptoms come on suddenly or gradually?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"They came on suddenly.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 975,
+      "tokensIn": 906,
+      "tokensOut": 57,
+      "costUsd": 0.0001701,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\nYou: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nPatient: I would say it was around a 7 when it was at its worst.\nYou: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nPatient: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\nYou: It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\nPatient: Yes, my speech was slurred for about 20 minutes and I had trouble getting words out.\nYou: Thank you for sharing that. I need to ask, did these symptoms come on suddenly or gradually?\nPatient: They came on suddenly.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for clarifying that. Given the symptoms you've described, it's important to assess for any urgent concerns. Have you experienced any chest pain or difficulty breathing at any point?\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 6 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2265,
+      "tokensIn": 627,
+      "tokensOut": 220,
+      "costUsd": 0.00022605,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nService: Thank you for sharing that. Can you tell me how long you have been experiencing this sensation in your arm?\nPatient: It started about 90 minutes ago.\nService: I appreciate the information. On a scale from 0 to 10, how would you rate the severity of the sensation in your arm, with 0 being no sensation and 10 being the worst possible?\nPatient: I would say it was around a 7 when it was at its worst.\nService: Thank you for that information. Have you noticed any other symptoms accompanying the sensation in your arm, such as weakness, numbness, or difficulty moving it?\nPatient: Yes, my right arm went weak and I couldn't lift a cup. My partner also said my face was drooping on the right side.\nService: It sounds concerning that you experienced weakness in your arm and facial drooping. Have you had any other symptoms, such as difficulty speaking, confusion, or any changes in vision?\nPatient: Yes, my speech was slurred for about 20 minutes and I had trouble getting words out.\nService: Thank you for sharing that. I need to ask, did these symptoms come on suddenly or gradually?\nPatient: They came on suddenly.\nService: Thank you for clarifying that. Given the symptoms you've described, it's important to assess for any urgent concerns. Have you experienced any chest pain or difficulty breathing at any point?",
+      "output": "{\n  \"chiefComplaint\": \"Sensation in right arm and facial drooping.\",\n  \"duration\": \"90 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in right arm\",\n    \"inability to lift a cup\",\n    \"facial drooping on right side\",\n    \"slurred speech\",\n    \"trouble getting words out\"\n  ],\n  \"redFlags\": [\n    \"my right arm went weak and I couldn't lift a cup\",\n    \"my face was drooping on the right side\",\n    \"my speech was slurred for about 20 minutes\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reported a sudden onset of weakness in the right arm, inability to lift a cup, and facial drooping on the right side. They also experienced slurred speech for about 20 minutes. The severity of the sensation in the arm was rated as 7/10, and these symptoms began approximately 90 minutes ago.\"\n}"
+    },
+    {
+      "step": "triage:miscalibrated",
+      "model": "gpt-4o",
+      "latencyMs": 1213,
+      "tokensIn": 377,
+      "tokensOut": 87,
+      "costUsd": 0.0018124999999999999,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Sensation in right arm and facial drooping.\",\n  \"duration\": \"90 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in right arm\",\n    \"inability to lift a cup\",\n    \"facial drooping on right side\",\n    \"slurred speech\",\n    \"trouble getting words out\"\n  ],\n  \"redFlags\": [\n    \"my right arm went weak and I couldn't lift a cup\",\n    \"my face was drooping on the right side\",\n    \"my speech was slurred for about 20 minutes\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reported a sudden onset of weakness in the right arm, inability to lift a cup, and facial drooping on the right side. They also experienced slurred speech for about 20 minutes. The severity of the sensation in the arm was rated as 7/10, and these symptoms began approximately 90 minutes ago.\"\n}",
+      "output": "{\n  \"carePathway\": \"RED\",\n  \"urgency\": \"immediate\",\n  \"reasoning\": \"The symptoms described, including sudden weakness in the right arm, facial drooping, and slurred speech, are concerning for a possible stroke or transient ischemic attack (TIA). These are medical emergencies that require immediate evaluation and treatment to minimize potential damage and improve outcomes.\",\n  \"requiresHumanReview\": true\n}"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 7739,
+    "tokensOut": 752,
+    "costUsd": 0.0033158,
+    "latencyMs": 14010,
+    "modelCalls": 13
+  }
+}

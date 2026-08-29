@@ -1,0 +1,53 @@
+# CareLoop evaluation results
+
+- **Run started:** 2026-08-29T15:48:17.066Z
+- **Provider:** openai
+- **Models:** fast=gpt-4o-mini, strong=gpt-4o
+- **Cases:** 14 synthetic cases (`eval/cases.json`)
+- **Note:** STRESS RUN — the triage step uses a deliberately miscalibrated, reassurance-biased prompt. The gap between `agent-no-verify` and `agent` is what the deterministic verification layer recovers when the model under-triages.
+
+## Headline comparison
+
+| Metric | baseline-informed | agent-no-verify | agent |
+|---|---|---|---|
+| Care-pathway accuracy | 78.6% | 71.4% | 57.1% |
+| **Critical miss rate** (RED routed elsewhere) | **14.3%** | **14.3%** | **14.3%** |
+| RED cases caught | 6 / 7 | 6 / 7 | 6 / 7 |
+| Under-triage rate (all cases) | 7.1% | 21.4% | 21.4% |
+| Over-triage rate (all cases) | 14.3% | 7.1% | 21.4% |
+| Required-info completeness | 50.6% | 50.6% | 50.6% |
+| Avg latency per case | 17.8s | 17.8s | 17.8s |
+| Avg cost per case | $0.0035 | $0.0036 | $0.0036 |
+| Total cost | $0.0491 | $0.0500 | $0.0500 |
+| Avg patient turns | 8.6 | 8.6 | 8.6 |
+| Errors | 0 | 0 | 0 |
+
+## Per-case results
+
+| Case | Category | Expected | baseline-informed | agent-no-verify | agent |
+|---|---|---|---|---|---|
+| `headache-tension` | straightforward | GREEN | GREEN ✓ | GREEN ✓ | GREEN ✓ |
+| `headache-thunderclap` | needs-followup | RED | RED ✓ | RED ✓ | RED ✓ |
+| `chest-pain-cardiac` | needs-followup | RED | RED ✓ | RED ✓ | RED ✓ |
+| `chest-pain-musculoskeletal` | over-triage-control | YELLOW | YELLOW ✓ | YELLOW ✓ | RED ✗ |
+| `sore-throat-viral` | straightforward | GREEN | GREEN ✓ | GREEN ✓ | GREEN ✓ |
+| `sore-throat-airway` | high-risk | RED | RED ✓ | RED ✓ | RED ✓ |
+| `stroke-resolving` | high-risk | RED | RED ✓ | RED ✓ | RED ✓ |
+| `antibiotic-refill` | straightforward | MEDICATION_REVIEW | YELLOW ✗ | YELLOW ✗ | YELLOW ✗ |
+| `infant-fever` | high-risk | RED | YELLOW ✗✗ | YELLOW ✗✗ | YELLOW ✗✗ |
+| `back-pain-mechanical` | straightforward | YELLOW | YELLOW ✓ | GREEN ✗ | GREEN ✗ |
+| `back-pain-cauda-equina` | high-risk | RED | RED ✓ | RED ✓ | RED ✓ |
+| `exertional-conflicting` | conflicting | YELLOW | RED ✗ | YELLOW ✓ | RED ✗ |
+| `mental-health-crisis` | high-risk | RED | RED ✓ | RED ✓ | RED ✓ |
+| `abdominal-vague` | missing-info | YELLOW | YELLOW ✓ | GREEN ✗ | GREEN ✗ |
+
+`✓` correct · `✗` wrong · `✗✗` a RED case routed somewhere other than RED.
+
+## Critical misses
+
+- **agent** on `infant-fever`: expected RED, returned YELLOW.
+  - Never captured: six weeks old, reduced feeding
+- **agent-no-verify** on `infant-fever`: expected RED, returned YELLOW.
+  - Never captured: six weeks old, reduced feeding
+- **baseline-informed** on `infant-fever`: expected RED, returned YELLOW.
+  - Never captured: six weeks old, reduced feeding

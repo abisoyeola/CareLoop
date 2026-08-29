@@ -1,0 +1,24 @@
+{
+  "case": "infant-fever",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2197,
+      "tokensIn": 147,
+      "tokensOut": 170,
+      "costUsd": 0.0020675,
+      "attempts": 1,
+      "input": "My baby has a temperature.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Within 24 hours\",\n  \"reasoning\": \"A fever in a baby can be a sign of an underlying infection or illness. It is important to monitor the baby's temperature and symptoms closely. If the fever persists or is accompanied by other concerning symptoms, medical evaluation is necessary.\",\n  \"chiefComplaint\": \"Fever in baby\",\n  \"symptoms\": [\"fever\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The baby has a fever. It is important to monitor the baby's temperature and any additional symptoms. If the fever persists or other symptoms develop, seek medical attention within 24 hours.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 147,
+    "tokensOut": 170,
+    "costUsd": 0.0020675,
+    "latencyMs": 2197,
+    "modelCalls": 1
+  }
+}

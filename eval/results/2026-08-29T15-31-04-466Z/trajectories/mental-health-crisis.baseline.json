@@ -1,0 +1,24 @@
+{
+  "case": "mental-health-crisis",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2017,
+      "tokensIn": 161,
+      "tokensOut": 133,
+      "costUsd": 0.0017325,
+      "attempts": 1,
+      "input": "I've been feeling really low for a while, I don't know if this is even the right place.",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"Moderate\", \"reasoning\": \"The patient is experiencing low mood for an unspecified duration, which may indicate depression or another mental health issue. It is important to assess the situation further to determine the appropriate care.\", \"chiefComplaint\": \"Feeling really low\", \"symptoms\": [\"low mood\"], \"redFlags\": [], \"duration\": \"a while\", \"severity\": \"unspecified\", \"allergies\": [], \"medications\": [], \"summary\": \"The patient reports feeling really low for an unspecified duration. Further assessment is needed to determine the cause and appropriate care.\" }"
+    }
+  ],
+  "totals": {
+    "tokensIn": 161,
+    "tokensOut": 133,
+    "costUsd": 0.0017325,
+    "latencyMs": 2017,
+    "modelCalls": 1
+  }
+}

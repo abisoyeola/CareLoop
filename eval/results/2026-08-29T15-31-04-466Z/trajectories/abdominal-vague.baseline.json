@@ -1,0 +1,24 @@
+{
+  "case": "abdominal-vague",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 1797,
+      "tokensIn": 145,
+      "tokensOut": 164,
+      "costUsd": 0.0020025,
+      "attempts": 1,
+      "input": "My stomach hurts.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Non-urgent\",\n  \"reasoning\": \"The patient reports stomach pain, which can be caused by a variety of conditions ranging from mild to serious. Without additional information, it is advisable to monitor symptoms and seek medical advice if they persist or worsen.\",\n  \"chiefComplaint\": \"Stomach pain\",\n  \"symptoms\": [\"Stomach pain\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing stomach pain. Further details are needed to assess the severity and potential causes. Monitoring the symptoms and consulting a healthcare provider if they persist or worsen is recommended.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 145,
+    "tokensOut": 164,
+    "costUsd": 0.0020025,
+    "latencyMs": 1797,
+    "modelCalls": 1
+  }
+}

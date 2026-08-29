@@ -1,0 +1,24 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2161,
+      "tokensIn": 152,
+      "tokensOut": 149,
+      "costUsd": 0.0018700000000000001,
+      "attempts": 1,
+      "input": "I'm probably fine, I've just been really tired lately.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Low\",\n  \"reasoning\": \"The patient reports experiencing fatigue, which can be a symptom of various underlying conditions. While it may not be urgent, it is important to monitor and possibly investigate further if it persists.\",\n  \"chiefComplaint\": \"Fatigue\",\n  \"symptoms\": [\"Fatigue\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient reports feeling really tired lately. While they believe they are probably fine, persistent fatigue can indicate an underlying issue that may require further evaluation.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 152,
+    "tokensOut": 149,
+    "costUsd": 0.0018700000000000001,
+    "latencyMs": 2161,
+    "modelCalls": 1
+  }
+}

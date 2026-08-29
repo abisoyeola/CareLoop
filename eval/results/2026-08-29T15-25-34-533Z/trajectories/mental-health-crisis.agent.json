@@ -1,0 +1,246 @@
+{
+  "case": "mental-health-crisis",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1035,
+      "tokensIn": 512,
+      "tokensOut": 72,
+      "costUsd": 0.00011999999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\", \"Severity\", \"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1096,
+      "tokensIn": 289,
+      "tokensOut": 23,
+      "costUsd": 0.00005714999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I just feel really hopeless and I haven't wanted to see my friends or do anything.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 921,
+      "tokensIn": 555,
+      "tokensOut": 46,
+      "costUsd": 0.00011085000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. How long have you been feeling this way?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 861,
+      "tokensIn": 325,
+      "tokensOut": 13,
+      "costUsd": 0.00005655,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's been about two months now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1063,
+      "tokensIn": 581,
+      "tokensOut": 65,
+      "costUsd": 0.00012615,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 942,
+      "tokensIn": 377,
+      "tokensOut": 14,
+      "costUsd": 0.00006494999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it's around an 8.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1049,
+      "tokensIn": 634,
+      "tokensOut": 71,
+      "costUsd": 0.00013769999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\", \"options\": [\"Changes in sleep\", \"Changes in appetite\", \"Changes in energy levels\", \"None of the above\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 763,
+      "tokensIn": 414,
+      "tokensOut": 12,
+      "costUsd": 0.00006929999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nYou: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure about that.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1181,
+      "tokensIn": 669,
+      "tokensOut": 93,
+      "costUsd": 0.00015615,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nYou: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \", \"options\": [\"Trouble falling asleep\", \"Trouble staying asleep\", \"Sleeping too much\", \"No changes\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 854,
+      "tokensIn": 453,
+      "tokensOut": 21,
+      "costUsd": 0.00008054999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nYou: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nYou: I'm not sure about that.\nService: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I haven't really been paying attention to my sleep, so I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1156,
+      "tokensIn": 717,
+      "tokensOut": 76,
+      "costUsd": 0.00015315,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nYou: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\nYou: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nPatient: I haven't really been paying attention to my sleep, so I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 944,
+      "tokensIn": 504,
+      "tokensOut": 13,
+      "costUsd": 0.0000834,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nYou: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nYou: I'm not sure about that.\nService: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nYou: I haven't really been paying attention to my sleep, so I'm not sure.\nService: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure about that either.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1111,
+      "tokensIn": 760,
+      "tokensOut": 89,
+      "costUsd": 0.0001674,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nYou: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\nYou: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nPatient: I haven't really been paying attention to my sleep, so I'm not sure.\nYou: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nPatient: I'm not sure about that either.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\", \"options\": [\"Yes, more fatigued\", \"Yes, less motivated\", \"No changes\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening\", \"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 945,
+      "tokensIn": 540,
+      "tokensOut": 20,
+      "costUsd": 0.00009300000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nYou: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nYou: I'm not sure about that.\nService: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nYou: I haven't really been paying attention to my sleep, so I'm not sure.\nService: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nYou: I'm not sure about that either.\nService: That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\n\nReply to",
+      "output": "{ \"reply\": \"I haven't really thought about my energy levels, so I'm not sure.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1136,
+      "tokensIn": 803,
+      "tokensOut": 66,
+      "costUsd": 0.00016005000000000001,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nYou: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\nYou: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nPatient: I haven't really been paying attention to my sleep, so I'm not sure.\nYou: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nPatient: I'm not sure about that either.\nYou: That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\nPatient: I haven't really thought about my energy levels, so I'm not sure.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your honesty. Have you experienced any thoughts of self-harm or suicide during this time?\", \"options\": [\"Yes\", \"No\", \"I'm not sure\"], \"readyToAssess\": false, \"missingFields\": [\"Associated symptoms\", \"Red-flag screening specific to the complaint\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1025,
+      "tokensIn": 579,
+      "tokensOut": 16,
+      "costUsd": 0.00009645,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've been feeling really low for a while, I don't know if this is even the right place.\"\n\nYou: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nYou: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nYou: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nYou: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nYou: I'm not sure about that.\nService: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nYou: I haven't really been paying attention to my sleep, so I'm not sure.\nService: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nYou: I'm not sure about that either.\nService: That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\nYou: I ha",
+      "output": "{ \"reply\": \"Yes, I've been thinking about ending my life.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1148,
+      "tokensIn": 838,
+      "tokensOut": 63,
+      "costUsd": 0.0001635,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nYou: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nYou: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nYou: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nYou: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\nYou: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nPatient: I haven't really been paying attention to my sleep, so I'm not sure.\nYou: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nPatient: I'm not sure about that either.\nYou: That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\nPatient: I haven't really thought about my energy levels, so I'm not sure.\nYou: Thank you for your honesty. Have you e",
+      "output": "{\"reply\":\"I'm really sorry to hear that you're feeling this way. It's very important that you talk to someone who can help you right away. Can you tell me if you have a plan or means to carry out those thoughts?\",\"options\":[], \"readyToAssess\": true, \"missingFields\": []}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 9 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1475,
+      "tokensIn": 720,
+      "tokensOut": 136,
+      "costUsd": 0.0001896,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've been feeling really low for a while, I don't know if this is even the right place.\nService: It's okay to reach out for help. Can you describe what you mean by feeling low in your own words?\nPatient: I just feel really hopeless and I haven't wanted to see my friends or do anything.\nService: Thank you for sharing that. How long have you been feeling this way?\nPatient: It's been about two months now.\nService: I appreciate your openness. On a scale of 0 to 10, with 0 being no distress and 10 being the worst you can imagine, how would you rate your feelings of hopelessness?\nPatient: I'd say it's around an 8.\nService: Thank you for your response. Are you experiencing any other symptoms, such as changes in sleep, appetite, or energy levels?\nPatient: I'm not sure about that.\nService: It's okay if you're unsure. Have you noticed any changes in your sleep, like trouble falling asleep, staying asleep, or sleeping too much? \nPatient: I haven't really been paying attention to my sleep, so I'm not sure.\nService: I understand that it can be hard to notice those changes. Have you experienced any significant changes in your appetite, like eating much more or much less than usual?\nPatient: I'm not sure about that either.\nService: That's completely understandable. Have you noticed any changes in your energy levels, like feeling more fatigued or less motivated than usual?\nPatient: I haven't really thought about my energy levels, so I'm not sure.\nService: Thank you for",
+      "output": "{\n  \"chiefComplaint\": \"Feeling hopeless and having thoughts of self-harm.\",\n  \"duration\": \"two months\",\n  \"severity\": \"8\",\n  \"symptoms\": [],\n  \"redFlags\": [\n    \"I've been thinking about ending my life.\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling hopeless for about two months, rating their distress as an 8 out of 10. They have expressed thoughts of self-harm, indicating a need for immediate support and intervention. Further details regarding changes in sleep, appetite, or energy levels were not established.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1018,
+      "tokensIn": 583,
+      "tokensOut": 69,
+      "costUsd": 0.0021475,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Feeling hopeless and having thoughts of self-harm.\",\n  \"duration\": \"two months\",\n  \"severity\": \"8\",\n  \"symptoms\": [],\n  \"redFlags\": [\n    \"I've been thinking about ending my life.\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports feeling hopeless for about two months, rating their distress as an 8 out of 10. They have expressed thoughts of self-harm, indicating a need for immediate support and intervention. Further details regarding changes in sleep, appetite, or energy levels were not established.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient has expressed thoughts of self-harm and hopelessness, which are serious red flags indicating a potential risk of self-harm. This situation requires urgent assessment and intervention to ensure the patient's safety.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "2 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 10853,
+    "tokensOut": 978,
+    "costUsd": 0.0042334,
+    "latencyMs": 19723,
+    "modelCalls": 19
+  }
+}
