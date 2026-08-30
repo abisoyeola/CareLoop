@@ -13,18 +13,25 @@ import {
   LogOut,
   Menu,
   X,
+  LayoutDashboard,
+  Users,
+  ScrollText,
 } from "lucide-react";
 import { useSocket } from "./SocketProvider";
 import type { Role } from "@/lib/models";
 
-const NAV: Record<Role, { href: string; label: string; icon: typeof MessagesSquare }[]> = {
+const NAV: Record<Role, { href: string; label: string; icon: typeof MessagesSquare; exact?: boolean }[]> = {
   PATIENT: [
     { href: "/app/chat", label: "Health chats", icon: MessagesSquare },
     { href: "/app/care", label: "My care", icon: HeartPulse },
   ],
   CLINICIAN: [{ href: "/app/queue", label: "Consultation queue", icon: ClipboardList }],
   PHARMACY: [{ href: "/app/pharmacy", label: "Fulfilment", icon: Pill }],
-  ADMIN: [{ href: "/app/admin", label: "Platform", icon: ShieldCheck }],
+  ADMIN: [
+    { href: "/app/admin", label: "Overview", icon: LayoutDashboard, exact: true },
+    { href: "/app/admin/professionals", label: "Professionals", icon: Users },
+    { href: "/app/admin/audit", label: "Audit Trail", icon: ScrollText },
+  ],
 };
 
 export function AppNav({
@@ -51,8 +58,8 @@ export function AppNav({
 
   const links = (
     <nav className="space-y-1">
-      {items.map(({ href, label, icon: Icon }) => {
-        const active = pathname === href || pathname.startsWith(href + "/");
+      {items.map(({ href, label, icon: Icon, exact }) => {
+        const active = exact ? pathname === href : (pathname === href || pathname.startsWith(href + "/"));
         return (
           <Link
             key={href}

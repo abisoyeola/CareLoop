@@ -23,9 +23,17 @@ export const POST = route(async (req: Request) => {
   const prev =
     user.role === "CLINICIAN" ? Boolean(user.clinician?.verified) : Boolean(user.pharmacy?.verified);
 
-  if (user.role === "CLINICIAN" && user.clinician) user.clinician.verified = body.verified;
-  if (user.role === "PHARMACY" && user.pharmacy) user.pharmacy.verified = body.verified;
-  await user.save();
+  // Use $set directly so Mongoose nested-object change-detection is bypassed.
+  // Mutating user.clinician.verified / user.pharmacy.verified then calling save()
+  // silently fails when Mongoose doesn't mark the subdocument as dirty.
+  const field =
+    user.role === "CLINICIAN" ? "clinician.verified" : "pharmacy.verified";
+
+  await User.findByIdAndUpdate(
+    body.userId,
+    { $set: { [field]: body.verified } },
+    { new: true },
+  );
 
   await audit({
     actorUserId: session.userId,

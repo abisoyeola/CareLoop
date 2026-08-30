@@ -399,9 +399,16 @@ export function ChatWorkspace({ initial }: { initial: ConversationRow[] }) {
                 </div>
               )}
 
-              {messages.map((m) => (
-                <MessageRow key={m.id} message={m} />
-              ))}
+              {messages.map((m, i) => {
+                const isLast = i === messages.length - 1;
+                return (
+                  <MessageRow 
+                    key={m.id} 
+                    message={m} 
+                    onOptionSelect={isLast && active.state !== "ROUTED" ? send : undefined} 
+                  />
+                );
+              })}
 
               {thinking && <ThinkingRow steps={steps} />}
             </div>
@@ -544,7 +551,13 @@ function ThinkingRow({ steps }: { steps: AgentStep[] }) {
   );
 }
 
-function MessageRow({ message }: { message: ChatMessage }) {
+function MessageRow({ 
+  message, 
+  onOptionSelect 
+}: { 
+  message: ChatMessage; 
+  onOptionSelect?: (o: string) => void;
+}) {
   if (message.kind === "ASSESSMENT_CARD") return <AssessmentCard message={message} />;
 
   if (message.kind === "SYSTEM_EVENT") {
@@ -570,14 +583,24 @@ function MessageRow({ message }: { message: ChatMessage }) {
 
         {options.length > 0 && (
           <div className="mt-2.5 flex flex-wrap gap-1.5">
-            {options.map((o) => (
-              <span
-                key={o}
-                className="rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs text-ink-2"
-              >
-                {o}
-              </span>
-            ))}
+            {options.map((o) => {
+              const interactive = !!onOptionSelect;
+              return (
+                <button
+                  key={o}
+                  onClick={() => interactive && onOptionSelect(o)}
+                  disabled={!interactive}
+                  className={clsx(
+                    "rounded-full border px-3 py-1.5 text-sm transition",
+                    interactive 
+                      ? "border-brand bg-brand-soft/30 font-medium text-brand-ink hover:bg-brand-soft" 
+                      : "border-line bg-surface-2 text-muted"
+                  )}
+                >
+                  {o}
+                </button>
+              );
+            })}
           </div>
         )}
 

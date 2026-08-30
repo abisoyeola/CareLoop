@@ -38,6 +38,12 @@ export default async function Home() {
         </div>
         <nav className="flex items-center gap-2">
           <Link
+            href="/admin-login"
+            className="rounded-lg px-4 py-2 text-xs font-medium text-muted transition hover:bg-slate-100 hover:text-ink-2"
+          >
+            Admin
+          </Link>
+          <Link
             href="/login"
             className="rounded-lg px-4 py-2 text-sm font-medium text-ink-2 transition hover:bg-slate-100"
           >

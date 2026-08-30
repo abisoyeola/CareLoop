@@ -8,14 +8,24 @@ import { User } from "../src/lib/models";
  * Demo accounts.
  *
  * Idempotent: re-running updates the existing rows rather than duplicating them,
- * so it is safe to call on every deploy. Only the four demo logins are created —
+ * so it is safe to call on every deploy. Only the demo logins are created —
  * no patient data, no conversations. Everything clinical in this project is
  * generated at runtime or lives in eval/cases.json as synthetic cases.
+ *
+ * Default admin: micro1@careloop.com / beyourself
  */
 
 const PASSWORD = process.env.SEED_PASSWORD || "CareLoop!2026";
 
 const ACCOUNTS = [
+  // ── Primary admin (always seeded) ─────────────────────────────────────────
+  {
+    email: "micro1@careloop.com",
+    name: "Micro1 Admin",
+    role: "ADMIN" as const,
+    _password: "beyourself",
+  },
+  // ── Legacy demo admin ──────────────────────────────────────────────────────
   {
     email: "admin@careloop.test",
     name: "Platform Admin",
@@ -68,22 +78,32 @@ const ACCOUNTS = [
 
 async function main() {
   await connectDb();
-  const passwordHash = await bcrypt.hash(PASSWORD, 10);
+  const defaultHash = await bcrypt.hash(PASSWORD, 10);
 
   for (const account of ACCOUNTS) {
+    // Use per-account password if supplied, otherwise fall back to DEFAULT
+    const { _password, ...data } = account as typeof account & { _password?: string };
+    const passwordHash = _password ? await bcrypt.hash(_password, 10) : defaultHash;
+
     const existing = await User.findOne({ email: account.email });
     if (existing) {
-      Object.assign(existing, account, { passwordHash });
+      Object.assign(existing, data, { passwordHash });
       await existing.save();
-      console.log(`  updated  ${account.email.padEnd(28)} ${account.role}`);
+      console.log(`  updated  ${account.email.padEnd(32)} ${account.role}`);
     } else {
-      await User.create({ ...account, passwordHash });
-      console.log(`  created  ${account.email.padEnd(28)} ${account.role}`);
+      await User.create({ ...data, passwordHash });
+      console.log(`  created  ${account.email.padEnd(32)} ${account.role}`);
     }
   }
 
-  console.log(`\nAll demo accounts use the password: ${PASSWORD}`);
-  console.log("Change SEED_PASSWORD in .env before any non-demo use.\n");
+  console.log("\n┌────────────────────────────────────────────────────────────┐");
+  console.log("│  DEFAULT ADMIN CREDENTIALS                                 │");
+  console.log("│  Email:    micro1@careloop.com                             │");
+  console.log("│  Password: beyourself                                      │");
+  console.log("│  Login at: /admin-login                                    │");
+  console.log("├────────────────────────────────────────────────────────────┤");
+  console.log(`│  Other demo accounts use password: ${PASSWORD.padEnd(24)} │`);
+  console.log("└────────────────────────────────────────────────────────────┘\n");
 
   await mongoose.disconnect();
 }

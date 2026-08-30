@@ -26,6 +26,12 @@ export default async function LoginPage() {
             Sign in to continue where you left off.
           </p>
           <AuthForm mode="login" />
+          <p className="mt-6 text-center text-xs text-muted">
+            Are you a platform administrator?{" "}
+            <a href="/admin-login" className="font-medium text-brand-ink hover:underline">
+              Admin portal →
+            </a>
+          </p>
         </div>
       </div>
     </main>
