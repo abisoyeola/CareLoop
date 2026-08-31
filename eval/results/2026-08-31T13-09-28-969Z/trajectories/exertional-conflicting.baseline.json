@@ -1,0 +1,24 @@
+{
+  "case": "exertional-conflicting",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2852,
+      "tokensIn": 152,
+      "tokensOut": 135,
+      "costUsd": 0.0017300000000000002,
+      "attempts": 1,
+      "input": "I'm probably fine, I've just been really tired lately.",
+      "output": "{\n  \"carePathway\": \"GREEN\",\n  \"urgency\": \"non-urgent\",\n  \"reasoning\": \"The patient reports feeling tired but does not mention any severe symptoms or red flags that would indicate an urgent or serious condition.\",\n  \"chiefComplaint\": \"Fatigue\",\n  \"symptoms\": [\"tiredness\"],\n  \"redFlags\": [],\n  \"duration\": \"not specified\",\n  \"severity\": \"mild\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient is experiencing tiredness but does not report any other symptoms or concerns. This is likely a non-urgent issue.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 152,
+    "tokensOut": 135,
+    "costUsd": 0.0017300000000000002,
+    "latencyMs": 2852,
+    "modelCalls": 1
+  }
+}

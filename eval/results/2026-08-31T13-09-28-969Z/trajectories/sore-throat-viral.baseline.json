@@ -1,0 +1,24 @@
+{
+  "case": "sore-throat-viral",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2236,
+      "tokensIn": 147,
+      "tokensOut": 118,
+      "costUsd": 0.0015475,
+      "attempts": 1,
+      "input": "I have a sore throat.",
+      "output": "{ \"carePathway\": \"GREEN\", \"urgency\": \"low\", \"reasoning\": \"A sore throat is a common symptom that often resolves on its own. Without additional symptoms or red flags, it is likely not urgent.\", \"chiefComplaint\": \"sore throat\", \"symptoms\": [\"sore throat\"], \"redFlags\": [], \"duration\": \"\", \"severity\": \"\", \"allergies\": [], \"medications\": [], \"summary\": \"The patient reports having a sore throat. No additional symptoms or red flags are mentioned, suggesting a low urgency situation.\" }"
+    }
+  ],
+  "totals": {
+    "tokensIn": 147,
+    "tokensOut": 118,
+    "costUsd": 0.0015475,
+    "latencyMs": 2236,
+    "modelCalls": 1
+  }
+}

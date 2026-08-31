@@ -1,0 +1,24 @@
+{
+  "case": "back-pain-mechanical",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2907,
+      "tokensIn": 152,
+      "tokensOut": 143,
+      "costUsd": 0.00181,
+      "attempts": 1,
+      "input": "I've had lower back pain for about five weeks now.",
+      "output": "{ \"carePathway\": \"YELLOW\", \"urgency\": \"Routine\", \"reasoning\": \"The patient has been experiencing lower back pain for five weeks, which is a prolonged duration. While it is not an immediate emergency, it warrants further evaluation to determine the cause and appropriate treatment.\", \"chiefComplaint\": \"Lower back pain\", \"symptoms\": [\"lower back pain\"], \"redFlags\": [], \"duration\": \"Five weeks\", \"severity\": \"Not specified\", \"allergies\": [], \"medications\": [], \"summary\": \"The patient reports having lower back pain for five weeks. There are no red flags mentioned, but the prolonged duration suggests the need for a routine evaluation.\" }"
+    }
+  ],
+  "totals": {
+    "tokensIn": 152,
+    "tokensOut": 143,
+    "costUsd": 0.00181,
+    "latencyMs": 2907,
+    "modelCalls": 1
+  }
+}

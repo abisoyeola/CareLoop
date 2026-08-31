@@ -1,0 +1,267 @@
+{
+  "case": "antibiotic-refill",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1365,
+      "tokensIn": 802,
+      "tokensOut": 45,
+      "costUsd": 0.0001473,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"Duration and how it has changed over time\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 986,
+      "tokensIn": 277,
+      "tokensOut": 15,
+      "costUsd": 0.00005055,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I've been having these symptoms for two days.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 3836,
+      "tokensIn": 834,
+      "tokensOut": 46,
+      "costUsd": 0.0001527,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2523,
+      "tokensIn": 312,
+      "tokensOut": 14,
+      "costUsd": 0.0000552,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's about a 6 right now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1710,
+      "tokensIn": 868,
+      "tokensOut": 44,
+      "costUsd": 0.00015659999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"associated symptoms\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1161,
+      "tokensIn": 344,
+      "tokensOut": 18,
+      "costUsd": 0.0000624,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No fever or chills, but I am going more often.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1451,
+      "tokensIn": 904,
+      "tokensOut": 45,
+      "costUsd": 0.0001626,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Have you noticed any blood in your urine or any pain during urination?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"red-flag screening specific to the complaint\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1005,
+      "tokensIn": 375,
+      "tokensOut": 18,
+      "costUsd": 0.00006705,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No blood, but it does burn when I urinate.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1118,
+      "tokensIn": 935,
+      "tokensOut": 43,
+      "costUsd": 0.00016605,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Have you had any recent illnesses or urinary tract infections before this one?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1407,
+      "tokensIn": 405,
+      "tokensOut": 15,
+      "costUsd": 0.00006974999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I've had the same thing several times before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1364,
+      "tokensIn": 962,
+      "tokensOut": 37,
+      "costUsd": 0.00016649999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nYou: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Are you currently taking any medications or have any known allergies?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1820,
+      "tokensIn": 430,
+      "tokensOut": 26,
+      "costUsd": 0.0000801,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nYou: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1543,
+      "tokensIn": 998,
+      "tokensOut": 50,
+      "costUsd": 0.00017969999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nYou: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\nYou: Are you currently taking any medications or have any known allergies?\nPatient: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1436,
+      "tokensIn": 477,
+      "tokensOut": 20,
+      "costUsd": 0.00008355,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nYou: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\nYou: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nService: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any nausea, vomiting, or back pain.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1107,
+      "tokensIn": 1039,
+      "tokensOut": 53,
+      "costUsd": 0.00018764999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nYou: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\nYou: Are you currently taking any medications or have any known allergies?\nPatient: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nYou: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nPatient: No, I haven't had any nausea, vomiting, or back pain.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 916,
+      "tokensIn": 521,
+      "tokensOut": 19,
+      "costUsd": 0.00008955,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nYou: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\nYou: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nService: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nYou: No, I haven't had any nausea, vomiting, or back pain.\nService: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, this is about the same as what I've had before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1688,
+      "tokensIn": 1082,
+      "tokensOut": 54,
+      "costUsd": 0.00019470000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nYou: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\nYou: Are you currently taking any medications or have any known allergies?\nPatient: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nYou: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nPatient: No, I haven't had any nausea, vomiting, or back pain.\nYou: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\nPatient: No, this is about the same as what I've had before.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you ever had any symptoms that made you feel very unwell or required you to seek emergency care?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1148,
+      "tokensIn": 565,
+      "tokensOut": 24,
+      "costUsd": 0.00009914999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nYou: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\nYou: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nService: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nYou: No, I haven't had any nausea, vomiting, or back pain.\nService: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\nYou: No, this is about the same as what I've had before.\nService: Thank you fo",
+      "output": "{ \"reply\": \"No, I've never had symptoms that made me feel very unwell or required emergency care.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1085,
+      "tokensIn": 1131,
+      "tokensOut": 53,
+      "costUsd": 0.00020145,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I need antibiotics for a urine infection, I get one most years.\nYou: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nYou: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nYou: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nYou: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nYou: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\nYou: Are you currently taking any medications or have any known allergies?\nPatient: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nYou: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nPatient: No, I haven't had any nausea, vomiting, or back pain.\nYou: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\nPatient: No, this is about the same as what I've had before.\nYou: Thank you for the information. Have you ever had any symptoms that made you feel very unwell or r",
+      "output": "{ \"reply\": \"Thank you for your responses. Just to confirm, have you ever been diagnosed with any other urinary conditions or issues in the past?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1158,
+      "tokensIn": 613,
+      "tokensOut": 18,
+      "costUsd": 0.00010275,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I need antibiotics for a urine infection, I get one most years.\"\n\nYou: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nYou: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nYou: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nYou: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nYou: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nYou: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\nYou: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nService: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nYou: No, I haven't had any nausea, vomiting, or back pain.\nService: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\nYou: No, this is about the same as what I've had before.\nService: Thank you fo",
+      "output": "{ \"reply\": \"No, I've never been diagnosed with any other urinary conditions.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2231,
+      "tokensIn": 714,
+      "tokensOut": 179,
+      "costUsd": 0.0002145,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I need antibiotics for a urine infection, I get one most years.\nService: I understand you're experiencing a urine infection. How long have you been having these symptoms this time?\nPatient: I've been having these symptoms for two days.\nService: On a scale from 0 to 10, how severe is the pain or discomfort you're experiencing right now?\nPatient: It's about a 6 right now.\nService: Are you experiencing any other symptoms, such as fever, chills, or increased urgency to urinate?\nPatient: No fever or chills, but I am going more often.\nService: Have you noticed any blood in your urine or any pain during urination?\nPatient: No blood, but it does burn when I urinate.\nService: Have you had any recent illnesses or urinary tract infections before this one?\nPatient: I've had the same thing several times before.\nService: Are you currently taking any medications or have any known allergies?\nPatient: I'm not taking any medications right now, but I am allergic to penicillin and get a rash.\nService: Thank you for the information. Have you experienced any nausea, vomiting, or back pain along with your current symptoms?\nPatient: No, I haven't had any nausea, vomiting, or back pain.\nService: Thank you for your responses. Have you ever experienced any symptoms like this that were more severe or different from what you're experiencing now?\nPatient: No, this is about the same as what I've had before.\nService: Thank you for the information. Have you ever had any symptoms that m",
+      "output": "{\n  \"chiefComplaint\": \"Urinary infection symptoms\",\n  \"duration\": \"2 days\",\n  \"severity\": \"6\",\n  \"symptoms\": [\n    \"burning during urination\",\n    \"increased frequency of urination\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [\n    \"penicillin\"\n  ],\n  \"medications\": [],\n  \"history\": [\n    \"has had urinary infections several times before\",\n    \"no previous diagnoses of urinary conditions\"\n  ],\n  \"summary\": \"The patient reports experiencing symptoms of a urinary infection for the past two days, with a severity rating of 6 out of 10. They describe burning during urination and increased frequency but no fever, chills, or blood in the urine. The patient has a history of recurrent urinary infections and is allergic to penicillin, which causes a rash.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 2384,
+      "tokensIn": 626,
+      "tokensOut": 122,
+      "costUsd": 0.002785,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Urinary infection symptoms\",\n  \"duration\": \"2 days\",\n  \"severity\": \"6\",\n  \"symptoms\": [\n    \"burning during urination\",\n    \"increased frequency of urination\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [\n    \"penicillin\"\n  ],\n  \"medications\": [],\n  \"history\": [\n    \"has had urinary infections several times before\",\n    \"no previous diagnoses of urinary conditions\"\n  ],\n  \"summary\": \"The patient reports experiencing symptoms of a urinary infection for the past two days, with a severity rating of 6 out of 10. They describe burning during urination and increased frequency but no fever, chills, or blood in the urine. The patient has a history of recurrent urinary infections and is allergic to penicillin, which causes a rash.\"\n}",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"The patient should consult with a clinician soon for evaluation and potential treatment, given the history of recurrent urinary infections and current symptoms.\",\n  \"reasoning\": \"The patient reports symptoms consistent with a urinary infection, including burning during urination and increased frequency, which have persisted for two days. Although there are no red flags or severe symptoms reported, the history of recurrent infections suggests the need for professional evaluation and possible treatment. The allergy to penicillin should also be considered in treatment planning.\",\n  \"requiresHumanReview\": true\n}"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "YELLOW",
+      "note": "1 rule(s) fired and agreed with the model at YELLOW."
+    }
+  ],
+  "totals": {
+    "tokensIn": 15214,
+    "tokensOut": 958,
+    "costUsd": 0.0054748,
+    "latencyMs": 34442,
+    "modelCalls": 22
+  }
+}

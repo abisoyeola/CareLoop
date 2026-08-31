@@ -1,0 +1,158 @@
+{
+  "case": "back-pain-cauda-equina",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2997,
+      "tokensIn": 797,
+      "tokensOut": 83,
+      "costUsd": 0.00016935,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"How would you describe the onset of your back pain? Did it come on suddenly or gradually?\", \"options\": [\"Suddenly\", \"Gradually\"], \"readyToAssess\": false, \"missingFields\": [\"Duration and how it has changed over time\", \"Severity\", \"Associated symptoms\", \"Red-flag screening specific to the complaint\", \"Relevant history, current medications, allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1006,
+      "tokensIn": 281,
+      "tokensOut": 17,
+      "costUsd": 0.00005235,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It came on suddenly after I lifted a heavy box.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1569,
+      "tokensIn": 831,
+      "tokensOut": 71,
+      "costUsd": 0.00016725,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nPatient: It came on suddenly after I lifted a heavy box.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale from 0 to 10, how would you rate the severity of your back pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\", \"associated symptoms\", \"red-flag screening\", \"relevant history\", \"current medications\", \"allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 900,
+      "tokensIn": 319,
+      "tokensOut": 18,
+      "costUsd": 0.000058649999999999996,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nYou: It came on suddenly after I lifted a heavy box.\nService: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate it a 7 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1176,
+      "tokensIn": 870,
+      "tokensOut": 56,
+      "costUsd": 0.0001641,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nPatient: It came on suddenly after I lifted a heavy box.\nYou: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nPatient: I would rate it a 7 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 968,
+      "tokensIn": 361,
+      "tokensOut": 27,
+      "costUsd": 0.00007034999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nYou: It came on suddenly after I lifted a heavy box.\nService: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nYou: I would rate it a 7 out of 10.\nService: Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, both legs feel weak and heavy going up stairs, and I have numbness between my legs.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1227,
+      "tokensIn": 921,
+      "tokensOut": 55,
+      "costUsd": 0.00017115,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nPatient: It came on suddenly after I lifted a heavy box.\nYou: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nPatient: I would rate it a 7 out of 10.\nYou: Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, both legs feel weak and heavy going up stairs, and I have numbness between my legs.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Have you experienced any bladder or bowel control issues since the onset of your back pain?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"Red-flag screening specific to the complaint\",\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 999,
+      "tokensIn": 403,
+      "tokensOut": 28,
+      "costUsd": 0.00007725,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had back pain for a few days.\"\n\nYou: I've had back pain for a few days.\nService: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nYou: It came on suddenly after I lifted a heavy box.\nService: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nYou: I would rate it a 7 out of 10.\nService: Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\nYou: Yes, both legs feel weak and heavy going up stairs, and I have numbness between my legs.\nService: Have you experienced any bladder or bowel control issues since the onset of your back pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"Yes, I've struggled to start passing urine since this morning and it doesn't feel like I can feel it coming.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1402,
+      "tokensIn": 964,
+      "tokensOut": 44,
+      "costUsd": 0.00017099999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had back pain for a few days.\nYou: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nPatient: It came on suddenly after I lifted a heavy box.\nYou: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nPatient: I would rate it a 7 out of 10.\nYou: Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, both legs feel weak and heavy going up stairs, and I have numbness between my legs.\nYou: Have you experienced any bladder or bowel control issues since the onset of your back pain?\nPatient: Yes, I've struggled to start passing urine since this morning and it doesn't feel like I can feel it coming.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"It sounds like you're experiencing some concerning symptoms. Have you had any recent injuries or medical conditions that might be relevant?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":true,\"missingFields\":[]}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 5 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2100,
+      "tokensIn": 530,
+      "tokensOut": 190,
+      "costUsd": 0.0001935,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've had back pain for a few days.\nService: How would you describe the onset of your back pain? Did it come on suddenly or gradually?\nPatient: It came on suddenly after I lifted a heavy box.\nService: On a scale from 0 to 10, how would you rate the severity of your back pain right now?\nPatient: I would rate it a 7 out of 10.\nService: Are you experiencing any other symptoms along with your back pain, such as numbness, tingling, or weakness in your legs?\nPatient: Yes, both legs feel weak and heavy going up stairs, and I have numbness between my legs.\nService: Have you experienced any bladder or bowel control issues since the onset of your back pain?\nPatient: Yes, I've struggled to start passing urine since this morning and it doesn't feel like I can feel it coming.\nService: It sounds like you're experiencing some concerning symptoms. Have you had any recent injuries or medical conditions that might be relevant?",
+      "output": "{\n  \"chiefComplaint\": \"Back pain\",\n  \"duration\": \"a few days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in both legs\",\n    \"heavy feeling in legs going up stairs\",\n    \"numbness between legs\",\n    \"struggled to start passing urine\"\n  ],\n  \"redFlags\": [\n    \"struggled to start passing urine since this morning\",\n    \"doesn't feel like I can feel it coming\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports sudden onset of back pain after lifting a heavy box, rated as 7 out of 10 in severity. They also describe weakness and heaviness in both legs, numbness between the legs, and difficulty with urination since this morning. These symptoms may indicate a need for urgent evaluation.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1732,
+      "tokensIn": 637,
+      "tokensOut": 66,
+      "costUsd": 0.0022525,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Back pain\",\n  \"duration\": \"a few days\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in both legs\",\n    \"heavy feeling in legs going up stairs\",\n    \"numbness between legs\",\n    \"struggled to start passing urine\"\n  ],\n  \"redFlags\": [\n    \"struggled to start passing urine since this morning\",\n    \"doesn't feel like I can feel it coming\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports sudden onset of back pain after lifting a heavy box, rated as 7 out of 10 in severity. They also describe weakness and heaviness in both legs, numbness between the legs, and difficulty with urination since this morning. These symptoms may indicate a need for urgent evaluation.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reports back pain with neurological symptoms including weakness in both legs, numbness between the legs, and difficulty with urination. These symptoms could indicate a serious condition requiring urgent evaluation.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 6914,
+    "tokensOut": 655,
+    "costUsd": 0.00354745,
+    "latencyMs": 16076,
+    "modelCalls": 11
+  }
+}

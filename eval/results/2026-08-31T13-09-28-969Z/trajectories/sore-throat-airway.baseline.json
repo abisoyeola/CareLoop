@@ -1,0 +1,24 @@
+{
+  "case": "sore-throat-airway",
+  "arm": "baseline",
+  "steps": [
+    {
+      "step": "baseline",
+      "model": "gpt-4o",
+      "latencyMs": 2511,
+      "tokensIn": 147,
+      "tokensOut": 160,
+      "costUsd": 0.0019675,
+      "attempts": 1,
+      "input": "My throat is really sore.",
+      "output": "{\n  \"carePathway\": \"YELLOW\",\n  \"urgency\": \"Within 24-48 hours\",\n  \"reasoning\": \"A sore throat can be a symptom of a viral or bacterial infection, such as a cold or strep throat. It is important to monitor for additional symptoms or worsening condition.\",\n  \"chiefComplaint\": \"Sore throat\",\n  \"symptoms\": [\"sore throat\"],\n  \"redFlags\": [],\n  \"duration\": \"Not specified\",\n  \"severity\": \"Not specified\",\n  \"allergies\": [],\n  \"medications\": [],\n  \"summary\": \"The patient reports a sore throat. Further evaluation is needed to determine if it is due to a viral or bacterial infection. Monitoring for additional symptoms or worsening condition is advised.\"\n}"
+    }
+  ],
+  "totals": {
+    "tokensIn": 147,
+    "tokensOut": 160,
+    "costUsd": 0.0019675,
+    "latencyMs": 2511,
+    "modelCalls": 1
+  }
+}

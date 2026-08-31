@@ -1,0 +1,267 @@
+{
+  "case": "headache-tension",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1630,
+      "tokensIn": 797,
+      "tokensOut": 67,
+      "costUsd": 0.00015975,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"How would you describe the onset of your headache? Did it come on suddenly or gradually?\", \"options\": [\"Suddenly\", \"Gradually\"], \"readyToAssess\": false, \"missingFields\": [\"duration\", \"severity\", \"associated symptoms\", \"red-flag screening\", \"relevant history\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1141,
+      "tokensIn": 296,
+      "tokensOut": 14,
+      "costUsd": 0.000052799999999999996,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It came on gradually over the morning.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1228,
+      "tokensIn": 827,
+      "tokensOut": 46,
+      "costUsd": 0.00015165,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale of 0 to 10, how would you rate the severity of your headache right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1263,
+      "tokensIn": 330,
+      "tokensOut": 18,
+      "costUsd": 0.000060299999999999995,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I would rate it a 3 out of 10.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1264,
+      "tokensIn": 865,
+      "tokensOut": 48,
+      "costUsd": 0.00015854999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2346,
+      "tokensIn": 369,
+      "tokensOut": 17,
+      "costUsd": 0.00006555000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not experiencing any other symptoms like that.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1694,
+      "tokensIn": 903,
+      "tokensOut": 48,
+      "costUsd": 0.00016425,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Have you had any recent illnesses or infections?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"Relevant history\", \"Current medications\", \"Allergies\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1062,
+      "tokensIn": 393,
+      "tokensOut": 17,
+      "costUsd": 0.00006915,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses or infections.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1288,
+      "tokensIn": 927,
+      "tokensOut": 42,
+      "costUsd": 0.00016424999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Do you have any history of migraines or headaches in the past?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1154,
+      "tokensIn": 421,
+      "tokensOut": 21,
+      "costUsd": 0.00007574999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I don't have any history of migraines or headaches in the past.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 991,
+      "tokensIn": 959,
+      "tokensOut": 39,
+      "costUsd": 0.00016725,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nYou: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Are you currently taking any medications, and do you have any known allergies?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"current medications\",\"allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 897,
+      "tokensIn": 455,
+      "tokensOut": 22,
+      "costUsd": 0.00008144999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nYou: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not taking any medications, and I don't have any known allergies.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1323,
+      "tokensIn": 994,
+      "tokensOut": 54,
+      "costUsd": 0.00018150000000000002,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nYou: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\nYou: Are you currently taking any medications, and do you have any known allergies?\nPatient: No, I'm not taking any medications, and I don't have any known allergies.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 873,
+      "tokensIn": 502,
+      "tokensOut": 27,
+      "costUsd": 0.00009149999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nYou: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\nYou: No, I'm not taking any medications, and I don't have any known allergies.\nService: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 985,
+      "tokensIn": 1046,
+      "tokensOut": 48,
+      "costUsd": 0.0001857,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nYou: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\nYou: Are you currently taking any medications, and do you have any known allergies?\nPatient: No, I'm not taking any medications, and I don't have any known allergies.\nYou: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nPatient: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Have you had any recent head injuries or trauma?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"head injuries or trauma\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 874,
+      "tokensIn": 543,
+      "tokensOut": 18,
+      "costUsd": 0.00009224999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nYou: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\nYou: No, I'm not taking any medications, and I don't have any known allergies.\nService: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nYou: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nService: Thank you for sharing that. Have you had any recent head injuries or trauma?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent head injuries or trauma.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1004,
+      "tokensIn": 1078,
+      "tokensOut": 45,
+      "costUsd": 0.0001887,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nYou: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\nYou: Are you currently taking any medications, and do you have any known allergies?\nPatient: No, I'm not taking any medications, and I don't have any known allergies.\nYou: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nPatient: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nYou: Thank you for sharing that. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any recent head injuries or trauma.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the information. Have you experienced any visual disturbances or changes in your vision?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1383,
+      "tokensIn": 577,
+      "tokensOut": 20,
+      "costUsd": 0.00009855000000000001,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nYou: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\nYou: No, I'm not taking any medications, and I don't have any known allergies.\nService: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nYou: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nService: Thank you for sharing that. Have you had any recent head injuries or trauma?\nYou: No, I haven't had any recent head injuries or trauma.\nService: Thank you for the information. Have you experienced any visua",
+      "output": "{ \"reply\": \"No, I haven't experienced any visual disturbances or changes in my vision.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1178,
+      "tokensIn": 1114,
+      "tokensOut": 63,
+      "costUsd": 0.0002049,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: I've had a mild headache since this morning.\nYou: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nYou: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nYou: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nYou: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nYou: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\nYou: Are you currently taking any medications, and do you have any known allergies?\nPatient: No, I'm not taking any medications, and I don't have any known allergies.\nYou: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nPatient: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nYou: Thank you for sharing that. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any recent head injuries or trauma.\nYou: Thank you for the information. Have you experienced any visual disturbances or changes in your vision?\nPatient: No, I haven't e",
+      "output": "{ \"reply\": \"Thank you for the information. Have you noticed if your headache worsens with activity or improves with rest?\", \"options\": [\"Worsens with activity\", \"Improves with rest\", \"No change\", \"Not sure\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1175,
+      "tokensIn": 616,
+      "tokensOut": 21,
+      "costUsd": 0.00010499999999999999,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"I've had a mild headache since this morning.\"\n\nYou: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nYou: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nYou: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nYou: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nYou: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nYou: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\nYou: No, I'm not taking any medications, and I don't have any known allergies.\nService: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nYou: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nService: Thank you for sharing that. Have you had any recent head injuries or trauma?\nYou: No, I haven't had any recent head injuries or trauma.\nService: Thank you for the information. Have you experienced any visua",
+      "output": "{ \"reply\": \"I haven't really noticed if it worsens with activity or improves with rest.\" }"
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1512,
+      "tokensIn": 695,
+      "tokensOut": 126,
+      "costUsd": 0.00017985,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: I've had a mild headache since this morning.\nService: How would you describe the onset of your headache? Did it come on suddenly or gradually?\nPatient: It came on gradually over the morning.\nService: On a scale of 0 to 10, how would you rate the severity of your headache right now?\nPatient: I would rate it a 3 out of 10.\nService: Are you experiencing any other symptoms along with your headache, such as nausea, sensitivity to light, or visual changes?\nPatient: No, I'm not experiencing any other symptoms like that.\nService: Have you had any recent illnesses or infections?\nPatient: No, I haven't had any recent illnesses or infections.\nService: Do you have any history of migraines or headaches in the past?\nPatient: No, I don't have any history of migraines or headaches in the past.\nService: Are you currently taking any medications, and do you have any known allergies?\nPatient: No, I'm not taking any medications, and I don't have any known allergies.\nService: Thank you for the information. Have you experienced any changes in your daily routine or stress levels recently that might be related to your headache?\nPatient: I'm not sure, but I did sleep badly last night and have been staring at my laptop all day.\nService: Thank you for sharing that. Have you had any recent head injuries or trauma?\nPatient: No, I haven't had any recent head injuries or trauma.\nService: Thank you for the information. Have you experienced any visual disturbances or changes in your vis",
+      "output": "{\n  \"chiefComplaint\": \"Mild headache\",\n  \"duration\": \"since this morning\",\n  \"severity\": \"3/10\",\n  \"symptoms\": [\"headache\"],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a mild headache that started gradually this morning, rating it a 3 out of 10 in severity. They deny any other symptoms, recent illnesses, or a history of migraines. The patient mentioned having slept poorly the previous night and spending a lot of time on their laptop.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1768,
+      "tokensIn": 577,
+      "tokensOut": 100,
+      "costUsd": 0.0024425000000000002,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Mild headache\",\n  \"duration\": \"since this morning\",\n  \"severity\": \"3/10\",\n  \"symptoms\": [\n    \"headache\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports a mild headache that started gradually this morning, rating it a 3 out of 10 in severity. They deny any other symptoms, recent illnesses, or a history of migraines. The patient mentioned having slept poorly the previous night and spending a lot of time on their laptop.\"\n}",
+      "output": "{ \"carePathway\": \"GREEN\", \"urgency\": \"The symptoms are mild and self-limiting with no red flags reported.\", \"reasoning\": \"The patient reports a mild headache with no additional symptoms or concerning history. The headache started this morning and is rated 3/10 in severity. There are no red flags or other symptoms that would suggest a need for urgent or clinician evaluation. Poor sleep and prolonged laptop use could be contributing factors.\", \"requiresHumanReview\": false }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "GREEN",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 15284,
+    "tokensOut": 921,
+    "costUsd": 0.005141150000000001,
+    "latencyMs": 28033,
+    "modelCalls": 22
+  }
+}

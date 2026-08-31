@@ -1,0 +1,136 @@
+{
+  "case": "stroke-resolving",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 947,
+      "tokensIn": 802,
+      "tokensOut": 35,
+      "costUsd": 0.0001413,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"How long did the funny feeling in your arm last?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1152,
+      "tokensIn": 285,
+      "tokensOut": 27,
+      "costUsd": 0.000058949999999999996,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: How long did the funny feeling in your arm last?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1109,
+      "tokensIn": 838,
+      "tokensOut": 51,
+      "costUsd": 0.0001563,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: How long did the funny feeling in your arm last?\nPatient: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 928,
+      "tokensIn": 337,
+      "tokensOut": 18,
+      "costUsd": 0.00006135,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: How long did the funny feeling in your arm last?\nYou: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\nService: On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I'd say it was about a 7 at its worst.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1124,
+      "tokensIn": 881,
+      "tokensOut": 53,
+      "costUsd": 0.00016395,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: How long did the funny feeling in your arm last?\nPatient: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\nYou: On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\nPatient: I'd say it was about a 7 at its worst.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Can you describe any other symptoms you experienced along with the funny feeling in your arm, such as weakness, numbness, or tingling?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 3644,
+      "tokensIn": 381,
+      "tokensOut": 33,
+      "costUsd": 0.00007695,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My arm felt a bit funny this morning, it's mostly fine now.\"\n\nYou: My arm felt a bit funny this morning, it's mostly fine now.\nService: How long did the funny feeling in your arm last?\nYou: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\nService: On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\nYou: I'd say it was about a 7 at its worst.\nService: Can you describe any other symptoms you experienced along with the funny feeling in your arm, such as weakness, numbness, or tingling?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"I had weakness in my right arm and my face was drooping on that side. My speech was also slurred for a bit.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1111,
+      "tokensIn": 940,
+      "tokensOut": 54,
+      "costUsd": 0.00017339999999999999,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nYou: How long did the funny feeling in your arm last?\nPatient: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\nYou: On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\nPatient: I'd say it was about a 7 at its worst.\nYou: Can you describe any other symptoms you experienced along with the funny feeling in your arm, such as weakness, numbness, or tingling?\nPatient: I had weakness in my right arm and my face was drooping on that side. My speech was also slurred for a bit.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"It sounds concerning that you experienced weakness, facial drooping, and slurred speech. Did these symptoms resolve completely, or are any of them still present?\",\"options\":[\"Resolved completely\",\"Still present\"],\"readyToAssess\":true,\"missingFields\":[]}"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 4 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2126,
+      "tokensIn": 514,
+      "tokensOut": 208,
+      "costUsd": 0.0002019,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My arm felt a bit funny this morning, it's mostly fine now.\nService: How long did the funny feeling in your arm last?\nPatient: It started about 90 minutes ago and lasted for a little while, but now it feels almost normal.\nService: On a scale of 0 to 10, how would you rate the severity of the funny feeling in your arm at its worst?\nPatient: I'd say it was about a 7 at its worst.\nService: Can you describe any other symptoms you experienced along with the funny feeling in your arm, such as weakness, numbness, or tingling?\nPatient: I had weakness in my right arm and my face was drooping on that side. My speech was also slurred for a bit.\nService: It sounds concerning that you experienced weakness, facial drooping, and slurred speech. Did these symptoms resolve completely, or are any of them still present?",
+      "output": "{\n  \"chiefComplaint\": \"Funny feeling in the arm with associated weakness, facial drooping, and slurred speech.\",\n  \"duration\": \"90 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in right arm\",\n    \"facial drooping on right side\",\n    \"slurred speech\"\n  ],\n  \"redFlags\": [\n    \"weakness in my right arm\",\n    \"my face was drooping on that side\",\n    \"my speech was also slurred for a bit\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reported a funny feeling in their arm that started about 90 minutes ago and lasted for a little while, with a severity rating of 7/10 at its worst. They experienced weakness in the right arm, facial drooping on the right side, and slurred speech, which raises concern for potential neurological issues. Further evaluation is warranted.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1458,
+      "tokensIn": 655,
+      "tokensOut": 70,
+      "costUsd": 0.0023375,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Funny feeling in the arm with associated weakness, facial drooping, and slurred speech.\",\n  \"duration\": \"90 minutes\",\n  \"severity\": \"7/10\",\n  \"symptoms\": [\n    \"weakness in right arm\",\n    \"facial drooping on right side\",\n    \"slurred speech\"\n  ],\n  \"redFlags\": [\n    \"weakness in my right arm\",\n    \"my face was drooping on that side\",\n    \"my speech was also slurred for a bit\"\n  ],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reported a funny feeling in their arm that started about 90 minutes ago and lasted for a little while, with a severity rating of 7/10 at its worst. They experienced weakness in the right arm, facial drooping on the right side, and slurred speech, which raises concern for potential neurological issues. Further evaluation is warranted.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"immediate\", \"reasoning\": \"The patient reported symptoms including weakness in the right arm, facial drooping on the right side, and slurred speech. These symptoms could indicate a neurological issue that requires urgent assessment, such as a stroke.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:confirm",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "1 rule(s) fired and agreed with the model at RED."
+    }
+  ],
+  "totals": {
+    "tokensIn": 5633,
+    "tokensOut": 549,
+    "costUsd": 0.0033716,
+    "latencyMs": 13599,
+    "modelCalls": 9
+  }
+}

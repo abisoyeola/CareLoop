@@ -1,0 +1,246 @@
+{
+  "case": "chest-pain-musculoskeletal",
+  "arm": "agent",
+  "steps": [
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 967,
+      "tokensIn": 792,
+      "tokensOut": 43,
+      "costUsd": 0.0001446,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Duration\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 969,
+      "tokensIn": 271,
+      "tokensOut": 15,
+      "costUsd": 0.000049649999999999994,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It started yesterday after a heavy gym session.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1250,
+      "tokensIn": 824,
+      "tokensOut": 48,
+      "costUsd": 0.0001524,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\", \"options\": [], \"readyToAssess\": false, \"missingFields\": [\"Severity\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 827,
+      "tokensIn": 308,
+      "tokensOut": 14,
+      "costUsd": 0.0000546,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"It's about a 6 right now.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 2445,
+      "tokensIn": 860,
+      "tokensOut": 59,
+      "costUsd": 0.00016439999999999998,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [\"associated symptoms\"] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 905,
+      "tokensIn": 349,
+      "tokensOut": 15,
+      "costUsd": 0.00006135,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I'm not experiencing any other symptoms.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1835,
+      "tokensIn": 902,
+      "tokensOut": 46,
+      "costUsd": 0.0001629,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for clarifying that. Have you ever experienced chest pain like this before?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 957,
+      "tokensIn": 379,
+      "tokensOut": 17,
+      "costUsd": 0.00006705,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nYou: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I've never experienced chest pain like this before.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1196,
+      "tokensIn": 934,
+      "tokensOut": 49,
+      "costUsd": 0.0001695,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 859,
+      "tokensIn": 414,
+      "tokensOut": 19,
+      "costUsd": 0.0000735,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nYou: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nYou: No, I've never experienced chest pain like this before.\nService: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't had any recent illnesses or significant stressors.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1147,
+      "tokensIn": 971,
+      "tokensOut": 45,
+      "costUsd": 0.00017265,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\nYou: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nPatient: No, I haven't had any recent illnesses or significant stressors.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for the information. Do you have any known allergies or are you currently taking any medications?\",\"options\":[],\"readyToAssess\":false,\"missingFields\":[\"Relevant history, current medications, allergies\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 991,
+      "tokensIn": 451,
+      "tokensOut": 21,
+      "costUsd": 0.00008025,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nYou: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nYou: No, I've never experienced chest pain like this before.\nService: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nYou: No, I haven't had any recent illnesses or significant stressors.\nService: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I don't have any known allergies and I'm not taking any medications.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1217,
+      "tokensIn": 1010,
+      "tokensOut": 49,
+      "costUsd": 0.0001809,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\nYou: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nPatient: No, I haven't had any recent illnesses or significant stressors.\nYou: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nPatient: No, I don't have any known allergies and I'm not taking any medications.\n\nProduce the next turn.",
+      "output": "{\"reply\":\"Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\",\"options\":[\"Yes\",\"No\"],\"readyToAssess\":false,\"missingFields\":[\"radiating pain\"]}"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1373,
+      "tokensIn": 494,
+      "tokensOut": 25,
+      "costUsd": 0.0000891,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nYou: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nYou: No, I've never experienced chest pain like this before.\nService: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nYou: No, I haven't had any recent illnesses or significant stressors.\nService: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nYou: No, I don't have any known allergies and I'm not taking any medications.\nService: Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any pain that radiates to my arms, jaw, or back.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1332,
+      "tokensIn": 1057,
+      "tokensOut": 52,
+      "costUsd": 0.00018975,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\nYou: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nPatient: No, I haven't had any recent illnesses or significant stressors.\nYou: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nPatient: No, I don't have any known allergies and I'm not taking any medications.\nYou: Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain that radiates to my arms, jaw, or back.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for the details. Have you experienced any dizziness, lightheadedness, or fainting along with the chest pain?\", \"options\": [\"Yes\", \"No\"], \"readyToAssess\": false, \"missingFields\": [] }"
+    },
+    {
+      "step": "patient-sim",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1030,
+      "tokensIn": 542,
+      "tokensOut": 22,
+      "costUsd": 0.00009449999999999998,
+      "attempts": 1,
+      "input": "You opened the conversation by saying: \"My chest hurts.\"\n\nYou: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nYou: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nYou: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nYou: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nYou: No, I've never experienced chest pain like this before.\nService: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nYou: No, I haven't had any recent illnesses or significant stressors.\nService: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nYou: No, I don't have any known allergies and I'm not taking any medications.\nService: Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\nYou: No, I haven't experienced any pain that radiates to my arms, jaw, or back.\nService: Thank you for the details. Have you experienced any dizziness, lightheadedness, or fainting along with the chest pain?\n\nReply to the service's latest message.",
+      "output": "{ \"reply\": \"No, I haven't experienced any dizziness, lightheadedness, or fainting.\" }"
+    },
+    {
+      "step": "conversation",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1384,
+      "tokensIn": 1102,
+      "tokensOut": 70,
+      "costUsd": 0.00020729999999999997,
+      "attempts": 1,
+      "input": "Conversation so far:\nPatient: My chest hurts.\nYou: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nYou: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nYou: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nYou: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\nYou: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nPatient: No, I haven't had any recent illnesses or significant stressors.\nYou: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nPatient: No, I don't have any known allergies and I'm not taking any medications.\nYou: Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain that radiates to my arms, jaw, or back.\nYou: Thank you for the details. Have you experienced any dizziness, lightheadedness, or fainting along with the chest pain?\nPatient: No, I haven't experienced any dizziness, lightheadedness, or fainting.\n\nProduce the next turn.",
+      "output": "{ \"reply\": \"Thank you for all the information. Given that you started experiencing chest pain after a heavy gym session and it's your first time feeling this way, it's important to ensure everything is okay. I recommend seeking medical attention to evaluate your chest pain further.\", \"options\": [], \"readyToAssess\": true, \"missingFields\": [] }"
+    },
+    {
+      "step": "assessment-lock",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "",
+      "note": "Agent locked the assessment after 9 patient turn(s)."
+    },
+    {
+      "step": "extraction",
+      "model": "gpt-4o-mini",
+      "latencyMs": 1816,
+      "tokensIn": 693,
+      "tokensOut": 139,
+      "costUsd": 0.00018735,
+      "attempts": 1,
+      "input": "Conversation:\nPatient: My chest hurts.\nService: Thank you for sharing that. Can you tell me how long you've been experiencing this chest pain?\nPatient: It started yesterday after a heavy gym session.\nService: I appreciate that information. On a scale of 0 to 10, how severe is your chest pain right now?\nPatient: It's about a 6 right now.\nService: Thank you for that. Are you experiencing any other symptoms along with the chest pain, such as shortness of breath, sweating, or nausea?\nPatient: No, I'm not experiencing any other symptoms.\nService: Thank you for clarifying that. Have you ever experienced chest pain like this before?\nPatient: No, I've never experienced chest pain like this before.\nService: Thank you for sharing that. Have you had any recent illnesses or significant stressors in your life?\nPatient: No, I haven't had any recent illnesses or significant stressors.\nService: Thank you for the information. Do you have any known allergies or are you currently taking any medications?\nPatient: No, I don't have any known allergies and I'm not taking any medications.\nService: Thank you for providing that information. Have you experienced any pain that radiates to your arms, jaw, or back?\nPatient: No, I haven't experienced any pain that radiates to my arms, jaw, or back.\nService: Thank you for the details. Have you experienced any dizziness, lightheadedness, or fainting along with the chest pain?\nPatient: No, I haven't experienced any dizziness, lightheadedness, or fainting.\nSer",
+      "output": "{\n  \"chiefComplaint\": \"Chest pain\",\n  \"duration\": \"1 day\",\n  \"severity\": \"6/10\",\n  \"symptoms\": [\n    \"chest pain\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest pain that started yesterday after a heavy gym session. They rate the pain as a 6 out of 10 and have not experienced any other symptoms such as shortness of breath, sweating, or nausea. This is the first time the patient has experienced chest pain, and they have no known allergies or current medications.\"\n}"
+    },
+    {
+      "step": "triage",
+      "model": "gpt-4o",
+      "latencyMs": 1289,
+      "tokensIn": 586,
+      "tokensOut": 63,
+      "costUsd": 0.002095,
+      "attempts": 1,
+      "input": "Structured intake:\n{\n  \"chiefComplaint\": \"Chest pain\",\n  \"duration\": \"1 day\",\n  \"severity\": \"6/10\",\n  \"symptoms\": [\n    \"chest pain\"\n  ],\n  \"redFlags\": [],\n  \"allergies\": [],\n  \"medications\": [],\n  \"history\": [],\n  \"summary\": \"The patient reports experiencing chest pain that started yesterday after a heavy gym session. They rate the pain as a 6 out of 10 and have not experienced any other symptoms such as shortness of breath, sweating, or nausea. This is the first time the patient has experienced chest pain, and they have no known allergies or current medications.\"\n}",
+      "output": "{ \"carePathway\": \"RED\", \"urgency\": \"Immediate assessment needed\", \"reasoning\": \"The patient reports experiencing chest pain, which requires urgent evaluation to rule out any serious underlying conditions, despite the absence of additional symptoms like shortness of breath or nausea.\", \"requiresHumanReview\": true }"
+    },
+    {
+      "step": "verification:clear",
+      "model": "deterministic",
+      "latencyMs": 0,
+      "tokensIn": 0,
+      "tokensOut": 0,
+      "costUsd": 0,
+      "attempts": 0,
+      "input": "",
+      "output": "RED",
+      "note": "No red-flag rule fired."
+    }
+  ],
+  "totals": {
+    "tokensIn": 12939,
+    "tokensOut": 811,
+    "costUsd": 0.00439675,
+    "latencyMs": 23789,
+    "modelCalls": 19
+  }
+}
